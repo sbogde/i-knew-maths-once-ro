@@ -1,0 +1,23 @@
+\ProvidesPackage{preamble}
+
+% Language and Encoding
+\usepackage[utf8]{inputenc}
+\usepackage[romanian]{babel}
+
+% Math Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Formatting and Graphics
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Romanian Theorem Environments
+\newtheorem{theorem}{Teoremă}[section]
+\newtheorem{lemma}[theorem]{Lemă}
+\newtheorem{proposition}[theorem]{Propoziție}
+\newtheorem{definition}[theorem]{Definiție}
+\newtheorem{remark}[theorem]{Observație}
