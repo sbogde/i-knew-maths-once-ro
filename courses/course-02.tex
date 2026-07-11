@@ -206,3 +206,81 @@ a \arrow[r, mapsto] \arrow[d, mapsto] & f(a) \\
 \begin{remark}
 Dacă funcția $f^*$ există, ea este unică. Dacă $f_1^* \circ p = f_2^* \circ p$, deoarece $p$ este surjectivă (epimorfism), rezultă $f_1^* = f_2^*$.
 \end{remark}
+
+\vspace{1em}
+\textbf{Exemple de diagrame comutative (proprietatea de universalitate):}
+
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+\mathbb{Z} \arrow[r, "f_n"] \arrow[d, "p_n"'] & \mathbb{C} \\
+\mathbb{Z}_n \arrow[ur, dashed, "f_n^*"'] & 
+\end{tikzcd}
+\\[1ex] \centering $f_n = f_n^* \circ p_n$
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+\mathbb{Z} \arrow[r, "p_n"] \arrow[d, "p_m"'] & \mathbb{Z}_n \\
+\mathbb{Z}_m \arrow[ur, dashed, "f^*"'] & 
+\end{tikzcd}
+\\[1ex] \centering $p_n = f^* \circ p_m \iff n \mid m$
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+A \arrow[r, "f"] \arrow[d, "p"'] & B \arrow[d, "q"] \\
+A/R \arrow[r, dashed, "f^*"'] & B/Q
+\end{tikzcd}
+\\[1ex] \centering $f^* \circ p = q \circ f$ \\
+(unde $p, q$ sunt proiecțiile canonice)
+\end{minipage}
+\end{center}
+
+\begin{theorem}
+Fie $f: A \rightarrow B$ o aplicație de mulțimi, $R$ o relație de echivalență pe $A$ și $p: A \rightarrow \frac{A}{R}$ proiecția canonică.
+\begin{enumerate}
+    \item $\exists$ o aplicație $f^*: \frac{A}{R} \rightarrow B$ a.î. $f^* \circ p = f \iff R \subseteq R_f$. \\
+    (unde $R_f = \{(x,y) \in A \times A \mid f(x) = f(y)\}$)
+    \item $f^*$ este surjectivă $\iff f$ este surjectivă.
+    \item $f^*$ este injectivă $\iff R = R_f$.
+    \item $f^*$ este bijectivă $\iff f$ este surjectivă și $R = R_f$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) $R \subseteq R_f \iff f$ este constantă pe clasele de echivalență. \\
+``$\implies$'': $(x,y) \in R \implies x \sim y \implies x, y \in C \implies f(x) = f(y) \implies (x,y) \in R_f$. \\
+``$\impliedby$'': Presupunem că $\exists f^*: \frac{A}{R} \rightarrow B$ a.î. $f = f^* \circ p$. \\
+Fie $(x,y) \in R \implies \hat{x} = \hat{y}$. \\
+$f(x) = (f^* \circ p)(x) = f^*(p(x)) = f^*(\hat{x}) = f^*(\hat{y}) = f^*(p(y)) = (f^* \circ p)(y) = f(y) \implies (x,y) \in R_f$.
+
+Acum, presupunem că $R \subseteq R_f$ și avem triunghiul comutativ $f^* \circ p = f$. Trebuie să-i dăm regula de corespondență lui $f^*$. \\
+Fie $C \in \frac{A}{R}$. Căutăm $f^*(C) \in B$. \\
+Luăm $f^*(C) \overset{\text{def}}{=} f(a)$, unde $a \in C$. \\
+\textit{Corecta definire:} Fie $b \in C \implies f^*(C) = f(b)$. \\
+$\implies f(a) = f(b)$ adevărat (deoarece $R \subseteq R_f$). \\
+(din $a,b \in C \implies a \sim b \implies (a,b) \in R \implies f(a) = f(b)$). \\
+$\implies f^*$ este corect definită. \\
+Avem $f^*(\hat{a}) = f(a)$ (deoarece $\hat{a} = C$). \\
+$(\forall) a \in A \implies f^*(p(a)) = f(a) \implies (f^* \circ p)(a) = f(a) \implies f^* \circ p = f$.
+
+(2) 
+``$\implies$'': $f^* \circ p$ surjectivă $\implies f$ surjectivă. \\
+``$\impliedby$'': $f$ surjectivă $\implies f^* \circ p$ surjectivă $\implies f^*$ surjectivă.
+
+(3) $f^*$ injectivă $\iff \left( f^*(\hat{x}) = f^*(\hat{y}) \implies \hat{x} = \hat{y} \right)$. \\
+Cum $f^*(\hat{x}) = f(x)$ și $f^*(\hat{y}) = f(y)$, echivalează cu: \\
+$\iff \left( f(x) = f(y) \implies x \sim y \right) \iff \left( (x,y) \in R_f \implies (x,y) \in R \right)$. \\
+``$\implies$'': Presupunem $R = R_f$. \\
+$f^*(\hat{x}) = f^*(\hat{y}) \implies f(x) = f(y) \implies (x,y) \in R_f \implies (x,y) \in R \implies \hat{x} = \hat{y} \implies f^*$ injectivă. \\
+``$\impliedby$'': Fie $(x,y) \in R_f \implies f(x) = f(y) \implies f^*(\hat{x}) = f^*(\hat{y}) \implies \hat{x} = \hat{y} \implies x \sim y \implies (x,y) \in R \implies R_f \subseteq R$. Dar $R \subseteq R_f$ (din ipoteză), deci $R = R_f$.
+
+(4) Evident (combinând punctele 2 și 3).
+\end{proof}
+
+\vspace{1em}
+\textbf{Revenire la exemplul cu funcția $f_n(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$:} \\
+Avem $R_{f_n} = \{(h,k) \in \mathbb{Z} \times \mathbb{Z} \mid f_n(k) = f_n(h)\}$.
+$$ \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n} = \cos \frac{2h\pi}{n} + i \sin \frac{2h\pi}{n} $$
+$$ \implies \frac{2k\pi}{n} - \frac{2h\pi}{n} = 2\pi t, \quad t \in \mathbb{Z} $$
+$$ \implies k - h = nt \implies n \mid (k - h) \implies (h,k) \in R_n $$
+Astfel, $R_{f_n} = R_n$. Conform teoremei de factorizare, $(\mathbb{Z}_n, +) \simeq U_n$ (grupul rădăcinilor complexe de ordin $n$ ale unității).
