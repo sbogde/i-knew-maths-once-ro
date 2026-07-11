@@ -8,17 +8,17 @@ O relație binară este o pereche $(A, R)$, cu $A \neq \emptyset$ și $R \subset
 
 \textbf{Exemple:}
 \begin{enumerate}
-    \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists u \in \mathbb{N} \text{ a.î. } x + u = y\}$
-    \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists q \in \mathbb{N} \text{ a.î. } x \cdot q = y\}$
-    \item[(1)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists u \in \mathbb{Z} \text{ a.î. } x + u = y\}$
-    \item[(2)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists q \in \mathbb{N} \text{ a.î. } x \cdot q = y\}$
+    \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) u \in \mathbb{N} \text{ a.î. } x + u = y\}$
+    \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) q \in \mathbb{N} \text{ a.î. } x \cdot q = y\}$
+    \item[(1)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid (\exists) u \in \mathbb{Z} \text{ a.î. } x + u = y\}$
+    \item[(2)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid (\exists) q \in \mathbb{N} \text{ a.î. } x \cdot q = y\}$
     \item[(3)] $A = \mathbb{R}, \quad R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$
     \item[(4)] $n \in \mathbb{N}^*, \quad A = \mathbb{Z}, \quad R_n = \{(x, y) \in \mathbb{Z} \mid n \mid x - y \}$
     \item[(5)] $A = \text{mulțimea dreptelor dintr-un plan euclidian}$, \\ $R = \{(d_1, d_2) \in A \times A \mid d_1 = d_2 \text{ sau } d_1 \cap d_2 = \emptyset\}$
     \item[(6)] $A \xrightarrow{f} B, \quad R_f = \{(x, y) \in A \times A \mid f(x) = f(y)\}$
 \end{enumerate}
 
-\textbf{Exemplu pentru (6):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Atunci $R_f = R_n$.
+\textbf{Exemplu (cu notațiile de la (4) și (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Atunci $R_f = R_n$. \textit{(pt. demonstrație v. finalul cursului).}
 
 \begin{definition}
 Fie $A \neq \emptyset$, o mulțime. O submulțime $R \subseteq A \times A$ se numește \textbf{relație binară} pe $A$.
@@ -45,13 +45,18 @@ Fie $R$ o relație binară pe $A$. Spunem că relația binară este:
 \begin{definition}
 O relație binară $R$ pe $A$ care este:
 \begin{enumerate}
-    \item reflexivă, simetrică, tranzitivă s.n. \textbf{relație de echivalență}.
-    \item reflexivă, antisimetrică, tranzitivă s.n. \textbf{relație de ordine}.
-    \item reflexivă, tranzitivă s.n. \textbf{relație de cvasioardine} (preordine).
+    \item reflexivă, simetrică, tranzitivă se numește \textbf{relație de echivalență}.
+    \item reflexivă, antisimetrică, tranzitivă se numește \textbf{relație de ordine}.
+    \item reflexivă, tranzitivă se numește \textbf{relație de cvasioardine} (preordine).
 \end{enumerate}
 \end{definition}
 
-\textbf{Exemplu:} $(\mathbb{Z}, \equiv \pmod n)$.
+\textbf{Exemple:}
+\begin{itemize}
+    \item \textbf{Relație de echivalență:} Congruența modulo $n$ pe $\mathbb{Z}$, adică $(\mathbb{Z}, \equiv \pmod n)$.
+    \item \textbf{Relație de ordine:} Relația de incluziune $\subseteq$ pe ansamblul părților unei mulțimi, $(\mathcal{P}(X), \subseteq)$.
+    \item \textbf{Relație de preordine:} Relația de divizibilitate pe $\mathbb{Z}$. Este reflexivă și tranzitivă, dar nu este antisimetrică deoarece $a \mid b$ și $b \mid a \implies a = \pm b$.
+\end{itemize}
 
 Concepte asociate relațiilor de echivalență: \textbf{clasă de echivalență} și \textbf{sistem complet de reprezentanți (transversală)}.
 
@@ -97,7 +102,6 @@ Fie $(A, R)$, $R$ o relație de echivalență.
 \end{enumerate}
 \end{proposition}
 
-
 \begin{proof}
 (1)
 ``$\implies$'': $\hat{a} = \hat{b} \implies a \in \hat{a} \implies a \in \hat{b} \implies a \sim b$. \\
@@ -112,7 +116,7 @@ Fie $(A, R)$, $R$ o relație de echivalență.
 Fie $(A, R)$ cu $A \neq \emptyset$ și $R$ o relație de echivalență. O familie de elemente din $A$ se numește \textbf{sistem complet de reprezentanți} (S.C.R.) dacă:
 \begin{itemize}
     \item[$(\alpha)$] $(\forall) i, j \in I, i \neq j \implies a_i \not\sim a_j$
-    \item[$(\beta)$] $(\forall) x \in A, \exists! i \in I \text{ a.î. } x \sim a_i$
+    \item[$(\beta)$] $(\forall) x \in A, (\exists!) i \in I \text{ a.î. } x \sim a_i$
 \end{itemize}
 \end{definition}
 
@@ -123,23 +127,23 @@ Fie $(A, R)$ cu $A \neq \emptyset$ și $R$ o relație de echivalență. O famili
     Mulțimea $\{6q, 1+6q, \dots, 5+6q\}$ este, de asemenea, un S.C.R. \\
     $x - r \text{ este multiplu de } 6 \implies x \equiv r \pmod 6$.
     \item $A = \mathbb{R}$. Intervalul $[0, 1) \subset \mathbb{R}$, iar $R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$. \\
-    $x \in \mathbb{R} \implies \exists! a \in [0, 1) \text{ a.î. } x - a \in \mathbb{Z}$. \\
+    $x \in \mathbb{R} \implies (\exists!) a \in [0, 1) \text{ a.î. } x - a \in \mathbb{Z}$. \\
     $x = [x] + \{x\}$, unde $a = \{x\} \in [0, 1) \implies [0, 1)$ este un sistem complet de reprezentanți.
 \end{enumerate}
 
 \begin{definition}
 Fie $(A, R)$, cu $R$ o relație de echivalență. Mulțimea:
-$$ \frac{A}{R} = \{\hat{a} \mid a \in A\} $$
+$$ A/R = \{\hat{a} \mid a \in A\} $$
 reprezintă mulțimea tuturor claselor de echivalență și se numește \textbf{mulțimea factor} a lui $A$ prin $R$.
 \end{definition}
 
 \begin{proposition}
-$\frac{A}{R} = \{\hat{a}_i \mid i \in I\}$ unde $\{a_i\}_{i \in I}$ este un sistem complet de reprezentanți. \\
-$(\forall) a \in A, \exists a_i$ a.î. $\hat{a} = \hat{a}_i$.
+$A/R = \{\hat{a}_i \mid i \in I\}$ unde $\{a_i\}_{i \in I}$ este un sistem complet de reprezentanți. \\
+$(\forall) a \in A, (\exists) a_i$ a.î. $\hat{a} = \hat{a}_i$.
 \end{proposition}
 
 \textbf{Exemple:}
-$\frac{\mathbb{Z}}{R_6} = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. În general, $\frac{\mathbb{Z}}{R_n} = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
+$\mathbb{Z}/R_6 = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. În general, $\mathbb{Z}/R_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
 
 \begin{remark}
 Dacă $\{a_i\}_{i \in I} \subset A$ este o transversală în $A$ pentru o relație de echivalență $R$, atunci:
@@ -149,7 +153,7 @@ $$ A = \bigcup_{i \in I} \hat{a}_i \quad \text{(reuniune disjunctă)} $$
 \begin{proof}
 ``$\supseteq$'': Evident. \\
 ``$\subseteq$'': Folosim punctul $(\beta)$ din definiția sistemului complet de reprezentanți. \\
-Fie $x \in A \implies \exists i \in I \text{ a.î. } x \sim a_i \implies x \in \hat{a}_i \implies x \in \bigcup_{i \in I} \hat{a}_i$. \\
+Fie $x \in A \implies (\exists) i \in I \text{ a.î. } x \sim a_i \implies x \in \hat{a}_i \implies x \in \bigcup_{i \in I} \hat{a}_i$. \\
 Reuniunea este disjunctă pentru că $\hat{a}_i \cap \hat{a}_j = \emptyset$ pentru $i \neq j$.
 \end{proof}
 
@@ -174,21 +178,21 @@ O \textbf{partiție} a unei mulțimi $A \neq \emptyset$ este o familie de submul
 \end{definition}
 
 Pe o mulțime $A$ putem defini atâtea relații de echivalență câte partiții putem stabili pentru $A$.
-Dacă avem o partiție, definim relația: $x, y \in A \implies \left( x \sim y \overset{\text{def}}{\iff} \exists i \text{ a.î. } x, y \in A_i \right)$.
+Dacă avem o partiție, definim relația: $x, y \in A \implies \left( x \sim y \overset{\text{def}}{\iff} (\exists) i \text{ a.î. } x, y \in A_i \right)$.
 
 \textbf{Exercițiu:} Câte relații de echivalență pot fi definite pe o mulțime cu 6 elemente?
 
 \begin{definition}
 Fie $(A, R)$, cu $R$ o relație de echivalență. Definim funcția:
-$$ p : A \rightarrow \frac{A}{R}, \quad p(a) = \hat{a} $$
+$$ p : A \rightarrow A/R, \quad p(a) = \hat{a} $$
 Funcția $p$ este surjectivă și se numește \textbf{aplicația canonică} a mulțimii factor. Imaginea inversă a unui element din mulțimea factor este o clasă de echivalență.
 \end{definition}
 
-\textbf{Exemplu:} $p: \mathbb{Z} \rightarrow \frac{\mathbb{Z}}{R_n} = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+\textbf{Exemplu:} $p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
 
 \begin{theorem}[Teorema de factorizare pentru o aplicație de mulțimi]
 (Aplicația indusă pe o mulțime factor de către o aplicație de mulțimi). \\
-Dacă $f: A \rightarrow B$ este o funcție compatibilă cu relația de echivalență $R$, atunci $\exists f^* : \frac{A}{R} \rightarrow B$ astfel încât triunghiul următor să fie comutativ ($f = f^* \circ p$).
+Dacă $f: A \rightarrow B$ este o funcție compatibilă cu relația de echivalență $R$, atunci $(\exists) f^* : A/R \rightarrow B$ astfel încât triunghiul următor să fie comutativ ($f = f^* \circ p$).
 
 \begin{center}
 \begin{tikzcd}[row sep=large, column sep=large]
@@ -236,9 +240,9 @@ A/R \arrow[r, dashed, "f^*"'] & B/Q
 \end{center}
 
 \begin{theorem}
-Fie $f: A \rightarrow B$ o aplicație de mulțimi, $R$ o relație de echivalență pe $A$ și $p: A \rightarrow \frac{A}{R}$ proiecția canonică.
+Fie $f: A \rightarrow B$ o aplicație de mulțimi, $R$ o relație de echivalență pe $A$ și $p: A \rightarrow A/R$ proiecția canonică.
 \begin{enumerate}
-    \item $\exists$ o aplicație $f^*: \frac{A}{R} \rightarrow B$ a.î. $f^* \circ p = f \iff R \subseteq R_f$. \\
+    \item $(\exists)$ o aplicație $f^*: A/R \rightarrow B$ a.î. $f^* \circ p = f \iff R \subseteq R_f$. \\
     (unde $R_f = \{(x,y) \in A \times A \mid f(x) = f(y)\}$)
     \item $f^*$ este surjectivă $\iff f$ este surjectivă.
     \item $f^*$ este injectivă $\iff R = R_f$.
@@ -249,12 +253,12 @@ Fie $f: A \rightarrow B$ o aplicație de mulțimi, $R$ o relație de echivalenț
 \begin{proof}
 (1) $R \subseteq R_f \iff f$ este constantă pe clasele de echivalență. \\
 ``$\implies$'': $(x,y) \in R \implies x \sim y \implies x, y \in C \implies f(x) = f(y) \implies (x,y) \in R_f$. \\
-``$\impliedby$'': Presupunem că $\exists f^*: \frac{A}{R} \rightarrow B$ a.î. $f = f^* \circ p$. \\
+``$\impliedby$'': Presupunem că $(\exists) f^*: A/R \rightarrow B$ a.î. $f = f^* \circ p$. \\
 Fie $(x,y) \in R \implies \hat{x} = \hat{y}$. \\
 $f(x) = (f^* \circ p)(x) = f^*(p(x)) = f^*(\hat{x}) = f^*(\hat{y}) = f^*(p(y)) = (f^* \circ p)(y) = f(y) \implies (x,y) \in R_f$.
 
 Acum, presupunem că $R \subseteq R_f$ și avem triunghiul comutativ $f^* \circ p = f$. Trebuie să-i dăm regula de corespondență lui $f^*$. \\
-Fie $C \in \frac{A}{R}$. Căutăm $f^*(C) \in B$. \\
+Fie $C \in A/R$. Căutăm $f^*(C) \in B$. \\
 Luăm $f^*(C) \overset{\text{def}}{=} f(a)$, unde $a \in C$. \\
 \textit{Corecta definire:} Fie $b \in C \implies f^*(C) = f(b)$. \\
 $\implies f(a) = f(b)$ adevărat (deoarece $R \subseteq R_f$). \\
@@ -283,4 +287,4 @@ Avem $R_{f_n} = \{(h,k) \in \mathbb{Z} \times \mathbb{Z} \mid f_n(k) = f_n(h)\}$
 $$ \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n} = \cos \frac{2h\pi}{n} + i \sin \frac{2h\pi}{n} $$
 $$ \implies \frac{2k\pi}{n} - \frac{2h\pi}{n} = 2\pi t, \quad t \in \mathbb{Z} $$
 $$ \implies k - h = nt \implies n \mid (k - h) \implies (h,k) \in R_n $$
-Astfel, $R_{f_n} = R_n$. Conform teoremei de factorizare, $(\mathbb{Z}_n, +) \simeq U_n$ (grupul rădăcinilor complexe de ordin $n$ ale unității).
+Astfel, $R_{f_n} = R_n$. Conform teoremei de factorizare, $(\mathbb{Z}_n, +) \cong U_n$ (grupul rădăcinilor complexe de ordin $n$ ale unității).
