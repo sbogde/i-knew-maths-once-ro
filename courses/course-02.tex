@@ -6,7 +6,7 @@ Mulțimi $\rightarrow$ aplicații (morfisme) de mulțimi $\rightarrow$ submulți
 O relație binară este o pereche $(A, R)$, cu $A \neq \emptyset$ și $R \subseteq A \times A$.
 \end{definition}
 
-\textbf{Exemple:}
+\begin{example}
 \begin{enumerate}
     \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) u \in \mathbb{N} \text{ a.î. } x + u = y\}$
     \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) q \in \mathbb{N} \text{ a.î. } x \cdot q = y\}$
@@ -16,16 +16,19 @@ O relație binară este o pereche $(A, R)$, cu $A \neq \emptyset$ și $R \subset
     \item[(4)] $n \in \mathbb{N}^*, \quad A = \mathbb{Z}, \quad R_n = \{(x, y) \in \mathbb{Z} \mid n \mid x - y \}$
     \item[(5)] $A = \text{mulțimea dreptelor dintr-un plan euclidian}$, \\ $R = \{(d_1, d_2) \in A \times A \mid d_1 = d_2 \text{ sau } d_1 \cap d_2 = \emptyset\}$
     \item[(6)] $A \xrightarrow{f} B, \quad R_f = \{(x, y) \in A \times A \mid f(x) = f(y)\}$
+    \item[(7)] (cu notațiile de la (4) și (6)): $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Atunci $R_f = R_n$. \textit{(pt. demonstrație v. finalul cursului).}
 \end{enumerate}
+\end{example}
 
-\textbf{Exemplu (cu notațiile de la (4) și (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Atunci $R_f = R_n$. \textit{(pt. demonstrație v. finalul cursului).}
+
+% \textbf{Exemplu (cu notațiile de la (4) și (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Atunci $R_f = R_n$. \textit{(pt. demonstrație v. finalul cursului).}
 
 % repeta definitia de mai sus 
 % \begin{definition}
 % Fie $A \neq \emptyset$, o mulțime. O submulțime $R \subseteq A \times A$ se numește \textbf{relație binară} pe $A$.
 % \end{definition}
 
-% this does not belong here, maybe in the missing Course 1?ß
+% this does not belong here, maybe in the missing Course 1?
 % \begin{remark}
 % Fie $M$ o mulțime. Se numește \textbf{proprietate caracteristică} a mulțimii $M$ un criteriu ce ne permite să decidem care din afirmațiile următoare sunt adevărate:
 % 1) $x \in M$ \quad 2) $x \notin M$. \\
@@ -54,12 +57,14 @@ O relație binară $R$ pe $A$ care este:
 \end{enumerate}
 \end{definition}
 
-\textbf{Exemple:}
+% \vspace{1em}
+\begin{example}\leavevmode
 \begin{itemize}
     \item \textbf{Relație de echivalență:} Congruența modulo $n$ pe $\mathbb{Z}$, adică $(\mathbb{Z}, \equiv \pmod n)$.
     \item \textbf{Relație de ordine:} Relația de incluziune $\subseteq$ pe ansamblul părților unei mulțimi, $(\mathcal{P}(X), \subseteq)$.
     \item \textbf{Relație de preordine:} Relația de divizibilitate pe $\mathbb{Z}$. Este reflexivă și tranzitivă, dar nu este antisimetrică deoarece $a \mid b$ și $b \mid a \implies a = \pm b$.
 \end{itemize}
+\end{example}
 
 Concepte asociate relațiilor de echivalență: \textbf{clasă de echivalență} și \textbf{sistem complet de reprezentanți (transversală)}.
 
@@ -71,14 +76,17 @@ Fie $A \neq \emptyset$ o mulțime și o relație de echivalență pe $A$. O subm
 \end{enumerate}
 \end{definition}
 
-\textbf{Exemplu:} $n = 6$, $C = 6\mathbb{Z} + 1 \subset \mathbb{Z}$. \\
+\begin{example}\mbox{}\\
+$n = 6$, $C = 6\mathbb{Z} + 1 \subset \mathbb{Z}$. \\
 $R_6 = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid 6 \mid x - y\}$
 \begin{enumerate}
     \item $x, y \in C \implies 6 \mid x - y$
     \item $z \equiv x \pmod 6 \implies z - x = 6q_1$. Știind că $x = 6q + 1$, obținem: \\
     $z - (6q + 1) = 6q_1 \implies z = 6(q + q_1) + 1 \in C$.
 \end{enumerate}
+\end{example}
 
+\vspace{1em}
 Fie $(A, R)$ și $a \in A$. Notăm $[a]_R = \hat{a} = C_a = \{x \in A \mid x \sim a\} \subseteq A$.
 
 \begin{proposition}
@@ -123,7 +131,7 @@ Fie $(A, R)$ cu $A \neq \emptyset$ și $R$ o relație de echivalență. O famili
 \end{itemize}
 \end{definition}
 
-\textbf{Exemple:}
+\begin{example}\leavevmode
 \begin{enumerate}
     \item $(\mathbb{Z}, R_6)$, mulțimea $\{0, 1, 2, 3, 4, 5\} \subset \mathbb{Z}$ este un sistem complet de reprezentanți pentru $R_6$. \\
     $x \in \mathbb{Z} \implies x = 6q + r, \quad 0 \leq r < 6$. \\
@@ -133,6 +141,7 @@ Fie $(A, R)$ cu $A \neq \emptyset$ și $R$ o relație de echivalență. O famili
     $x \in \mathbb{R} \implies (\exists!) a \in [0, 1) \text{ a.î. } x - a \in \mathbb{Z}$. \\
     $x = [x] + \{x\}$, unde $a = \{x\} \in [0, 1) \implies [0, 1)$ este un sistem complet de reprezentanți.
 \end{enumerate}
+\end{example}
 
 \begin{definition}
 Fie $(A, R)$, cu $R$ o relație de echivalență. Mulțimea:
@@ -145,8 +154,9 @@ $A/R = \{\hat{a}_i \mid i \in I\}$ unde $\{a_i\}_{i \in I}$ este un sistem compl
 $(\forall) a \in A, (\exists) a_i$ a.î. $\hat{a} = \hat{a}_i$.
 \end{proposition}
 
-\textbf{Exemple:}
+\begin{example}\mbox{}\\
 $\mathbb{Z}/R_6 = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. În general, $\mathbb{Z}/R_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
+\end{example}
 
 \begin{remark}
 Dacă $\{a_i\}_{i \in I} \subset A$ este o transversală în $A$ pentru o relație de echivalență $R$, atunci:
@@ -160,7 +170,10 @@ Fie $x \in A \implies (\exists) i \in I \text{ a.î. } x \sim a_i \implies x \in
 Reuniunea este disjunctă pentru că $\hat{a}_i \cap \hat{a}_j = \emptyset$ pentru $i \neq j$.
 \end{proof}
 
-\textbf{Exemplu:} $\mathbb{Z} = 6\mathbb{Z} \cup (6\mathbb{Z}+1) \cup \dots \cup (6\mathbb{Z}+5)$.
+\begin{example}\mbox{}\\
+$\mathbb{Z} = 6\mathbb{Z} \cup (6\mathbb{Z}+1) \cup \dots \cup (6\mathbb{Z}+5)$.
+\end{example}
+
 
 \begin{definition}
 O \textbf{partiție} a unei mulțimi $A \neq \emptyset$ este o familie de submulțimi $A_i \subset A$, $A_i \neq \emptyset$, astfel încât:
@@ -191,7 +204,9 @@ $$ p : A \rightarrow A/R, \quad p(a) = \hat{a} $$
 Funcția $p$ este surjectivă și se numește \textbf{aplicația canonică} a mulțimii factor. Imaginea inversă a unui element din mulțimea factor este o clasă de echivalență.
 \end{definition}
 
-\textbf{Exemplu:} $p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+\begin{example}\mbox{}\\
+$p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+\end{example}
 
 \begin{theorem}[Teorema de factorizare pentru o aplicație de mulțimi]
 (Aplicația indusă pe o mulțime factor de către o aplicație de mulțimi). \\
