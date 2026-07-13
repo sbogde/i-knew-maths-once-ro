@@ -51,3 +51,48 @@ $(2\mathbb{N}, \cdot)$ nu are element neutru. (Elementul neutru pentru înmulți
 Fie $(S, \varphi)$ o lege de compoziție cu element neutru $e$. Un element $x \in S$ este \textbf{simetrizabil} în raport cu $\varphi \iff (\exists) x' \in S$ astfel încât:
 $$ \varphi(x, x') = \varphi(x', x) = e $$
 \end{definition}
+
+\begin{proposition}
+1) Dacă $\varphi$ este asociativă și are un element neutru, iar $x$ admite simetric $\implies$ acesta este unic. \\
+2) Dacă $x, y \in S$ sunt simetrizabile, atunci $\varphi(x, y)$ este simetrizabil și $(\varphi(x, y))' = \varphi(y', x')$.
+\end{proposition}
+
+\begin{proof}
+1) Fie $x', x'' \in S$ astfel încât:
+\begin{align*}
+    x x' &= x' x = e \\
+    x x'' &= x'' x = e
+\end{align*}
+$$ x'' = x'' e = x'' (x x') = (x'' x) x' = e x' = x' $$
+\end{proof}
+
+% Exemplu tăiat în manuscrisul original:
+% Ex: (\{ f:[a,b] \to \mathbb{R} \}, \circ)
+% f(x) = 2x - 3 și x = 3/2 \notin [a,b] \implies f = inversabilă...
+
+\begin{definition}
+Fie $(S, \cdot)$ cu $\cdot$ asociativă, $x_1, \dots, x_n \in S$.
+$$ x_1 \cdot x_2 \cdot \dots \cdot x_n = \begin{cases} x_1, & n=1 \\ (x_1 \dots x_{n-1})x_n, & n \ge 2 \end{cases} = \prod_{i=1}^n x_i $$
+\end{definition}
+
+\begin{lemma}
+Fie $(S, \cdot)$ cu $\cdot$ asociativă. Atunci $(\forall) x_1, \dots, x_n \in S$, $n \in \mathbb{N}^*$, $m \in \mathbb{N}^*$, $1 \le m < n$:
+$$ (x_1 \dots x_m)(x_{m+1} \dots x_n) = x_1 \dots x_n $$
+\end{lemma}
+
+\begin{proof}
+Inducție după $n$. \\
+Pentru $n=3$, partițiile posibile sunt: \\
+$m=1 \implies x_1(x_2 x_3)$ \\
+$m=2 \implies (x_1 x_2)x_3$
+\end{proof}
+
+\begin{corollary}
+Dacă $(S, \cdot)$ este asociativă, $(\forall) x_1, \dots, x_n \in S$, $n \ge 3$ și $(\forall) m_1, \dots, m_r \in \mathbb{N}^*$ cu $m_1 + \dots + m_r = n$, avem:
+$$ (x_1 \dots x_{m_1})(x_{m_1+1} \dots x_{m_1+m_2}) \dots (x_{n-m_r+1} \dots x_n) = x_1 \dots x_n $$
+\end{corollary}
+
+\begin{example}
+(Generalizarea comutativității). Presupunem că $(S, \cdot)$ este comutativă. Se arată că $(\forall) x_1, \dots, x_n \in S$, $n \ge 2$ și $(\forall) \sigma \in S_n$:
+$$ x_{\sigma(1)} x_{\sigma(2)} \dots x_{\sigma(n)} = x_1 x_2 \dots x_n $$
+\end{example}
