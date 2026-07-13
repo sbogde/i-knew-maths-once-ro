@@ -87,3 +87,82 @@ $$x \varphi y = y \varphi x, \quad (\forall) x, y \in G$$
 \end{example}
 
 \textbf{Exemplu de operație neasociativă:} Produsul vectorial pe mulțimea vectorilor din spațiu, $(V_3, \times)$, nu este asociativ.
+
+
+
+\subsection*{Subgrupuri}
+
+\begin{definition}
+Fie $(G, \cdot)$ un grup și $H \subseteq G$, $H \neq \emptyset$. Submulțimea $H$ se numește \textbf{subgrup} al lui $G$ (notat $H \le G$) dacă:
+\begin{enumerate}
+    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ este parte stabilă în raport cu operația).
+    \item $(\forall) x \in H \implies x^{-1} \in H$ (simetricul oricărui element din $H$ aparține lui $H$).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Evident, dacă $H$ este subgrup, atunci elementul neutru $e \in H$. \\
+(Deoarece $x \in H$ și $x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H$).
+\end{remark}
+
+\begin{theorem}[Teorema de caracterizare a subgrupurilor]
+$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
+\end{theorem}
+
+\begin{proof}
+``$\implies$'': Evident (dacă $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$). \\
+``$\impliedby$'': Presupunem că $x \cdot y^{-1} \in H$ pentru orice $x, y \in H$.
+\begin{itemize}
+    \item Luăm $x = y \implies x \cdot x^{-1} = e \in H$.
+    \item Cum $e \in H$ și $x \in H \implies e \cdot x^{-1} = x^{-1} \in H$.
+    \item Din $x, y \in H \implies x \in H$ și $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$.
+\end{itemize}
+Prin urmare, ambele condiții din definiție sunt îndeplinite, deci $H$ este subgrup.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
+    \item Dacă $n \in \mathbb{N}$, submulțimea $n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
+    \textit{Demonstrație:} Fie $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$. Conform teoremei de caracterizare (forma aditivă), este subgrup.
+    \item $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$. Acesta este grupul rădăcinilor complexe de ordin $n$ ale unității.
+\end{itemize}
+\end{example}
+
+\subsection*{Morfisme de grupuri. Izomorfisme}
+
+\begin{definition}
+Fie $(G, \cdot)$ și $(G', *)$ două grupuri. O aplicație $f: G \rightarrow G'$ se numește \textbf{morfism de grupuri} (sau omomorfism) dacă:
+$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{proposition}[Proprietăți]
+Dacă $f: G \rightarrow G'$ este un morfism de grupuri, atunci:
+\begin{enumerate}
+    \item $f(e) = e'$ (unde $e$ este elementul neutru în $G$, iar $e'$ este elementul neutru în $G'$).
+    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) $f(x) = f(x \cdot e) = f(x) * f(e)$. Înmulțind la stânga cu $(f(x))^{-1}$ în $G'$, obținem $e' = f(e)$. \\
+(2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1})$. Rezultă că $f(x^{-1})$ acționează ca simetricul lui $f(x)$ în $G'$, deci $f(x^{-1}) = (f(x))^{-1}$.
+\end{proof}
+
+\begin{definition}
+Un morfism de grupuri $f: G \rightarrow G'$ care este o funcție bijectivă se numește \textbf{izomorfism de grupuri}. \\
+(Dacă există un izomorfism între $G$ și $G'$, grupurile se numesc izomorfe și notăm $G \cong G'$).
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item Funcția $f: \mathbb{Z} \rightarrow 2\mathbb{Z}$, $f(x) = 2x$ este un izomorfism de la $(\mathbb{Z}, +)$ la $(2\mathbb{Z}, +)$. \\
+    \textit{Demonstrație:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ este morfism. Cum $f$ este evident bijectivă, rezultă $(\mathbb{Z}, +) \cong (2\mathbb{Z}, +)$.
+    \item Funcția exponențială $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot)$, $f(x) = e^x$. \\
+    \textit{Demonstrație:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ este morfism. Cum funcția exponențială este bijectivă pe codomeniul $(0, \infty)$, este izomorfism.
+    \item Funcția logaritmică $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +)$, $f(x) = \ln x$. \\
+    \textit{Demonstrație:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ este morfism. Fiind o funcție bijectivă, este izomorfism (este chiar izomorfismul invers celui precedent).
+\end{itemize}
+\end{example}
+
+
