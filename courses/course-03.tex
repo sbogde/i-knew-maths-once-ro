@@ -166,3 +166,50 @@ Un morfism de grupuri $f: G \rightarrow G'$ care este o funcție bijectivă se n
 \end{example}
 
 
+\subsection*{Inele și Corpuri}
+
+\begin{definition}
+Fie $A \neq \emptyset$ o mulțime dotată cu două legi de compoziție interne (operații algebrice), notate de obicei cu $+$ (adunarea) și $\cdot$ (înmulțirea). Tripletul $(A, +, \cdot)$ se numește \textbf{inel} dacă:
+\begin{enumerate}
+    \item $(A, +)$ este grup abelian.
+    \item $(A, \cdot)$ este monoid (legea este asociativă și admite element neutru).
+    \item Înmulțirea este distributivă față de adunare, adică:
+    $$ x \cdot (y + z) = x \cdot y + x \cdot z, \quad (\forall) x, y, z \in A $$
+    $$ (y + z) \cdot x = y \cdot x + z \cdot x, \quad (\forall) x, y, z \in A $$
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+\begin{itemize}
+    \item Elementul neutru pentru adunare se notează de obicei cu $0$ și se numește \textbf{element nul}.
+    \item Elementul neutru pentru înmulțire se notează de obicei cu $1$ și se numește \textbf{element unitate}.
+    \item Simetricul unui element $x$ în raport cu adunarea se notează cu $-x$ și se numește \textbf{opusul} lui $x$.
+    \item Simetricul unui element $x$ în raport cu înmulțirea (dacă există) se notează cu $x^{-1}$ și se numește \textbf{inversul} lui $x$. Mulțimea elementelor inversabile dintr-un inel $A$ se notează de obicei $U(A)$, iar $(U(A), \cdot)$ formează un grup numit grupul unităților inelului.
+\end{itemize}
+\end{remark}
+
+\begin{definition}
+Un inel $(A, +, \cdot)$ se numește \textbf{inel comutativ} dacă operația de înmulțire ($\cdot$) este comutativă:
+$$ x \cdot y = y \cdot x, \quad (\forall) x, y \in A $$
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +, \cdot), (\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ sunt inele comutative.
+    \item $(\mathbb{Z}_n, +, \cdot)$ este inel comutativ (inelul claselor de resturi modulo $n$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +, \cdot)$, unde $n \ge 2$, este un inel necomutativ (înmulțirea matricelor nu este comutativă). Elementul unitate este matricea identitate $I_n$.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Un inel $(K, +, \cdot)$ se numește \textbf{corp} dacă $0 \neq 1$ și orice element nenul din $K$ este inversabil. (Adică $U(K) = K \setminus \{0\} = K^*$). \\
+Dacă, în plus, înmulțirea este comutativă, atunci $K$ se numește \textbf{corp comutativ}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ sunt corpuri comutative.
+    \item $(\mathbb{Z}, +, \cdot)$ \textbf{nu} este corp, deoarece elementele sale nenule (cu excepția lui $1$ și $-1$) nu au inverse în $\mathbb{Z}$.
+    \item $(\mathbb{Z}_p, +, \cdot)$ este corp comutativ dacă și numai dacă $p$ este un număr prim.
+\end{itemize}
+\end{example}
