@@ -96,3 +96,78 @@ $$ (x_1 \dots x_{m_1})(x_{m_1+1} \dots x_{m_1+m_2}) \dots (x_{n-m_r+1} \dots x_n
 (Generalizarea comutativității). Presupunem că $(S, \cdot)$ este comutativă. Se arată că $(\forall) x_1, \dots, x_n \in S$, $n \ge 2$ și $(\forall) \sigma \in S_n$:
 $$ x_{\sigma(1)} x_{\sigma(2)} \dots x_{\sigma(n)} = x_1 x_2 \dots x_n $$
 \end{example}
+
+
+
+% page 3 
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +), (\mathbb{Q}, +), (\mathbb{R}, +), (\mathbb{C}, +)$.
+    \item $(\mathbb{Z}, \cdot), (\mathbb{Q}, \cdot), (\mathbb{R}, \cdot), (\mathbb{C}, \cdot)$.
+    \item $(\mathcal{P}(A), \cup), (\mathcal{P}(A), \cap), (\mathcal{P}(A), \Delta)$ unde $A \Delta B = (A \setminus B) \cup (B \setminus A)$. (Elementul neutru este $\emptyset$).
+\end{itemize}
+\end{example}
+
+% Exemplu tăiat în manuscrisul original:
+% (\mathcal{P}(A), \setminus) \rightarrow A \setminus B = A \cap \complement_A B.
+% asociativă ? A \setminus \emptyset = A, \emptyset \setminus A = \emptyset (Nu este comutativă).
+
+\begin{definition}
+Fie $S \neq \emptyset$. O pereche $(S, \varphi)$ unde $\varphi$ este o lege de compoziție pe $S$ se numește \textbf{grupoid}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +), (\mathbb{N}, \cdot), (\mathbb{Z}, +)$ etc. sunt grupoizi.
+    \item $(\mathcal{M}_n(\mathbb{C}), +), (\mathcal{M}_n(\mathbb{C}), \cdot)$ sunt grupoizi.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Un grupoid $(S, \varphi)$ se numește \textbf{semigrup} dacă $\varphi$ este asociativă.
+\end{definition}
+
+\begin{example}
+Toate cele de mai sus.
+\end{example}
+
+\begin{definition}
+Un semigrup care admite element neutru se numește \textbf{monoid}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +) \rightarrow e = 0$; $(\mathbb{N}, \cdot) \rightarrow e = 1$ (la fel pentru $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +) \rightarrow e = O_n$; $(\mathcal{M}_n(\mathbb{C}), \cdot) \rightarrow e = I_n$.
+    \item $(\mathcal{P}(A), \cup) \rightarrow e = \emptyset$; $(\mathcal{P}(A), \cap) \rightarrow e = A$; $(\mathcal{P}(A), \Delta) \rightarrow e = \emptyset$.
+    \item $(\mathcal{P}(A), \setminus)$ - nu (nu are element neutru).
+    \item $(A^A, \circ)$ unde $A^A = \{f \mid f: A \rightarrow A\}$, elementul neutru este $1_A$.
+\end{itemize}
+\end{example}
+
+\vspace{1em}
+\textbf{Reguli de calcul într-un semigrup}
+
+Fie $(S, \cdot)$ un semigrup și $x \in S$.
+\begin{align*}
+    x^1 &= x \\
+    x^2 &= x \cdot x \\
+    &\dots \\
+    x^n &= \underbrace{x \cdot x \dots x}_{n \text{ ori}}
+\end{align*}
+$$ x^n \cdot x^m = x^{n+m} $$
+$$ (x^n)^m = x^{n \cdot m} $$
+Dacă $S$ este monoid: $x^0 \stackrel{\text{def}}{=} e$ (convenție).
+
+\textit{Forma aditivă:}
+\begin{align*}
+    1 \cdot x &= x \\
+    2x &= x + x \\
+    &\dots \\
+    nx &= \underbrace{x + x \dots x}_{n \text{ ori}}
+\end{align*}
+$$ nx + mx = (n+m)x $$
+$$ m(nx) = (mn)x $$
+Dacă $S$ este monoid: $0 \cdot x = 0$.
+
+
