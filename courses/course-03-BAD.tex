@@ -1,0 +1,215 @@
+% \subsection*{Legi de compoziție. Grupoid. Semigrup. Monoid. Grup (18-Oct-1994)}
+
+% Change from \subsection*{...} to \section{...}
+\section{Legi de compoziție. Grupoid. Semigrup. Monoid. Grup (18-Oct-1994)}
+
+\begin{definition}
+O \textbf{lege de compoziție} internă (sau o operație algebrică) pe o mulțime $A \neq \emptyset$ este o aplicație $\varphi: A \times A \rightarrow A$. \\
+(Se notează în general prin $\varphi(x, y) = x \circ y = x * y = x \cdot y = x + y$).
+\end{definition}
+
+\begin{definition}
+O pereche $(A, \varphi)$ unde $A \neq \emptyset$ și $\varphi$ este o lege de compoziție internă pe $A$ se numește \textbf{grupoid}.
+\end{definition}
+
+\begin{definition}
+Un grupoid $(A, \varphi)$ în care legea $\varphi$ este asociativă se numește \textbf{semigrup}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +)$, $(\mathbb{N}, \cdot)$, $(\mathbb{Z}, +)$, $(\mathbb{Z}, \cdot)$, $(\mathbb{Q}, +)$, $(\mathbb{Q}, \cdot)$, $(\mathbb{R}, +)$, $(\mathbb{R}, \cdot)$, $(\mathbb{C}, +)$, $(\mathbb{C}, \cdot)$.
+    \item $(\mathcal{M}_n(\mathbb{C}), +)$ și $(\mathcal{M}_n(\mathbb{C}), \cdot)$.
+    \item $(\mathcal{P}(M), \cup)$, $(\mathcal{P}(M), \cap)$, $(\mathcal{P}(M), \Delta)$, $(\mathcal{P}(M), \setminus)$.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Un semigrup $(A, \varphi)$ se numește \textbf{monoid} dacă are un element neutru $e \in A$:
+$$x \varphi e = e \varphi x = x, \quad (\forall) x \in A$$
+\end{definition}
+
+\begin{remark}
+Dacă elementul neutru există, el este unic.
+\end{remark}
+
+\begin{proof}
+Presupunem că $e$ și $e'$ sunt elemente neutre. Atunci: $e = e \varphi e' = e'$.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +)$ cu $e = 0$; $(\mathbb{N}, \cdot)$ cu $e = 1$. (La fel pentru $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +)$ cu $e = O_n$ (matricea nulă); $(\mathcal{M}_n(\mathbb{C}), \cdot)$ cu $e = I_n$ (matricea unitate).
+    \item $(\mathcal{P}(M), \cup)$ cu $e = \emptyset$.
+    \item $(\mathcal{P}(M), \cap)$ cu $e = M$.
+    \item $(\mathcal{P}(M), \Delta)$ cu $e = \emptyset$.
+    \item $(\mathcal{P}(M), \setminus)$ nu este monoid (nu are element neutru).
+    \item $(A^A, \circ)$, mulțimea funcțiilor de la $A$ la $A$ împreună cu compunerea funcțiilor, are ca element neutru $e = 1_A$ (aplicația identică).
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Fie $(A, \varphi)$ un monoid cu elementul neutru $e$. Un element $x \in A$ se numește \textbf{simetrizabil} dacă există un element $x' \in A$ astfel încât:
+$$x \varphi x' = x' \varphi x = e$$
+\end{definition}
+
+\begin{remark}
+Dacă operația este notată aditiv ($+$), elementul simetrizabil se numește \textbf{opus} și se notează cu $-x$. \\
+Dacă operația este notată multiplicativ ($\cdot$), elementul simetrizabil se numește \textbf{invers} și se notează cu $x^{-1}$.
+\end{remark}
+
+\begin{proposition}
+Dacă $x$ este un element simetrizabil într-un monoid, simetricul său este unic.
+\end{proposition}
+
+\begin{proof}
+Presupunem că $x$ are două elemente simetrice, $x'$ și $x''$. Atunci:
+$$x' = x' \varphi e = x' \varphi (x \varphi x'') = (x' \varphi x) \varphi x'' = e \varphi x'' = x''$$
+\end{proof}
+
+Notăm cu $U(A)$ mulțimea elementelor simetrizabile din monoidul $A$. Atunci perechea $(U(A), \varphi)$ formează un grup.
+
+\begin{definition}
+Un monoid $(G, \varphi)$ în care orice element este simetrizabil (adică $U(G) = G$) se numește \textbf{grup}. \\
+Un grup $(G, \varphi)$ se numește \textbf{abelian} (sau comutativ) dacă operația $\varphi$ este comutativă:
+$$x \varphi y = y \varphi x, \quad (\forall) x, y \in G$$
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +)$, $(\mathbb{Q}, +)$, $(\mathbb{R}, +)$, $(\mathbb{C}, +)$ sunt grupuri abeliene.
+    \item $(\mathbb{Q}^*, \cdot)$, $(\mathbb{R}^*, \cdot)$, $(\mathbb{C}^*, \cdot)$ sunt grupuri abeliene.
+    \item $(\mathbb{Z}_n, +)$ unde $\mathbb{Z}_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$ este un grup abelian.
+    \item $GL_n(\mathbb{C}) = \{A \in \mathcal{M}_n(\mathbb{C}) \mid \det A \neq 0\}$ împreună cu înmulțirea matricelor formează un grup necomutativ (grupul liniar general).
+    \item $(\mathcal{P}(M), \Delta)$ este un grup abelian. Orice element coincide cu simetricul său, deoarece $X \Delta X = \emptyset = e$.
+\end{itemize}
+\end{example}
+
+\textbf{Exemplu de operație neasociativă:} Produsul vectorial pe mulțimea vectorilor din spațiu, $(V_3, \times)$, nu este asociativ.
+
+
+
+\subsection*{Subgrupuri}
+
+\begin{definition}
+Fie $(G, \cdot)$ un grup și $H \subseteq G$, $H \neq \emptyset$. Submulțimea $H$ se numește \textbf{subgrup} al lui $G$ (notat $H \le G$) dacă:
+\begin{enumerate}
+    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ este parte stabilă în raport cu operația).
+    \item $(\forall) x \in H \implies x^{-1} \in H$ (simetricul oricărui element din $H$ aparține lui $H$).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Evident, dacă $H$ este subgrup, atunci elementul neutru $e \in H$. \\
+(Deoarece $x \in H$ și $x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H$).
+\end{remark}
+
+\begin{theorem}[Teorema de caracterizare a subgrupurilor]
+$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
+\end{theorem}
+
+\begin{proof}
+``$\implies$'': Evident (dacă $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$). \\
+``$\impliedby$'': Presupunem că $x \cdot y^{-1} \in H$ pentru orice $x, y \in H$.
+\begin{itemize}
+    \item Luăm $x = y \implies x \cdot x^{-1} = e \in H$.
+    \item Cum $e \in H$ și $x \in H \implies e \cdot x^{-1} = x^{-1} \in H$.
+    \item Din $x, y \in H \implies x \in H$ și $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$.
+\end{itemize}
+Prin urmare, ambele condiții din definiție sunt îndeplinite, deci $H$ este subgrup.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
+    \item Dacă $n \in \mathbb{N}$, submulțimea $n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
+    \textit{Demonstrație:} Fie $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$. Conform teoremei de caracterizare (forma aditivă), este subgrup.
+    \item $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$. Acesta este grupul rădăcinilor complexe de ordin $n$ ale unității.
+\end{itemize}
+\end{example}
+
+\subsection*{Morfisme de grupuri. Izomorfisme}
+
+\begin{definition}
+Fie $(G, \cdot)$ și $(G', *)$ două grupuri. O aplicație $f: G \rightarrow G'$ se numește \textbf{morfism de grupuri} (sau omomorfism) dacă:
+$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{proposition}[Proprietăți]
+Dacă $f: G \rightarrow G'$ este un morfism de grupuri, atunci:
+\begin{enumerate}
+    \item $f(e) = e'$ (unde $e$ este elementul neutru în $G$, iar $e'$ este elementul neutru în $G'$).
+    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) $f(x) = f(x \cdot e) = f(x) * f(e)$. Înmulțind la stânga cu $(f(x))^{-1}$ în $G'$, obținem $e' = f(e)$. \\
+(2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1})$. Rezultă că $f(x^{-1})$ acționează ca simetricul lui $f(x)$ în $G'$, deci $f(x^{-1}) = (f(x))^{-1}$.
+\end{proof}
+
+\begin{definition}
+Un morfism de grupuri $f: G \rightarrow G'$ care este o funcție bijectivă se numește \textbf{izomorfism de grupuri}. \\
+(Dacă există un izomorfism între $G$ și $G'$, grupurile se numesc izomorfe și notăm $G \cong G'$).
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item Funcția $f: \mathbb{Z} \rightarrow 2\mathbb{Z}$, $f(x) = 2x$ este un izomorfism de la $(\mathbb{Z}, +)$ la $(2\mathbb{Z}, +)$. \\
+    \textit{Demonstrație:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ este morfism. Cum $f$ este evident bijectivă, rezultă $(\mathbb{Z}, +) \cong (2\mathbb{Z}, +)$.
+    \item Funcția exponențială $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot)$, $f(x) = e^x$. \\
+    \textit{Demonstrație:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ este morfism. Cum funcția exponențială este bijectivă pe codomeniul $(0, \infty)$, este izomorfism.
+    \item Funcția logaritmică $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +)$, $f(x) = \ln x$. \\
+    \textit{Demonstrație:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ este morfism. Fiind o funcție bijectivă, este izomorfism (este chiar izomorfismul invers celui precedent).
+\end{itemize}
+\end{example}
+
+
+\subsection*{Inele și Corpuri}
+
+\begin{definition}
+Fie $A \neq \emptyset$ o mulțime dotată cu două legi de compoziție interne (operații algebrice), notate de obicei cu $+$ (adunarea) și $\cdot$ (înmulțirea). Tripletul $(A, +, \cdot)$ se numește \textbf{inel} dacă:
+\begin{enumerate}
+    \item $(A, +)$ este grup abelian.
+    \item $(A, \cdot)$ este monoid (legea este asociativă și admite element neutru).
+    \item Înmulțirea este distributivă față de adunare, adică:
+    $$ x \cdot (y + z) = x \cdot y + x \cdot z, \quad (\forall) x, y, z \in A $$
+    $$ (y + z) \cdot x = y \cdot x + z \cdot x, \quad (\forall) x, y, z \in A $$
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+\begin{itemize}
+    \item Elementul neutru pentru adunare se notează de obicei cu $0$ și se numește \textbf{element nul}.
+    \item Elementul neutru pentru înmulțire se notează de obicei cu $1$ și se numește \textbf{element unitate}.
+    \item Simetricul unui element $x$ în raport cu adunarea se notează cu $-x$ și se numește \textbf{opusul} lui $x$.
+    \item Simetricul unui element $x$ în raport cu înmulțirea (dacă există) se notează cu $x^{-1}$ și se numește \textbf{inversul} lui $x$. Mulțimea elementelor inversabile dintr-un inel $A$ se notează de obicei $U(A)$, iar $(U(A), \cdot)$ formează un grup numit grupul unităților inelului.
+\end{itemize}
+\end{remark}
+
+\begin{definition}
+Un inel $(A, +, \cdot)$ se numește \textbf{inel comutativ} dacă operația de înmulțire ($\cdot$) este comutativă:
+$$ x \cdot y = y \cdot x, \quad (\forall) x, y \in A $$
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +, \cdot), (\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ sunt inele comutative.
+    \item $(\mathbb{Z}_n, +, \cdot)$ este inel comutativ (inelul claselor de resturi modulo $n$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +, \cdot)$, unde $n \ge 2$, este un inel necomutativ (înmulțirea matricelor nu este comutativă). Elementul unitate este matricea identitate $I_n$.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Un inel $(K, +, \cdot)$ se numește \textbf{corp} dacă $0 \neq 1$ și orice element nenul din $K$ este inversabil. (Adică $U(K) = K \setminus \{0\} = K^*$). \\
+Dacă, în plus, înmulțirea este comutativă, atunci $K$ se numește \textbf{corp comutativ}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ sunt corpuri comutative.
+    \item $(\mathbb{Z}, +, \cdot)$ \textbf{nu} este corp, deoarece elementele sale nenule (cu excepția lui $1$ și $-1$) nu au inverse în $\mathbb{Z}$.
+    \item $(\mathbb{Z}_p, +, \cdot)$ este corp comutativ dacă și numai dacă $p$ este un număr prim.
+\end{itemize}
+\end{example}
