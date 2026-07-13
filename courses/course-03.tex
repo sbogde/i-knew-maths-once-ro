@@ -171,3 +171,78 @@ $$ m(nx) = (mn)x $$
 Dacă $S$ este monoid: $0 \cdot x = 0$.
 
 
+
+% page 4
+\subsection*{Subgrupuri}
+
+\begin{definition}
+Fie $(G, \cdot)$ un grup și $H \subseteq G$, $H \neq \emptyset$. Submulțimea $H$ se numește \textbf{subgrup} al lui $G$ (notat $H \le G$) dacă:
+\begin{enumerate}
+    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ este parte stabilă în raport cu $\cdot$).
+    \item $(\forall) x \in H \implies x^{-1} \in H$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Evident: $e \in H$. $(x \in H, x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H)$.
+\end{remark}
+
+\begin{theorem}[de caracterizare a subgrupurilor]
+$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
+\end{theorem}
+
+\begin{proof}
+``$\implies$'': $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$. \\
+``$\impliedby$'': Presupunem că $x \cdot y^{-1} \in H$, $(\forall) x, y \in H$.
+\begin{itemize}
+    \item $\implies$ (pentru $x=y$) $x \cdot x^{-1} = e \in H$.
+    \item $e \in H, x \in H \implies e \cdot x^{-1} = x^{-1} \in H$ (2).
+    \item din $x, y \in H \implies x \in H$ și $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$ (1).
+\end{itemize}
+$\implies H \le G$.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item[(1)] $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
+    \item[(2)] $n \in \mathbb{N}, n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
+    \textit{Demonstrație:} $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$.
+    \item[(3)] $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$.
+\end{itemize}
+\end{example}
+
+\subsection*{Morfisme de grupuri. Izomorfisme}
+
+\begin{definition}
+Fie $(G, \cdot)$ și $(G', *)$ două grupuri. O aplicație $f: G \rightarrow G'$ se numește \textbf{morfism de grupuri} dacă:
+$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{proposition}
+Dacă $f: G \rightarrow G'$ este morfism $\implies$
+\begin{enumerate}
+    \item $f(e) = e'$
+    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+1) $f(x) = f(x \cdot e) = f(x) * f(e) \implies e' = f(e)$. \\
+2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1}) \implies f(x^{-1}) = (f(x))^{-1}$.
+\end{proof}
+
+\begin{definition}
+Un morfism bijectiv se numește \textbf{izomorfism}. ($G \cong G'$).
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item[(1)] $f: \mathbb{Z} \rightarrow 2\mathbb{Z}, f(x) = 2x$. \\
+    \textit{Demonstrație:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ morfism; bijectivă $\implies$ izomorfism.
+    \item[(2)] $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot), f(x) = e^x$. \\
+    \textit{Demonstrație:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ morfism; bijectivă $\implies$ izomorfism.
+    \item[(3)] $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +), f(x) = \ln x$. \\
+    \textit{Demonstrație:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ morfism; bijectivă $\implies$ izomorfism.
+\end{itemize}
+\end{example}
+
