@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amscd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Curs 3 -- Pagina 4}
+
+\noindent Fie $(\mathbb{Z},+)$ = gr.\ comut., $(M,\cdot,e)$ = monoid.
+
+\noindent Avem $f : \mathbb{Z} \to M$, $f(k) = a^k$
+
+\[
+f(h+k) = f(h)\cdot f(k),
+\]
+adică $a^{h+k} = a^h \cdot a^k$.
+
+\[
+\begin{aligned}
+h&=m, & k&=n\\
+h&=-m, & k&=-n
+\end{aligned}
+\qquad m,n\in\mathbb{N}^*.
+\]
+
+\[
+a^{-m}\cdot a^{-n} = (a^{-1})^{m}\cdot(a^{-1})^{n} = (a^{-1})^{m+n} = a^{h+k}
+\]
+\noindent\textit{(ultimul termen e neclar în original -- ar putea fi $a^{h+k}$ sau $a^h\cdot a^k$; te rog verifică.)}
+
+\bigskip
+\noindent\underline{\textbf{Lege de compoziție indusă pe o parte stabilă}} (respectiv pe o mulțime finită)
+
+\bigskip
+\noindent\textbf{Def.} Fie $(S,\varphi)$; $\varphi : S\times S \to S$, $S \neq \varnothing$.
+
+\noindent O submulțime $T \subseteq S$ s.n. \textbf{parte stabilă} a lui $S$ în raport cu $\varphi$ dacă $(\forall)\, x,y \in T \Rightarrow \varphi(x,y) \in T$.
+
+\[
+\begin{CD}
+S\times S @>\varphi>> S\\
+@AAA @AAA\\
+T\times T @>\varphi'>> T
+\end{CD}
+\]
+\noindent $(x,y)\in T \Rightarrow \varphi'(x,y) \overset{\text{def}}{=} \varphi(x,y)$
+
+\noindent $\varphi'$ = aplicația indusă pe $T$ de $\varphi$.
+
+\noindent Fie $S = M_2(\mathbb{R})$, $(M_2(\mathbb{R}),\cdot)$
+
+\[
+T = \left\{ \begin{pmatrix} 1 & a \\ 0 & 1 \end{pmatrix} \,\middle|\, a\in\mathbb{R} \right\} \subseteq S = M_2(\mathbb{R}).
+\]
+\[
+X_a X_b = X_{a+b}: \qquad \begin{pmatrix}1 & a\\ 0 & 1\end{pmatrix}\begin{pmatrix}1 & b\\ 0 & 1\end{pmatrix} = \begin{pmatrix}1 & a+b\\ 0 & 1\end{pmatrix}
+\]
+
+\bigskip
+\noindent\fbox{Propoziție} \ Fie $S\neq\varnothing$, $\varphi$ lege de compoziție pe $S$.\\
+$T\subseteq S$, $T$ stabilă în raport cu $\varphi$,\\
+$\varphi'$ = operația indusă de $\varphi$ pe $T$: $\varphi'(x,y)=\varphi(x,y)\in T$.
+
+\begin{enumerate}
+\item[(1)] Dacă $\varphi$ este asociativă (resp.\ comutativă) $\Rightarrow$ $\varphi'$ este asociativă (resp.\ comutativă).
+\item[(2)] Dacă $\varphi$ admite element neutru $e$ şi $e\in T$ $\Rightarrow$ $e$ este element neutru şi pentru $\varphi'$.
+\item[(3)] Dacă un element $x\in T$ este simetrizabil în raport cu $\varphi$ ($\varphi$ = asociativă şi cu element neutru) şi simetricul său $x'$ în raport cu $\varphi$ este în $T$ $\Rightarrow$ $x$ este simetrizabil şi în raport cu $\varphi'$.
+\item[(4)] simetricul (lui $x$ în raport cu $\varphi'$), fiind tot $x'$.
+\end{enumerate}
+
+\end{document}

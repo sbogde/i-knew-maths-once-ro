@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Curs 3 -- Pagina 3}
+
+\noindent\textbf{Definiție.} Fie $(S,\varphi)$, $\varphi : S \times S \to S$, $S \neq \varnothing$.
+
+\begin{enumerate}
+\item[(1)] Dacă $\varphi$ este asociativă $\Rightarrow$ $(S,\varphi)$ s.n. \textbf{semigrup}.
+
+\item[(2)] Un cuplu $(M,\varphi)$, $M \neq \varnothing$, $\varphi : M \times M \to M$.\\
+Dacă $\varphi$ este asociativă și cu element neutru, $M$ se numește \textbf{monoid}.
+
+\item[(3)] Un cuplu $(G,\varphi)$, $G \neq \varnothing$, $\varphi : G \times G \to G$; dacă $\varphi$ este asociativă, cu elem.\ neutru și cu toate elementele lui $G$ simetrizabile în raport cu $\varphi$ $\Rightarrow$ $G$ s.n. \textbf{grup}.
+\end{enumerate}
+
+\noindent\textbf{Exemple:}
+\begin{align*}
+(\mathbb{N},+,0) &= \text{monoid comutativ} \\
+(M_2(\mathbb{R}), \cdot, I_2) &= \text{monoid necomutativ} \\
+(\mathbb{Z},+,0),\ (\mathbb{R},+,0),\ (\mathbb{R}^*,\cdot,1) &= \text{grupuri comutative} \\
+|A| \geq 2 \Rightarrow (T_A,\circ,1_A) &= \text{monoid necomutativ} \\
+|A| \geq 3 \Rightarrow (S_A,\circ,1_A) &= \text{grup necomutativ}
+\end{align*}
+
+\noindent\textbf{Reguli de calcul într-un semigrup/monoid/grup}
+
+\noindent\textbf{Def.} Fie $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' asociativă și $a \in S$, $n \in \mathbb{N}^*$.
+
+\noindent Definim
+\[
+a^n \overset{\text{def}}{=} \underbrace{a \cdot a \cdots a}_{n \text{ ori}} =
+\begin{cases}
+a, & n=1 \\
+a^{n-1}\cdot a, & n>1
+\end{cases}
+\]
+
+\noindent În notație aditivă,
+\[
+na = \underbrace{a+a+\cdots+a}_{n \text{ ori}} =
+\begin{cases}
+a, & n=1 \\
+(n-1)a+a, & n>1
+\end{cases}
+\]
+
+\noindent\textbf{Propoziție.} Fie $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' asociativă. Atunci:
+\begin{enumerate}
+\item[(1)] Dacă $a \in S$, $m,n \in \mathbb{N}^*$ $\Rightarrow$ $a^m \cdot a^n = a^{m+n}$.
+\item[(2)] Dacă $a,b \in S$ și $ab=ba$ $\Rightarrow$ $(ab)^n = a^n \cdot b^n$, $(\forall)\, n \in \mathbb{N}^*$.
+\end{enumerate}
+
+\noindent\textbf{Propoziție.} Fie $(M,\cdot,e)$ = monoid, $a \in M$, $a$ = simetrizabil.
+\begin{enumerate}
+\item[(1)] $a^n \cdot a^k = a^{n+k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\item[(2)] $(a^n)^k = a^{n\cdot k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\[
+\left[\, a^0 \overset{\text{def}}{=} e, \qquad a^{-n} \overset{\text{def}}{=} (a^{-1})^n \,\right]
+\]
+\item[(3)] Dacă $a\cdot b = b\cdot a$, $a$ și $b$ simetrizabile $\Rightarrow$ $(ab)^k = a^k b^k$.
+\end{enumerate}
+
+\end{document}

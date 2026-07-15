@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Curs 3 -- Pagina 6}
+
+\noindent\fbox{Teorema 1} \ Fie $(S,\varphi)$, $S\neq\varnothing$ şi $R$ o congruență pe $S$.
+
+\bigskip
+\noindent\underline{Atunci:} \ 1) $\varphi^* : S/R\times S/R \to S/R$ definită prin
+\[
+\varphi^*(\hat a,\hat b) = \varphi(a,b)
+\]
+s.n. legea de compoziție indusă pe $S/R$ de $\varphi$.
+
+\begin{enumerate}
+\item[(2)] $\varphi$ = asoc.\ (comut.) $\Rightarrow$ $\varphi^*$ = asoc.\ (comut.).
+\item[(3)] $e\in S$ = elem.\ neutru pt.\ $\varphi$ $\Rightarrow$ $\hat e$ = el.\ neutru al operației $\varphi^*$.
+\item[(4)] $a\in S$ este simetrizabil în rap.\ cu $\varphi$ $\Leftrightarrow$ $\hat a$ = simetrizabil în raport cu $\varphi^*$, şi $\hat a^{-1} = \widehat{a^{-1}}$.
+\item[(5)] $(S,\varphi)$ = grup $\Rightarrow$ $(S/R,\varphi^*)$ = grup.
+\end{enumerate}
+
+\noindent $\big(\mathbb{Z}/n\mathbb{Z} = (\mathbb{Z}_n,+) = $ grup$\big)$
+
+\bigskip
+\noindent\underline{\textbf{Dem}}
+
+\begin{enumerate}
+\item[(1)] Nu se dem., e bine definit(ă).\footnote{ultimul cuvânt e neclar în original (arată ca ,,dif.'' în manuscris) -- probabil ,,definit(ă)''.}
+\item[(2)] $\hat a\hat b = \widehat{ab} = \widehat{ba} = \hat b\hat a$.
+\item[(3)] $\hat e\hat a = \widehat{ea} = \hat a = \widehat{ae} = \hat a\hat e$.
+\item[(4)] $\hat a\hat a' = \widehat{aa'} = \hat e = \widehat{a'a} = \hat a'\hat a$.
+\end{enumerate}
+
+\[
+p : S \to S/R
+\]
+\noindent $(S,\cdot)$ \hspace{2cm} $(S/R,\cdot)$
+
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\hat b.
+\]
+
+\[
+\mathbb{Z} \to \mathbb{Z}_n
+\]
+\noindent $p(a) = \hat a$.
+
+\[
+p(a+b) = p(a)+p(b) \ \Leftrightarrow\ \widehat{a+b} = \hat a+\hat b.
+\]
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\cdot\hat b.
+\]
+
+\end{document}
