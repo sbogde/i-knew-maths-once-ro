@@ -130,3 +130,71 @@ f*g : I\to A \qquad (f*g)(x) \overset{\text{def}}{=} f(x)*g(x) \in A.
 \item[(2)] $e_1,e_2$ = elem.\ neutru pt.\ $\varphi_1,\varphi_2$ $\Rightarrow$ $(e_1,e_2)$ = el.\ neutru pt.\ $\varphi$.
 \item[(3)] $x_1\in A_1$ e simetrizabil în rap.\ cu $\varphi_1$ şi $x_2\in A_2$ e sim.\ în rap.\ cu $\varphi_2$ $\Rightarrow$ $(x_1,x_2)$ e simetrizabil în rap.\ cu $\varphi$ şi $(x_1,x_2)' = (x_1',x_2')$.
 \end{enumerate}
+
+
+
+
+
+% course 4, page 3
+\section*{Curs 4 - Pagina 3}
+\noindent\textbf{(5)} Transportul unei legi de compoziție printr-o bijecție
+
+\[
+(A,\varphi) \qquad A \xrightarrow{f} A'
+\]
+
+\noindent Dacă $x',y'\in A' \Rightarrow \exists!\, x,y\in A$ a.î.\ $x'=f(x)$ şi $y'=f(y)$
+
+\[
+\varphi' : A'\times A' \to A', \qquad \varphi'(x',y') = f\big(\varphi(x,y)\big) \in A'
+\]
+
+\noindent [notație: $\varphi(x,y)=xy$] \quad $x'y' \overset{\text{def}}{=} f(xy)$\footnote{această linie e foarte compactată în original; se pare că se introduce convenția multiplicativă $\varphi(x,y)=xy$, astfel încât definiția lui $\varphi'$ devine $x'y'=f(xy)$.}
+
+\[
+f : A\to A' \qquad f(xy) = f(x)f(y) \quad (\forall)\,x,y\in A.
+\]
+\[
+f^{-1}(x'y') = f^{-1}(x')f^{-1}(y') \quad (\forall)\,x',y'\in A'.
+\]
+
+\bigskip
+\noindent\underline{Teoremă:} Fie $(A,\varphi)$, $\varphi:A\times A\to A$.
+
+\noindent $f:A\to A'$ şi $\varphi':A'\times A'\to A'$.
+
+\begin{enumerate}
+\item[1)] $\varphi$ = asoc.\ (comut.) $\Leftrightarrow$ $\varphi'$ e asoc.\ (comut.).
+\item[2)] $e\in A$ elem.\ neutru pt.\ $\varphi$ $\Leftrightarrow$ $f(e)$ el.\ neutru pt.\ $\varphi'$.\footnote{în original apare ,,pt.\ $f$'' / ,,pt.\ $f$' '' -- corectat aici la $\varphi$/$\varphi'$ pentru consecvență cu punctul 1) şi cu restul teoremei.}
+\item[3)] $x\in A$ simetrizabil în raport cu $\varphi$ $\Leftrightarrow$ $f(x)$ simetrizabil în raport cu $\varphi'$.
+\end{enumerate}
+
+\noindent $x',y'\in A'$.
+
+\[
+x'y' = f(x)f(y) = f(xy) = f(yx) = f(y)f(x).
+\]
+
+\bigskip
+\begin{center}
+\fbox{\Large\textbf{GRUPURI}}
+\end{center}
+
+\noindent\underline{\textbf{Subgrupuri. T.\ lui Lagrange}}
+
+\bigskip
+\noindent\underline{Def:} Fie $G$ un grup. O submulțime $H$ nevidă a lui $G$ s.n.\ \textbf{subgrup} al grupului $G$ dacă:
+
+\begin{enumerate}
+\item[(1)] $(\forall)\,x,y\in H \Rightarrow xy\in H$
+\item[(2)] $(\forall)\,x\in H \Rightarrow x^{-1}\in H$
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Pb:} Dat un grup $G$ să determinăm toate congruențele pe $G$.
+
+\noindent Rel.\ de ech.\ pe $G$ compatibilă cu operația grupului:
+
+\[
+xRy \Rightarrow zxRzy.
+\]
