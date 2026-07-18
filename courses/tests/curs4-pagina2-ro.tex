@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\fbox{Teoremă} \ Fie $(A,\varphi)$; $\varphi : A\times A \to A$, $I\neq\varnothing$.
+
+\[
+\tilde\varphi : A^I \times A^I \to A^I
+\]
+
+\begin{enumerate}
+\item[(1)] Dacă $\varphi$ asoc.\ (comut.) $\Rightarrow$ $\tilde\varphi$ asoc.\ (comut.).
+\item[(2)] Dacă $e\in A$ el.\ neutru pt.\ $\varphi$ $\Rightarrow$ $\tilde e : I\to A$, $\tilde e(i)=e$ este el.\ neutru pt.\ $\tilde\varphi$.
+\item[(3)] $\varphi$ are el.\ neutru şi $f(i)$ $(\forall)\,i$ e simetrizabil față de $\varphi$ $\Rightarrow$ $f$ simetrizabil față de $\tilde\varphi$ şi un simetric al lui $f$ este $f'(i) = (f(i))'$.
+\end{enumerate}
+
+\bigskip
+\noindent (1) Notăm legea pe $A$ cu $*$.\footnote{formularea exactă e neclară în original (compactată/greu de citit) -- se pare că se redenumește legea $\varphi$ prin $*$ pentru comoditatea notației în demonstrație.}
+
+\[
+(f*g)(i) \overset{\text{def}}{=} f(i)*g(i) = g(i)*f(i) \overset{\text{def}}{=} (g*f)(i), \quad \text{adevărat.}
+\]
+
+\noindent (2) $(f*\tilde e)(i) = f(i)*\tilde e(i) = f(i)$.
+
+\noindent $f*\tilde e = \tilde e*f = f$.
+
+\noindent (3) $(f*f')(i) = \tilde e(i) = e$.
+
+\noindent $f(i)*f'(i) = f(i)*(f(i))' = e$.
+
+\bigskip
+\noindent\textbf{(4)} Produs a 2 legi de compoziție.
+
+\noindent $(A_1,\varphi_1)$, $(A_2,\varphi_2)$; $A = A_1\times A_2$.
+
+\noindent $\varphi : A\times A \to A$; \quad $\varphi : (A_1\times A_2)\times(A_1\times A_2) \to A_1\times A_2$
+
+\[
+\varphi\big((x_1,x_2),(y_1,y_2)\big) \overset{\text{def}}{=} \big(\varphi_1(x_1,y_1),\varphi_2(x_2,y_2)\big).
+\]
+\[
+(x_1,x_2)+(y_1,y_2) = (x_1+y_1,\,x_2+y_2) \quad \text{-- notație aditivă.}
+\]
+
+\noindent $(\mathbb{Z},+)$ \qquad $(\mathbb{Z}_6,+)$ \qquad $\mathbb{Z}\times\mathbb{Z}_6$
+
+\bigskip
+\noindent\fbox{Teoremă} \ Fie $(A_1,\varphi_1)$, $(A_2,\varphi_2)$ şi $\varphi = \varphi_1\times\varphi_2$.
+
+\begin{enumerate}
+\item[(1)] Dacă $\varphi_1$ şi $\varphi_2$ sunt asoc.\ (comut.) $\Rightarrow$ $\varphi$ asoc.\ (comut.)
+\item[(2)] $e_1,e_2$ = elem.\ neutru pt.\ $\varphi_1,\varphi_2$ $\Rightarrow$ $(e_1,e_2)$ = el.\ neutru pt.\ $\varphi$.
+\item[(3)] $x_1\in A_1$ e simetrizabil în rap.\ cu $\varphi_1$ şi $x_2\in A_2$ e sim.\ în rap.\ cu $\varphi_2$ $\Rightarrow$ $(x_1,x_2)$ e simetrizabil în rap.\ cu $\varphi$ şi $(x_1,x_2)' = (x_1',x_2')$.
+\end{enumerate}
+
+\end{document}

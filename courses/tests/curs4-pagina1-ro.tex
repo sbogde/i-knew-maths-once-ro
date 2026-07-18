@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\fbox{\textbf{ALGEBRA I}}\\[2pt]
+(Curs 4)
+\end{center}
+\begin{flushright}
+\textit{20 Oct.\ 1994}
+\end{flushright}
+
+\bigskip
+\noindent\textbf{(1)} Lege de compoziție indusă pe o parte stabilă. $(A,\varphi)$, $\varphi : A\times A \to A$, $A\neq\varnothing$.
+
+\noindent $B\subseteq A$, $B$ parte stab.\ a lui $A$ în raport cu $\varphi$ dacă $(\forall)\,x,y\in B \Rightarrow \varphi(x,y)\in B$.
+
+\noindent $\varphi' : B\times B \to B$.
+
+\bigskip
+\noindent\textbf{(2)} Lege de compoziție indusă pe o mulțime factor. $(A,R)$
+
+\noindent $\varphi : A\times A \to A$, \quad $R\subseteq A\times A$
+
+\noindent $R$ compatibil cu $\varphi$: \quad $xRx'$ şi $yRy'$ $\Rightarrow$ $xyRx'y'$ (în notație multiplicativă.)
+
+\[
+\frac{A}{R} = \left\{\hat a \mid a\in A\right\} \qquad \varphi^* : \frac{A}{R}\times\frac{A}{R} \to \frac{A}{R} \qquad \varphi^*(\hat a,\hat b) \overset{\text{def}}{=} \widehat{\varphi(a,b)}
+\]
+\[
+\hat a\hat b = \widehat{ab}; \qquad \hat a + \hat b = \widehat{a+b}.
+\]
+
+\bigskip
+\noindent\textbf{(3)} Lege de compoziție indusă pe o mult.\ de funcții. $(A,\varphi)$, $I\neq\varnothing$.
+
+\noindent $A^I = \{f \mid f:I\to A\}$
+
+\noindent $\tilde\varphi$ = legea de comp.\ indusă de $\varphi$.
+
+\noindent $(A^I,\tilde\varphi)$ \qquad $(\mathbb{R},+)$; $I=[a,b]$.
+
+\noindent $\mathbb{R}^{[a,b]} = \{f \mid f:[a,b]\to\mathbb{R}\}$; \qquad $\mathbb{R}^{\{1,\ldots,n\}} = \{f \mid f:\{1,\ldots,n\}\to\mathbb{R}\}$.
+
+\medskip
+\noindent $A = a_0,a_1,\ldots,a_n,\ldots$
+
+\noindent $m,n\in\mathbb{N}^*$.
+
+\[
+\mathbb{R}^{\{1,\ldots,m\}\times\{1,\ldots,n\}}
+\]
+\noindent $A : \{1,\ldots,m\}\times\{1,\ldots,n\} \to \mathbb{R}$ \hfill $\mathbb{R}\ni a_{ij} = A(i,j)$
+
+\medskip
+\noindent $(A,\varphi)$, $I\neq\varnothing$
+
+\noindent $f,g\in A^I$
+
+\[
+f*g : I\to A \qquad (f*g)(x) \overset{\text{def}}{=} f(x)*g(x) \in A.
+\]
+\[
+\varphi^* : A^I\times A^I \to A^I \qquad \big(\varphi^*(f,g)\big)(x) \overset{\text{def}}{=} \varphi\big(f(x),g(x)\big).
+\]
+
+\medskip
+\noindent (1) Fie $f,g : [a,b]\to\mathbb{R}$; \quad $f+g : [a,b]\to\mathbb{R}$.
+
+\noindent $(\forall)\, x\in[a,b]$ \qquad $(f+g)(x) = f(x)+g(x)$.
+
+\noindent $fg : [a,b]\to\mathbb{R}$ \qquad $(fg)(x) = f(x)g(x)$.
+
+\end{document}
