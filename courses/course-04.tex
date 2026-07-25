@@ -198,3 +198,76 @@ x'y' = f(x)f(y) = f(xy) = f(yx) = f(y)f(x).
 \[
 xRy \Rightarrow zxRzy.
 \]
+
+
+
+% course 4, page 4
+\section*{Curs 4 - Pagina 4}
+
+\noindent $n\in\mathbb{N}$.
+
+\bigskip
+\noindent $H \overset{\text{not}}{=} n\mathbb{Z} = \{ny \mid y\in\mathbb{Z}\}$ subgrup al grupului $(\mathbb{Z},+)$.
+
+\noindent $\Rightarrow \exists!\, n\in\mathbb{N}$ a.î.\ $H=n\mathbb{Z}$.
+
+\begin{enumerate}
+\item[1)] $(\forall)\, x,y\in n\mathbb{Z} \Rightarrow x+y\in n\mathbb{Z}$.
+\item[2)] $(\forall)\, x\in n\mathbb{Z} \Rightarrow -x\in n\mathbb{Z}$.
+\end{enumerate}
+
+\[
+\left.\begin{aligned}
+x&=nq_1\\
+y&=nq_2
+\end{aligned}\right\} \Rightarrow x+y = n(q_1+q_2).
+\]
+
+\bigskip
+\noindent\underline{Reciproc.}
+
+\noindent $H$ este subgrup al lui $(\mathbb{Z},+)$ $\Rightarrow$ $H=n\mathbb{Z}$.
+
+\noindent $0\in H$
+
+\noindent $H=\{0\}$: \quad $\{0\} = \{0y \mid y\in\mathbb{Z}\}$.
+
+\noindent Pp.\ $H\neq\{0\}$.
+
+\[
+H^+ = \{x\in H \mid x>0\}.
+\]
+
+\noindent Fie $n$ cel mai mic element din $H^+$
+
+\noindent Dem.\ că $H=n\mathbb{Z}$.
+
+\bigskip
+\noindent (prin inducție)\footnote{cuvântul/simbolul exact e neclar în original -- se pare că indică un argument prin inducție.} $x=nq$.
+
+\noindent $q=1 \Rightarrow x=n$
+
+\noindent $nk\in H \Rightarrow n(k+1)\in H \Rightarrow nk+n\in H$.
+
+\noindent Deci $n\mathbb{Z}\subseteq H$
+
+\bigskip
+\noindent Presupunem\footnote{,,Pp.'' -- ar putea însemna şi ,,prin propoziția [împărțirii cu rest]''.} $x=nq+r$.
+
+\noindent Pp.\ $r\neq 0 \Rightarrow r=x-nq\in H$.
+
+\bigskip
+\noindent\underline{\textbf{Congruențe la stânga (dr.) pe un grup.}}
+
+\noindent\underline{\textbf{Th.\ lui Lagrange.}}
+
+\bigskip
+\noindent Fie $G$ un grup, $H\subseteq G$
+
+\[
+R_H^s = \{(x,y)\in G\times G \mid x^{-1}y\in H\}.
+\]
+\[
+R_H^d = \{(x,y)\in G\times G \mid xy^{-1}\in H\}.
+\]
+

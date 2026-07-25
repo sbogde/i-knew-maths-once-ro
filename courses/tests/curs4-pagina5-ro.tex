@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent $xR_H^s y \Leftrightarrow (x,y)\in R_H^s$.
+
+\noindent $x\equiv_s y \pmod H \Leftrightarrow x^{-1}y\in H$.
+
+\bigskip
+\noindent $x\equiv_s y \pmod H \Leftrightarrow y\equiv_s x \pmod H$ $(\forall)\, x,y\in G$.
+
+\noindent $x\equiv_s y \pmod H$, $y\equiv_s z \pmod H \Rightarrow x\equiv_s z \pmod H$
+
+\bigskip
+\noindent $x\equiv_s y \pmod H \Rightarrow zx\equiv_s zy \pmod H$. \ $(\forall)\, x,y\in G$.\footnote{,,z'' e neclar în original (ar putea părea o cifră ,,2''), dar sensul se potrivește cu compatibilitatea la stânga stabilită pe pagina anterioară ($xRy\Rightarrow zxRzy$).}
+
+\bigskip
+\noindent\underline{Obs}: Dacă $R$ este o relație de echivalență pe $G$ compatibilă cu înmulțirea la stânga $\Rightarrow$ $\exists\, H\leq G$ a.î.\ $R=R_H^s$
+
+\[
+H \overset{\text{def}}{=} [e]_R = \{x\in G \mid xRe\}.
+\]
+
+\noindent $x,y\in H \overset{?}{\Rightarrow} xy\in H$.
+
+\noindent $xRe$
+
+\noindent $yRe$
+
+\noindent $\Rightarrow xyRe \Rightarrow xy\in H$.
+
+\bigskip
+\noindent Dem.\ că $R=R_H^s$.
+
+\noindent Fie $(x,y)\in R \Leftrightarrow xRy \Leftrightarrow eRx^{-1}y \Leftrightarrow x^{-1}yRe \Leftrightarrow x^{-1}y\in H$
+
+\noindent $\Leftrightarrow (x,y)\in R_H^s$.
+
+\bigskip
+\noindent\underline{Prop}: $G$=grup şi $H\leq G$; iar $a\in G$ a.î.
+
+\[
+[a]_{R_H^s} = aH \overset{\text{def}}{=} \{ah \mid h\in H\}
+\]
+
+\noindent = clasa la stânga de reprezentant $a$ după subgrupul $H$.
+
+\bigskip
+\noindent Pp.\ că $x\in[a]_{R_H^s} \Rightarrow x\equiv_s a \pmod H \Rightarrow a\equiv_s x \pmod H$
+
+\noindent $\Leftrightarrow a^{-1}x\in H \Leftrightarrow x=ah,\ h\in H$.
+
+\bigskip
+\noindent Fie $\{a_i\}_{i\in I}$ transversală la dreapta a lui $H$ în $G$.
+
+\[
+\{a_i\}_{i\in I} \xrightarrow{\ \xi\ } \{a_i^{-1}\}_{i\in I} \qquad
+\begin{aligned}
+&(\forall)\, i\neq j \Rightarrow a_i \not\equiv_s a_j \pmod H\\
+&(\forall)\, x\in G,\ \exists!\, i\in I \text{ a.î. } x\equiv_s a_i \pmod H.
+\end{aligned}
+\]
+
+\noindent $\xi$ = bij.
+
+\[
+\text{Card}(I) = [G:H]
+\]
+
+\noindent = indicele lui $H$ în $G$. (numărul claselor de resturi la stânga (dr.) după subgrupul $H$).
+
+\end{document}
