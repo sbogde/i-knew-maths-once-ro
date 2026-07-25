@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent ($\Leftarrow$)\footnote{simbolul exact de la începutul acestei linii e neclar în original -- se pare că marchează cealaltă implicaţie a echivalenţei începute pe pagina anterioară.} \ $(a,n)=1 \Rightarrow \exists\,b,q$ a.î.\ $ab+nq=1$.
+
+\[
+\Rightarrow 1\equiv ab \pmod n \Rightarrow \hat 1=\widehat{ab}=\hat a\hat b \Rightarrow \hat a\in U(\mathbb{Z}_n).
+\]
+
+\bigskip
+\noindent $\Rightarrow$ ord $U(\mathbb{Z}_n) = \varphi(n) \Rightarrow (\hat a)^{\varphi(n)} = \hat 1.$
+
+\[
+\Rightarrow a^{\varphi(n)} \equiv 1 \pmod n
+\]
+\[
+a^{\varphi(p)} \equiv 1 \pmod p.
+\]
+
+\bigskip
+\noindent\underline{Dem.\ T.\ Fermat}: \ $(p,a)=1 \Rightarrow a^{\varphi(p)}\equiv 1 \pmod p$
+
+\noindent $p$=prim $\Rightarrow \varphi(p)=p-1 \Rightarrow a^{p-1}\equiv 1 \pmod p$.
+
+\bigskip
+\noindent\underline{Exp}:
+
+\noindent Grupul $U(\mathbb{Z}_p)$, $p$=prim e ciclic.
+
+\bigskip
+\noindent $p$=prim $\Rightarrow U(\mathbb{Z}_p) = \mathbb{Z}_p\setminus\{\hat 0\}$.
+
+\noindent $\Rightarrow$ ord$\big(U(\mathbb{Z}_p)\big)=p-1$.
+
+\bigskip
+\noindent Fie $n=\exp\big(U(\mathbb{Z}_p)\big) \mid p-1$,
+
+\noindent \big(cel mai mare ord.\ pt.\ un elem.\ de grup\big).
+
+\[
+\hat a^n = \hat 1 \quad (\forall)\,\hat a\in\mathbb{Z}_p\setminus\{\hat 0\}.
+\]
+
+\noindent $X^n-1\in\mathbb{Z}_p[X]$ -- toate cele $p-1$ elemente sunt rădăcini ale acestui polinom.
+
+\[
+\Rightarrow \exp\big(U(\mathbb{Z}_p)\big) = p-1 \ \Rightarrow \ \exists\,\hat a\in\mathbb{Z}_p, \ \text{ord}(\hat a)=p-1.
+\]
+
+\noindent $\Rightarrow U(\mathbb{Z}_p)$=ciclic.
+
+\bigskip
+\noindent\underline{Exp}: \ (1) $(\forall)\,n\in\mathbb{N}^*$ \ $\exists!\,H\leq\mathbb{C}^*$ de ordin $n$.
+
+\noindent (2) $(\forall)$ subgrup finit al lui $\mathbb{C}^*$ este ciclic.
+
+\[
+U_n = \{z\in\mathbb{C}^* \mid z^n=1\} \leq \mathbb{C}^*
+\]
+
+\end{document}

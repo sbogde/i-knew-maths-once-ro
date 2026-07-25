@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent Ele sunt adevărate prop:
+
+\begin{enumerate}
+\item[1.] $\big(a,(b,c)\big) = \big((a,b),c\big)$
+\item[2.] $(ca,cb) = c(a,b)$.
+\item[3.] dacă $(a,b)=1$ şi $(a,c)=1 \Rightarrow (a,bc)=1$.
+
+\noindent generalizare
+
+\[
+(a,b_i)=1,\ i=\overline{1,n} \ \Rightarrow \ (a,\,b_1b_2\cdots b_n)=1.
+\]
+
+\item[4.] $a\mid bc$, $(a,b)=1 \ \Rightarrow \ a\mid c$
+
+\item[5.] $\left.\begin{aligned} a&\mid c\\ b&\mid c\\ (a,b)&=1\end{aligned}\right\} \Rightarrow ab\mid c$
+
+\noindent generalizare: \quad $m_i\mid c$, \ $(m_i,m_j)=1 \ \Rightarrow \ m_1m_2\cdots m_n\mid c$
+
+\item[6.] $(a,b)=1 \Rightarrow$ [continuare neclară în original: fragmentul vizibil e ,,$c,ab$''.]\footnote{proprietatea 6 e incompletă/neclară în original -- posibil să implice $(ab,c)$, dar formularea exactă nu e sigură.}
+\end{enumerate}
+
+\bigskip
+\noindent (1) evident.
+
+\noindent $(b,c)=d$.\footnote{rolul exact al acestei notaţii în demonstraţie e neclar în original.}
+
+\bigskip
+\noindent (3). \ $1=(a,b)=(a,c)$
+
+\bigskip
+\noindent (4) \ $a\mid bc \Rightarrow (a,bc)=a$
+
+\[
+(a,c) \overset{?}{=} \big((a,bc),c\big) = \big(a,(bc,c)\big)
+\]
+\[
+\Rightarrow (a,c)=a \ \Rightarrow \ a\mid c
+\]
+\noindent\footnote{pasul algebric din mijloc e foarte compactat în original şi nu poate fi reconstituit cu certitudine deplină -- te rog verifică-l.}
+
+\bigskip
+\noindent (5). \ $(ab,c)=$ \ [pagina se întrerupe aici.]
+
+\bigskip
+\noindent Fie $p$ = nr.\ nat.\ ireductibil $\Rightarrow p$=prim
+
+\noindent\underline{Dem}: R.A.\ (reducere la absurd) \ $p\neq$prim $\Rightarrow \exists\,a,b\in\mathbb{N}$ a.î.
+
+\[
+p\mid ab,\quad p\nmid a,\quad p\nmid b
+\]
+\[
+\Rightarrow (p,a)=1 \text{ şi } (p,b)=1 \overset{(3)}{\Longrightarrow} (p,ab)=1
+\]
+\[
+\Rightarrow p=1 \quad \times.
+\]
+
+\end{document}

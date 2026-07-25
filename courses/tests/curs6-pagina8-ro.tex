@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent R.A.: $\exists\,a\in G$ a.î.\ ord$\,a\nmid m$.
+
+\noindent $\Rightarrow \big[\text{ord}\,a,\,m\big] > m$ \quad căci $m=\max S$.
+
+\bigskip
+\noindent $\Rightarrow (\forall)\,a\in G \Rightarrow$ ord$\,a\mid m$.
+
+\[
+a^m = \big(a^{\text{ord}\,a}\big)^{q_a} = e \ \Rightarrow \ (\forall)\,a\in G,\ a^m=e.
+\]
+
+\bigskip
+\noindent b) $m\mid$ ord$\,G$. $\Rightarrow$ orice divizor prim al lui $m$ e div.\ al lui ord$\,G$.
+
+\noindent Reciproc dacă $p$=div.\ prim al lui ord$\,G \overset{\text{Cauchy}}{\Longrightarrow} \exists\,a\in G$ a.î.
+
+\noindent ord$(a)=p$.
+
+\bigskip
+\noindent (c) evident
+
+\bigskip
+\noindent\fbox{T.\ lui Euler}: \ Dacă $n\in\mathbb{N}$, $a\in\mathbb{Z}$. Atunci.
+
+\[
+a^{\varphi(n)} \equiv 1 \pmod n, \quad \big(\Leftrightarrow n\mid a^{\varphi(n)}-1\big).
+\]
+\[
+\varphi(n) = \big|\{k\in\{1,\ldots,n\} \mid (k,n)=1\}\big|.
+\]
+
+\bigskip
+\noindent\fbox{T.\ lui Fermat}: \ $p$=prim, $a\in\mathbb{Z}$, $p\nmid a$
+
+\noindent $\Rightarrow a^{p-1}\equiv 1 \pmod p$.
+
+\bigskip
+\noindent\underline{Dem}: $\bar E$.\footnote{eticheta exactă de aici e neclară în original.}
+
+\noindent Fie $(M,\cdot)$=monoid. \ $U(M)$=mulţ.\ el.\ inversabile.
+
+\bigskip
+\noindent $U(M)\neq\varnothing$ \ $(e\in U(M))$.
+
+\noindent $U(M)$ stabil în raport cu $\cdot$
+
+\noindent (un chenar în original: el.\ inversabil.)
+
+\bigskip
+\noindent $\Rightarrow (U(M),\cdot)$ = grupul unităţilor monoidului $M$.
+
+\bigskip
+\noindent Iau $(\mathbb{Z}_n,\cdot)$=monoid.\footnote{în original apare $(\mathbb{Z}_n^*,\cdot)$; corectat aici la $\mathbb{Z}_n$, deoarece $U(\mathbb{Z}_n)$ (mulțimea unităților) e ceea ce se determină, nu punctul de plecare.}
+
+\bigskip
+\noindent $\hat x$ e unitate $\Leftrightarrow (x,n)=1$
+
+\bigskip
+\noindent ($\Rightarrow$) \ $\hat a\in U(\mathbb{Z}_n) \Rightarrow \exists\,\hat b$ a.î.\ $\hat a\hat b=\hat 1 \Rightarrow \widehat{ab}=\hat 1$
+
+\[
+\Rightarrow ab\equiv 1 \pmod n \Rightarrow n\mid 1-ab \Rightarrow 1-ab=nq.
+\]
+\[
+1=ab+nq \Rightarrow (a,n)=1.
+\]
+
+\end{document}

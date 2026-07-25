@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amscd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\fbox{\textbf{CURS 6}}\\[2pt]
+\underline{(ALGEBRA)}
+\end{center}
+\begin{flushright}
+\textit{8-XI-94}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{Ordinul unui element}}
+
+\bigskip
+\noindent\underline{Anexa I}: -- Elemente de aritmetică în $\mathbb{N}$.
+
+\bigskip
+\noindent\underline{Sistem Peano}: $(A,a,s)$ ; $a\in A$; $s:A\to A$,\footnote{în original apare ,,$s:A\to B$''; corectat aici la $A\to A$, cum cere definiția unui sistem Peano.} $A\neq\varnothing$
+
+\begin{enumerate}
+\item[1)] $s(x)\neq a$ $(\forall)\,x\in A$, \ $\big(s(A)=A\setminus\{a\}\big)$.
+\item[2)] $s$ injectivă.
+\item[3)] Dacă $M\subseteq A$ are pp.\ $\begin{cases} a\in M \\ x\in M \Rightarrow s(x)\in M \end{cases} \Rightarrow M=A$.
+\end{enumerate}
+
+\bigskip
+\noindent\fbox{T1}. \ Dacă $(A,a,s)$, $(B,b,t)$ sisteme Peano $\Rightarrow$
+
+\noindent $\exists!\, f:A\to B$ a.î.\ $f(a)=b$, $f\circ s = t\circ f$.
+
+\noindent Mai mult,\footnote{fraza exactă e neclară în original.} $f$ e bijectivă.
+
+\[
+\begin{CD}
+A @>s>> A\\
+@VfVV @VVfV\\
+B @>t>> B
+\end{CD}
+\]
+
+\bigskip
+\noindent Fie $(\mathbb{N},0,s)$; \ $s:\mathbb{N}\to\mathbb{N}$.
+
+\noindent funcţ.\ succesor.
+
+\noindent $s(x)=x'$ -- succesorul lui $x$.
+
+\bigskip
+\noindent N.\ Becheanu -- Alg.\ ptr.\ perf.\ profesorale\footnote{referință bibliografică; titlul exact e reconstituit din formă compactată.}
+
+\bigskip
+\noindent\fbox{T2}: $\exists!\, e:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ \ $e\overset{\text{not}}{=}+$
+
+\noindent $A_1$: $e(m,0)=m$ $(\forall)\,m\in\mathbb{N}$.
+
+\noindent $A_2$: $e(m,n')=e(m,n)'$ $(\forall)\,m,n\in\mathbb{N}$ \quad $m+n'=(m+n)'$.
+
+\bigskip
+\noindent Rezultă $m+p=m+n \Rightarrow p=n$.
+
+\[
+(\mathbb{N},+,0) = \text{monoid comutativ cu simplificare.}
+\]
+
+\bigskip
+\noindent\fbox{T}: $\exists!\, \psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ a.î.
+
+\noindent $\psi(m,0)=0$\footnote{în original pare ,,$=m$''; corectat la $0$, cum cere definiția standard a înmulțirii (notația alăturată ,,$m\cdot 0$'' e la fel $0$, nu $m$).} $(\forall)\,m\in\mathbb{N}$: \quad $m\cdot 0=0$
+
+\noindent $\psi(m,n')=\psi(m,n)+m$ $(\forall)\,m,n\in\mathbb{N}$ \quad $mn'=mn+m$.
+
+\bigskip
+\noindent $(\mathbb{N},\cdot,1)$ = monoid comutativ cu simplificare.
+
+\noindent $mn=mp \Rightarrow n=p$.
+
+\noindent $m(n+p)=mn+mp$.
+
+\bigskip
+\noindent $(\mathbb{N},+,\cdot)$ = structură algebrică.
+
+\noindent $(\mathbb{N},\leq)$ = structură de ordine.
+
+\end{document}
