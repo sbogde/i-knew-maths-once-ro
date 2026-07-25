@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{\textbf{Ordinul unui element dintr-un grup.}}
+
+\bigskip
+\noindent\underline{Def}: Fie $G$=grup, $a\in G$. Spunem că $a$ este un elem.
+
+\noindent de ordin finit (element torsionar al gr.\ $G$) dacă $\exists\, k\in\mathbb{N}^*$
+
+\noindent a.î.\ $a^k=e$.
+
+\bigskip
+\noindent În acest caz $n=\min\{k \mid k\in\mathbb{N}^*, a^k=e\}$ s.n.\ \underline{ordinul lui $a$}
+
+\noindent $\overset{\text{not}}{=}$ ord $a$
+
+\bigskip
+\noindent dacă $\nexists\, k\in\mathbb{N}^*$ a.î.\ $a^k=e$ \quad $a$ e de ordin \underline{infinit}
+
+\bigskip
+\noindent $(\mathbb{C}^*,\cdot,1)$ \quad $z\in\mathbb{C}^*$ \quad $z=\cos 2\pi r + i\sin 2\pi r$, $r\in\mathbb{Q}$.
+
+\noindent elem.\ de ord.\ finit.
+
+\[
+r=\frac{m}{n} \quad m,n\in\mathbb{Z}, n>0. \qquad z^n = \cos 2\pi m + i\sin 2\pi m = 1.
+\]
+
+\noindent Ex: $(\forall)$ el.\ de ord.\ finit din $\mathbb{C}^*$ e de forma $\cos 2\pi r+i\sin 2\pi r$.
+
+\bigskip
+\noindent \textit{[notă laterală -- parțial neclară în original: pare o rezolvare a ecuației $nt=2k\pi$, cu concluzia $nt=\dfrac{\pi}{2}+k\pi=\dfrac{\pi(2k+1)}{2}$.]}\footnote{fragmentul lateral e prea compactat/neclar pentru o transcriere sigură; l-am parafrazat aici în loc să-l reconstitui linie cu linie.}
+
+\bigskip
+\noindent\underline{Lema 1}: Fie $G$=grup, $a\in G$.
+
+\noindent U.A.S.E:
+
+\begin{enumerate}
+\item[(1)] ord$(a)<\infty$.
+\item[(2)] $f:\mathbb{Z}\to G$ \quad $f(k)=a^k$ nu e inj.
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Dem}: $(1)\Rightarrow(2)$. \ Pp.\ ord$(a)=r \overset{\text{def}}{=} r\in\mathbb{N}^*$.
+
+\[
+\Rightarrow a^0=a^r=e, \ r\neq 0 \ \Rightarrow \ f \text{ nu e inj.}
+\]
+
+\bigskip
+\noindent $(2)\Rightarrow(1)$. \ $f$ nu e inj.\ $\Rightarrow \exists\, i\neq j\in\mathbb{Z}$ a.î.\ $f(i)=f(j)$.
+
+\noindent $(i<j)$.
+
+\[
+a^i=a^j \Rightarrow a^{j-i}=e.
+\]
+\[
+j-i=k>0
+\]
+
+\bigskip
+\noindent\underline{Consecință}: ord$(G)<+\infty \Rightarrow$ ord$(a)<\infty$ $(\forall)\,a\in G$.
+
+\bigskip
+\noindent $H=\{\cos 2\pi r+i\sin 2\pi r \mid r\in\mathbb{Q}\} \leq (\mathbb{C}^*,\cdot)$.
+
+\noindent $|H|=\infty$ şi toate elementele sale sunt
+
+\end{document}

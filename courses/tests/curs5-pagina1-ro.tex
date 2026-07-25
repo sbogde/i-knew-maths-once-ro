@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\fbox{\textbf{ALGEBRA}}\\[2pt]
+\fbox{(Curs 5)}
+\end{center}
+\begin{flushright}
+\textit{11.XI.1995}\footnote{data exactă e neclară în original -- ar putea fi şi 1.XI, sau anul 1994.}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{T.\ lui Lagrange}}
+
+\bigskip
+\noindent Fie $(G,\cdot)$ grup.\ $H\leq G$.
+
+\noindent Dacă $x,y\in G$ \quad $x\equiv_s y \pmod H \overset{\text{def}}{\Longleftrightarrow} x^{-1}y\in H$.
+
+\[
+R_H^s = \{(x,y)\in G\times G \mid x^{-1}y\in H\} \subseteq G\times G.
+\]
+
+\noindent $R_H^s$ = rel.\ de ech.\ pe $G$, ce e compatibilă la st.\ cu $\cdot$.
+
+\[
+xR_H^s y \Rightarrow zxR_H^s zy
+\]
+
+\noindent Pt.\ $a\in G$, \ $[a]_{R_H^s} = aH = \{ah \mid h\in H\}$ = clasa de resturi la stânga
+
+\bigskip
+\noindent $x\equiv_d y \pmod H \overset{\text{def}}{\Longleftrightarrow} xy^{-1}\in H$.
+
+\[
+R_H^d = \{(x,y)\in G\times G \mid xy^{-1}\in H\} = \text{rel.\ de ech.\ compat.\ la dr.\ cu } \cdot.
+\]
+
+\[
+xR_H^d y \Rightarrow xzR_H^d yz.
+\]
+
+\[
+[a]_{R_H^d} = Ha = \{ha \mid h\in H\}.
+\]
+
+\bigskip
+\noindent Deci $T=\{a_i\}_{i\in I}$ = transversală la stânga a lui $H$ în $G$
+
+\noindent = sist.\ complet de reprezentanți
+
+\begin{enumerate}
+\item[1)] $i\neq j \Rightarrow a_i \not\equiv_s a_j \pmod H$
+\item[2)] $(\forall)\, x\in G$ \ $\exists\, i\in I$ a.î.\ $x\equiv_s a_i \pmod H$
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Not.} $T^{-1} = \{a_i^{-1}\}_{i\in I}$
+
+\noindent $T$ = transv.\ la stânga $\Rightarrow$ $T^{-1}$ = transv.\ la dreapta.
+
+\[
+T \xrightarrow{\ } T^{-1}, \qquad a_i \mapsto a_i^{-1} \text{ e bijecție} \ \Rightarrow \ \text{card}\, T = \text{card}\, T^{-1}
+\]
+
+\noindent = indicele lui $H$ în $G \overset{\text{not}}{=} [G:H]$
+
+\noindent ord $G$ = card $G$ = $|G|$.
+
+\bigskip
+\noindent\fbox{T.\ Lagrange} \quad Dacă $(G,\cdot)$ = grup finit şi $H$ un subgr.\ al lui $G$,
+
+\noindent atunci:
+
+\[
+\boxed{|G| = |H|\cdot [G:H]}
+\]
+
+\noindent sau, atunci: \quad $\big($ord $G$ = ord $H\cdot [G:H]\big)$
+
+\bigskip
+\noindent\underline{Aplicație:} ord $S_n = n!$
+
+\[
+S_n = \{\sigma : \{1,2,\ldots,n\}\to\{1,2,\ldots,n\} \mid \sigma \text{ = bijectivă}\}.
+\]
+
+\noindent [Notăm:]\footnote{fragmentul de legătură de aici e foarte compactat în original.}
+\[
+\sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ \sigma(1) & \sigma(2) & \cdots & \sigma(n) \end{pmatrix}
+\]
+
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\fbox{Corolar}: $G$=grup, $a\in G$, ord $a=n$ şi $n=st$.
+
+\noindent Atunci ord $a^s=t$.
+
+\bigskip
+\noindent\underline{Dem} \ ord $a^s = \dfrac{n}{(s,n)} = \dfrac{n}{s} = t$.
+
+\bigskip
+\noindent\fbox{Lema 3}: Fie $G$=grup, $a\in G$, ord$(a)=n$ şi $H=\{e,a,\ldots,a^{n-1}\}$.
+
+\noindent Atunci: \ $H\leq G$ şi ord $H=n=$ ord$(a)$.
+
+\bigskip
+\noindent\underline{Dem}: \ $a^i\cdot a^{n-i}=e$. \quad ($a^{n-i}\in H$?) \quad $i=\overline{1,n-1}$.
+
+\bigskip
+\noindent $a^i,a^j\in H \Rightarrow a^{i+j}\in H$.
+
+\[
+i+j=qn+r, \quad 0\leq r<n.
+\]
+\[
+a^{i+j}=a^{qn+r}=a^r\in H.
+\]
+
+\bigskip
+\noindent pp.\ $a^i=a^j$, \ $0\leq i,j\leq n-1$, \ $i\neq j$.
+
+\noindent pp.\ $i<j \Rightarrow a^{j-i}=e$, \ $0\leq j-i<n$.
+
+\[
+\Rightarrow n\mid(j-i) \Rightarrow i=j \ \ \times.
+\]
+
+\bigskip
+\noindent\fbox{Teorema}. \ Fie $G$ un grup finit. Atunci:
+
+\begin{enumerate}
+\item[(1)] $(\forall)\,a\in G$, ord $a<\infty$.
+\item[(2)] $(\forall)\,a\in G$, ord $a\mid$ ord $G$.
+\item[(3)] $x^{\text{ord}\,G}=e$ $(\forall)\,x\in G$.
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Dem}:
+
+\noindent (1) evident
+
+\noindent (2) $\overset{(4)}{=}$ de t.\ lui Lagrange \ (ord$(a)=n$, $H=\{e,\ldots,a^{n-1}\}\leq G$
+
+\noindent $\Rightarrow n\mid$ ord $G$).\footnote{referința ,,(4)'' de aici nu e clară din context.}
+
+\bigskip
+\noindent (3) $x\in G \Rightarrow$ ord $x\mid$ ord $G \Rightarrow$ ord $G = p\cdot$ord $x$
+
+\[
+x^{\text{ord}\,G} = x^{p\cdot\text{ord}\,x} = e.
+\]
+
+\end{document}
