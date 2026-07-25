@@ -446,3 +446,89 @@ j-i=k>0
 \noindent $H=\{\cos 2\pi r+i\sin 2\pi r \mid r\in\mathbb{Q}\} \leq (\mathbb{C}^*,\cdot)$.
 
 \noindent $|H|=\infty$ şi toate elementele sale sunt
+
+
+
+% course 5, page 7
+\section*{Curs 5 - Pagina 7}
+
+\noindent\textit{[fragment neclar la începutul paginii: $(\mathbb{N},+,\cdot,\leq,1)$ -- relația cu restul paginii nu e clară; posibil rest dintr-o idee neterminată de pe pagina anterioară.]}
+
+\bigskip
+\noindent\underline{Lemă}. Fie $(G,\cdot,e)$=grup, $a\in G$, $n\in\mathbb{N}^*$
+
+\noindent U.A.S.E:
+
+\begin{enumerate}
+\item[(1)] ord $a=n$.
+\item[(2)] (i) $a^n=e$,
+
+\noindent (ii) $a^h=e$, $h\in\mathbb{Z} \Rightarrow n\mid h$
+\end{enumerate}
+
+\bigskip
+\noindent (1)$\Rightarrow$(2). \ evident.
+
+\bigskip
+\noindent (2)$\Rightarrow$(1) \quad $h=qn+r$ \quad $0\leq r<n$.
+
+\[
+a^h = a^{qn+r} = a^{qn}\cdot a^r = (a^n)^q\cdot a^r = a^r
+\]
+\[
+a^h=e
+\]
+\[
+\Rightarrow a^r=e
+\]
+
+\noindent\footnote{în original, o linie de forma ,,dacă $r>0$, $a^r=e\Rightarrow r=0$'' apare tăiată/eliminată aici, înlocuită cu argumentul de mai jos.}
+
+\bigskip
+\begin{center}
+$\big(a^n=e$ şi $0<t<n \Rightarrow a^t\neq e\big)$
+\end{center}
+
+\noindent pp.\ $a^t=e=a^n \Rightarrow a^{n-t}=e \overset{\text{Lemă}}{\Longrightarrow} n\mid n-t$ \ imposibil.
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw (0,0) -- (4,0);
+\draw (0,-0.1) -- (0,0.1) node[above] {};
+\draw (0,0) node[below] {$0$};
+\draw (1.5,-0.15) -- (1.5,0.15);
+\draw (1.5,0) node[below] {$t$};
+\draw (3,-0.15) -- (3,0.15);
+\draw (3,0) node[below] {$n$};
+\draw (1.5,0.15) -- (3,0.15);
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+\noindent\underline{Prop}: Fie $(G,\cdot)$=grup, $a\in G$, ord$(a)=n$.
+
+\noindent $h\in\mathbb{Z}$. Atunci ord $a^h = \dfrac{n}{(n,h)}$.
+
+\bigskip
+\noindent În particular ord $a^h=n \Leftrightarrow (n,h)=1$.
+
+\bigskip
+\noindent\underline{Dem}: Fie $d=(h,n)$ = c.m.m.d.c.
+
+\[
+h=dh_1, \quad n=dn_1
+\]
+
+\noindent\underline{Lema}: ord $a^h = n_1$ \qquad $b=a^h$.
+
+\[
+b^{n_1} = a^{hn_1} = a^{dh_1n_1} = a^{nh_1} = (a^n)^{h_1} = e.
+\]
+
+\noindent pp.\ $b^t=e=a^{ht} \Rightarrow n\mid ht \Rightarrow n_1d\mid dh_1t \Rightarrow n_1\mid h_1t$
+
+\noindent dar $(h_1,n_1)=1 \Rightarrow n_1\mid t$
+
+\[
+\Rightarrow \text{ord } b=n_1 \Leftrightarrow \text{ord } a^h = \frac{n}{(n,h)}
+\]
