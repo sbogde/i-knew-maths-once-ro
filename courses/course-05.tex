@@ -596,3 +596,86 @@ a^{i+j}=a^{qn+r}=a^r\in H.
 \[
 x^{\text{ord}\,G} = x^{p\cdot\text{ord}\,x} = e.
 \]
+
+
+
+
+% course 5, page 9
+\section*{Curs 5 - Pagina 9}
+
+\begin{center}
+\fbox{\textbf{Teorema (Cauchy)}}
+\end{center}
+
+\bigskip
+\noindent Dacă $G$ este un gr.\ abelian finit şi $p\mid$ ord $G$, $p$=prim
+
+\noindent Atunci $\exists\, a\in G$, ord $a=p$.
+
+\bigskip
+\noindent\underline{Dem}:
+
+\noindent Not $n=$ ord $G$, $n\geq p$.
+
+\noindent inducție după $n$.
+
+\bigskip
+\noindent $n=p=$ ord $G$.
+
+\noindent $p$ prim $\Rightarrow p>1 \Rightarrow \exists\, a\neq e$. \ ord $a\mid$ ord $G=p$.
+
+\noindent $a\neq e \Rightarrow$ ord $a>1$
+
+\noindent $p=$prim
+
+\noindent $\Rightarrow$ ord $a=p$.
+
+\bigskip
+\noindent\big(ord $G=p$=prim $\Rightarrow (\forall)\,a\in G\setminus\{e\}$ avem ord$(a)=p$\big).
+
+\bigskip
+\noindent pp $n>p$, $p\mid n$, şi că afirmația e adevărată pt.\ gr.\ de ordin $<n$.
+
+\bigskip
+\noindent\underline{Cazul I}: \ $\exists\, a\in G$ a.î.\ $p\mid$ ord$(a)$. \ $\Rightarrow$ ord$(a)=p\cdot l$.\footnote{simbolul exact folosit pentru acest exponent e neclar în original -- din raționamentul matematic trebuie să fie $l=\text{ord}(a)/p$.}
+
+\noindent Iar $b=a^l \Rightarrow$ ord $b=p$.
+
+\bigskip
+\noindent\underline{Cazul II}: \ $\nexists\, a\in G$ a.î.\ $p\mid$ ord$(a)$.
+
+\bigskip
+\noindent Fie $a\in G$, $a\neq e$. \ pp.\ ord$(a)=m \Rightarrow p\nmid m$
+
+\noindent Fie $H=\{e,\ldots,a^{m-1}\}\trianglelefteq G$ \ (pt.\ că $G$ e abelian).
+
+\noindent Fie $\dfrac{G}{H}$. \ $\Rightarrow \left|\dfrac{G}{H}\right| = [G:H] < n$ \ (din Lagrange)
+
+\bigskip
+\noindent ord $G = n = m\cdot[G:H]$.
+
+\[
+p\mid n = m\cdot[G:H]
+\]
+\[
+p\nmid m
+\]
+\[
+\Rightarrow p\mid [G:H] = \left|\dfrac{G}{H}\right| < n.
+\]
+
+\bigskip
+\noindent\underline{ip.\ de inducție} $\Rightarrow \exists\, \hat b\in \dfrac{G}{H}$ a.î.\ ord $\hat b=p$; \ $b\in G$=finit.\ $G$
+
+\[
+\Rightarrow \text{ord } b<\infty.
+\]
+\[
+b^t=e
+\]
+\[
+\hat e=\widehat{b^t}=\hat b^t \Rightarrow p\mid t.
+\]
+
+\noindent\textit{cu ip.\ de la cazul II.}\footnote{semnul de la finalul paginii pare mai degrabă un marcaj de tipul ,,q.e.d.'' decât o contradicție: $p\mid t=\text{ord}(b)$ e exact faptul care încheie Cazul II, reducându-l la tehnica deja stabilită în Cazul I (elementul $b^{t/p}$ ar avea ordin $p$).}
+
