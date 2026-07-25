@@ -418,3 +418,72 @@ n \overset{\text{not}}{=} \min\{k\in\mathbb{N}^* \mid a^k=e\} = \text{ord}(a).
 
 \bigskip
 \noindent ord $a^h = n \Leftrightarrow (n,h)=1$
+
+
+
+
+
+% course 6, page 7
+\section*{Curs 6 - Pagina 7}
+
+\noindent ord$(a)=n$. \ $\Rightarrow \langle a\rangle = \{e,a,\ldots,a^{n-1}\}$.
+
+\noindent $\Rightarrow$ ord$(a) = |\langle a\rangle|$
+
+\noindent când $|G|<\infty$
+
+\bigskip
+\noindent\fbox{Teoremă}: \ Fie $G$ = un grup abelian finit.
+
+\[
+S=\{\text{ord}(a) \mid a\in G\} \subseteq \mathbb{N}^*.
+\]
+
+\begin{enumerate}
+\item[(1)] $n\in S$ şi $d\mid n \Rightarrow d\in S$.
+\item[(2)] $m,n\in S$ şi $(m,n)=1 \Rightarrow mn\in S$.
+\item[(3)] $m,n\in S \Rightarrow [m,n]\in S$.
+\item[(4)] $m=\max S \Rightarrow$
+\begin{enumerate}
+\item[(a)] $x^m=e$ $(\forall)\,x\in G$.
+\item[(b)] $m,n$ au aceiaşi divizori, $n=$ord$\,G$
+\item[(c)] $x^n=e$ $(\forall)\,x\in G \Rightarrow m\mid n$.
+\end{enumerate}
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Dem}:
+
+\noindent (1) şi (2) -- ca la Lema anterioară.\footnote{formularea exactă de aici e neclară în original -- se pare că trimite spre demonstraţia deja făcută a acestor două proprietăţi.}
+
+\bigskip
+\noindent (3). \ Fie $a,b\in G$ a.î.\ ord $a=m$, ord $b=n$.
+
+\[
+m=p_1^{\alpha_1}\cdots p_r^{\alpha_r}
+\]
+\[
+n=p_1^{\beta_1}\cdots p_r^{\beta_r}
+\]
+\[
+f_i=\max\{\alpha_i,\beta_i\}
+\]
+
+\noindent $\exists\, c_i\in G$ a.î.\ ord $c_i=p_i^{f_i}$ $(\forall)\,i=\overline{1,r}$.
+
+\bigskip
+\noindent $p_i^{f_i}\mid m$ sau $n$\footnote{acest pas, care justifică de ce $p_i^{f_i}\in S$ (fiind un divizor al lui $m$ sau al lui $n$, aplicând proprietatea (1)), e compactat în original.}
+
+\[
+\big(p_i^{f_i},\,p_j^{f_j}\big)=1 \ \Rightarrow \ \text{ord}(c_ic_j) = p_i^{f_i}p_j^{f_j}
+\]
+
+\bigskip
+\noindent Prin inducţie -- ord$(c_1\cdots c_r) = p_1^{f_1}\cdots p_r^{f_r} = [m,n]$
+
+\bigskip
+\noindent (4) Fie $g\in G$ a.î.\ ord $g=m$
+
+\begin{enumerate}
+\item[(a)] ord$(a)\mid m$ $(\forall)\,a\in G$.
+\end{enumerate}
