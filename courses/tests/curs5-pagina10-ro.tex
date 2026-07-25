@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{Lema 4}: Fie $(G,\cdot,e)$=gr.\ abelian finit.
+
+\[
+S=\{\text{ord } a \mid a\in G\} \subseteq \mathbb{N}^*.
+\]
+
+\bigskip
+\noindent atunci:
+
+\begin{enumerate}
+\item[(1)] dacă $m\in S$ şi $d\mid m$, $d\in\mathbb{N} \Rightarrow d\in S$.
+\item[(2)] $m,n\in S$. \ dacă $(m,n)=1 \Rightarrow mn\in S$.
+\item[(3)] $m,n\in S \Rightarrow [m,n]\in S$.
+\end{enumerate}
+
+\bigskip
+\noindent\textit{[notă laterală, citată ca fapt general]}\footnote{eticheta din original (,,infinit / abelian'') e neclară -- pare o notă că faptul de mai jos e valabil în general pentru elemente ce comută, nu doar în cazul de față.}: \ dacă $a,b\in G$, ord$(a)$, ord$(b)$, $ab=ba$, $\big(\text{ord } a,\text{ord } b\big)=1 \Rightarrow \text{ord}(ab)=\text{ord}(a)\cdot\text{ord}(b)$.
+
+\bigskip
+\noindent\big($GL_2(\mathbb{Z})$, 2 matrici de ordin finit al căror produs să
+
+\noindent fie de ordin $\infty$.\big)
+
+\bigskip
+\noindent\underline{Dem}:
+
+\bigskip
+\noindent (2) \ $\exists\, a,b\in G$ \ ord $a=m$
+
+\noindent ord $b=n$
+
+\[
+(ab)^{mn} = (a^m)^n(b^n)^m = e.
+\]
+
+\noindent pp.\ $(ab)^h=e \overset{?}{\Longrightarrow} mn\mid h$.
+
+\[
+a^{hn}=b^{-hn}=e
+\]
+\[
+m\mid hn
+\]
+\[
+(m,n)=1
+\]
+\[
+\Rightarrow m\mid h
+\]
+
+\noindent analog $n\mid h$
+
+\[
+(m,n)=1 \Rightarrow mn\mid h
+\]
+
+\bigskip
+\noindent (3)
+
+\noindent $o(a)=m$
+
+\noindent $o(b)=n$
+
+\end{document}
