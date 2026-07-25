@@ -169,3 +169,76 @@ f(\alpha) = \begin{pmatrix} 1 & 2 & \cdots & n-1 & n \\ \alpha(1) & \alpha(2) & 
 \[
 = (n-1)!\cdot n.
 \]
+
+
+
+% course 5, page 3
+\section*{Curs 5 - Pagina 3}
+
+\noindent\underline{\textbf{Subgrup normal.\ Grup factor.}}
+
+\bigskip
+\noindent Câte transv.\ la stânga ale lui $H$ în $S_n$ există? \ $=\big((n-1)!\big)^n$.
+% \footnote{cuvântul de aici (,,det.'') e neclar în original.}
+
+\bigskip
+\noindent\underline{Lemă.} Fie $G$=grup, $N\leq G$.
+
+\noindent\underline{U.A.S.E}: 
+% [Vom arăta sunt echivalente:]
+
+\begin{enumerate}
+\item[(1)] $(\forall)\, a\in G, (\forall)\, x\in N \Rightarrow axa^{-1}\in N$.
+\item[(2)] $(\forall)\, a\in G \Rightarrow aN=Na$
+\item[(3)] $R_N^s = R_N^d$ ($\overset{\text{not}}{=} R_N$).
+\end{enumerate}
+
+\noindent\underline{Def.}  Un subgrup cu aceşti proprietăți va fi numit \underline{subgrup normal} al lui $G$
+
+\noindent (\underline{divizor normal}).
+
+\bigskip
+\noindent\underline{Dem}: $\big[G$=comutativ $\Rightarrow (\forall)$ subgrup e normal$\big]$
+
+\bigskip
+\begin{center}
+(2) $\Rightarrow$ (1) $\Rightarrow$ (3) $\Rightarrow$ (2)\footnote{în original acest ciclu de implicații e desenat ca o diagramă triunghiulară cu săgeți, nu liniar.}
+\end{center}
+
+\bigskip
+\noindent\underline{(2) $\Rightarrow$ (1)}, \ $x\in N$.
+
+\[
+ax\in aN=Na
+\]
+\[
+\Rightarrow \exists\, x_1\in N \text{ a.î. } ax=x_1a \ \Rightarrow \ axa^{-1}=x_1
+\]
+\[
+\Rightarrow axa^{-1}\in N.
+\]
+
+\bigskip
+\noindent\underline{(3) $\Rightarrow$ (2)}
+
+\[
+aN = [a]_{R_N^s} = [a]_{R_N^d} = Na
+\]
+
+\bigskip
+\noindent\underline{(1) $\Rightarrow$ (3)}
+
+\noindent\footnote{fragmentul introductiv de aici e neclar în original.} $(x,y)\in R_N^s \Leftrightarrow x^{-1}y\in N \Leftrightarrow y^{-1}x\in N$
+
+\[
+= x(y^{-1}x)x^{-1} \overset{(1)}{\Longrightarrow} xy^{-1}\in N \Rightarrow (x,y)\in R_N^d
+\]
+
+\bigskip
+\noindent\underline{Exp}: (normal) Grup factor.
+
+\noindent (1) $(\mathbb{Z},+,0)$, $H=n\mathbb{Z}$, $n\geq 0$.
+
+\noindent $H$ normal în $\mathbb{Z}$, \ $H\trianglelefteq\mathbb{Z}$.
+
+\noindent (2) $(S_3,\circ)$. \quad $\sigma = \begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}$ \quad $\sigma^2=\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}$, \ $\sigma^3=\begin{pmatrix}1&2&3\\1&2&3\end{pmatrix}$.
