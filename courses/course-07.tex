@@ -444,3 +444,81 @@ U \cong \frac{(\mathbb{R},+,0)}{(\mathbb{Z},+,0)}
 \noindent $f:\mathbb{R}\to\mathbb{C}$
 
 \noindent $f(x) = \cos 2\pi x + i\sin 2\pi x$.
+
+
+
+
+% course 7, page 7
+\section*{Curs 7 - Pagina 7}
+
+\noindent\underline{\textbf{Aplicaţii: \ Teorema de structură a gr.\ ciclice}}
+
+\bigskip
+\noindent Fie $(G,\cdot,e)$; $a\in G$ \quad $\langle a\rangle \overset{\text{not}}{=} \{a^h \mid h\in\mathbb{Z}\}$ = subgrupul ciclic
+
+\noindent al lui $G$ generat de $a\in G$.
+
+\[
+a^h =
+\begin{cases}
+\underbrace{a\cdot a\cdots a}_{h \text{ ori}}, & h=n\in\mathbb{N} \\
+e, & h=0. \\
+(a^{-1})^n, & h=-n\in\mathbb{N}
+\end{cases}
+\]
+
+\noindent $\langle a\rangle \leq G$.
+
+\bigskip
+\noindent $G$ s.n.\ ciclic dacă $\exists\,a\in G$ a.î.\ $G=\langle a\rangle$.
+
+\bigskip
+\noindent\underline{Obs}: \ Dacă ord $G=n<\infty \Rightarrow G$-ciclic $\Leftrightarrow \exists\,a\in G$ a.î.\ ord$\,a=n$.
+
+\noindent $G=\{e,a,\ldots,a^{n-1}\} = \langle a\rangle$.
+
+\bigskip
+\noindent (1) Grupurile $(\mathbb{Z},+,0)$, $(\mathbb{Z}_n,+,\hat 0)$, $n\geq 1$ sunt ciclice.
+
+\noindent (2) $(\forall)\,G$ grup ciclic atunci $G\cong (\mathbb{Z},+,0)$ \ pt.\ $G$ infinit
+
+\bigskip
+\noindent\underline{Dem}:
+
+\noindent $(\forall)\,h\in\mathbb{Z}$, $h=h\cdot 1 \Rightarrow \mathbb{Z} = \langle 1\rangle = \langle -1\rangle$
+
+\noindent $\mathbb{Z}_n = \langle\hat 1\rangle$.
+
+\bigskip
+\noindent $f: \mathbb{Z}\to G=\langle a\rangle$, $a\in G$.
+
+\noindent $f(h)=a^h$ \quad $f$ morfism surjectiv
+
+\bigskip
+\noindent $f$ inj.\ $\Rightarrow$ ker$f=\{0\}$.
+
+\noindent $f$ nu e inj.\ $\Rightarrow \{0\}\neq\text{ker}f\leq\mathbb{Z} \Rightarrow \exists!\,n\geq 1$ a.î.\ ker$f=n\mathbb{Z}$
+
+\[
+G=\text{Im}f \cong \frac{\mathbb{Z}}{\text{ker}f} =
+\begin{cases}
+\mathbb{Z}/\{0\} \cong \mathbb{Z}, & f=\text{inj}\\
+\mathbb{Z}/n\mathbb{Z} = \mathbb{Z}_n, & f\text{ nu e inj.}
+\end{cases}
+\]
+
+\bigskip
+\noindent $\mathbb{Z} \xrightarrow{\ 1_{\mathbb{Z}}\ } \mathbb{Z}$. \quad ker$\,1_\mathbb{Z} = 0_\mathbb{Z} \ \Rightarrow \ \text{Im}(1_\mathbb{Z}) = \mathbb{Z} \cong \dfrac{\mathbb{Z}}{\text{ker}\,1_\mathbb{Z}}$
+
+\bigskip
+\noindent\underline{\textbf{Teorema lui Cayley}}: \ $A\neq\varnothing$, $S_A = \{\sigma \mid \sigma:A\to A \text{ bij.}\}$.
+
+\bigskip
+\noindent Fie $(S_A,\circ,1_A)$ = grupul tuturor permutărilor mulţ.\ $A$.
+
+\noindent Un subgrup $H\leq S_A$ s.n.\ grup de permutări.
+
+\bigskip
+\noindent Dacă $f:G\xrightarrow{\ \sim\ }G'$, \quad $x^3=e$ \ $(\forall)\,x\in G \ \Rightarrow \ x'^3=e'$ \ $(\forall)\,x'\in G'$.
+
+\noindent $x'=f(x)$, $x\in G$, \quad $x'^3 = f(x^3) = f(e) = e'$.
