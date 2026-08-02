@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent Condiţia $R\subseteq R_f$ \ aici $R_N\subseteq R_f \Leftrightarrow N\subseteq\ker f$.
+
+\bigskip
+\noindent ($\Rightarrow$). \ $x\in N \Rightarrow e\equiv_s x \pmod N \Rightarrow (e,x)\in R_N$
+
+\[
+R_N\subseteq R_f \Big| \Rightarrow (e,x)\in R_f \Rightarrow f(x)=f(e)
+\]
+\[
+\Rightarrow f(x)=e' \Rightarrow x\in\ker f.
+\]
+
+\bigskip
+\noindent ($\Leftarrow$).
+
+\[
+(x,y)\in R_N \Rightarrow xy^{-1}\in N \Rightarrow f(xy^{-1})=e' \Rightarrow f(x)f(y)^{-1}=e' \Rightarrow f(x)=f(y)
+\]
+\[
+\Rightarrow xR_fy.
+\]
+
+\bigskip
+\noindent $f^*(\hat a\hat b) = f^*(\widehat{ab}) = f(ab) = f(a)f(b) = f^*(\hat a)\cdot f^*(\hat b) \ \Rightarrow \ f^*=\text{morf.}$
+
+\bigskip
+\begin{center}
+\underline{\textbf{Teorema fundamentală de izomorfism}}
+\end{center}
+
+\noindent\underline{Def}: Dacă $f:G\to G'$ morfism de grupuri, atunci
+
+\[
+\text{Im}\,f = f(G) \leq G'.
+\]
+
+\bigskip
+\noindent\fbox{T} \ Dacă $f:G\to G'$ morfism $\Rightarrow \text{Im}\,f \cong \dfrac{G}{\ker f}$.
+
+\bigskip
+\noindent\underline{Dem}:
+
+\[
+\begin{tikzcd}
+G \arrow[r,"f"] \arrow[d,"\pi"'] & \text{Im}\,f \subseteq G' \\
+\dfrac{G}{\ker f} \arrow[ur, dashed,"f^*"'] &
+\end{tikzcd}
+\]
+
+\bigskip
+\noindent $\text{Im}\,f=f(G) \Rightarrow f:G\to\text{Im}\,f$ e surj.\ $\Rightarrow f^*=$surj.
+
+\noindent $N=\ker f \Rightarrow f^*=$inj
+
+\noindent $\Rightarrow f^*=$izomorfism. \quad $f^*(\hat a) = f(a)$.
+
+\noindent $\hat a = a\,\ker f$.
+
+\bigskip
+\noindent Dacă $U=\{z\in\mathbb{C} \mid |z|=1\} \leq \mathbb{C}^*$.
+
+\[
+U \cong \frac{(\mathbb{R},+,0)}{(\mathbb{Z},+,0)}
+\]
+
+\noindent $f:\mathbb{R}\to\mathbb{C}$
+
+\noindent $f(x) = \cos 2\pi x + i\sin 2\pi x$.
+
+\end{document}

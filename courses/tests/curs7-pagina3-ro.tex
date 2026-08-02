@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent Mai mult, dacă avem $\big(\mathcal{L}_N(G),\subseteq\big)$, $\big(\mathcal{L}(G'),\subseteq\big)$=mulţ.\ ordonate
+
+\noindent $\Rightarrow \alpha,\beta$=monotone.
+
+\bigskip
+\noindent\underline{Dem}: \ (1) \ $f(e) = f(e\cdot e) = f(e)\cdot f(e) \Rightarrow f(e)=e'$.
+
+\[
+e' = f(e) = f(xx^{-1}) = f(x)\cdot f(x^{-1}) \in G'
+\]
+\[
+e' = f(e) = f(x^{-1}x) = f(x^{-1})\cdot f(x) \in G'
+\]
+\[
+\Big\} \Rightarrow f(x^{-1}) = f(x)^{-1}
+\]
+
+\bigskip
+\noindent (2). \ Fie $x,y\in$ ker $f$.
+
+\[
+f(x\cdot y) = f(x)\cdot f(y) = e'\cdot e' = e' \ \Rightarrow \ xy\in\text{ker}\,f
+\]
+\[
+f(x^{-1}) = f(x)^{-1} = e'^{-1} = e' \ \Rightarrow \ x^{-1}\in\text{ker}\,f \quad (\forall)
+\]
+
+\bigskip
+\noindent Fie $a\in G \overset{?}{\Rightarrow} axa^{-1}\in$ ker $f$.
+
+\[
+f(axa^{-1}) = f(a)\cdot f(x)\cdot f(a^{-1}) = f(a)\cdot e'\cdot f(a)^{-1} = e'\cdot e' = e'
+\]
+\[
+\Rightarrow axa^{-1}\in\text{ker}\,f
+\]
+
+\bigskip
+\noindent (3). \ Fie $x',y'\in f(H) \Rightarrow \exists\,x,y\in H$ a.î.\ $\begin{cases}x'=f(x)\\y'=f(y)\end{cases}$
+
+\[
+x'y' = f(x)\cdot f(y) = f(xy) \in f(H).
+\]
+\[
+(x')^{-1} = \big(f(x)\big)^{-1} = f(x^{-1}) \in f(H)
+\]
+
+\bigskip
+\noindent Fie $x,y\in f^{-1}(H') \Rightarrow f(x),f(y)\in H' \Rightarrow f(x)\cdot f(y)\in H'$
+
+\noindent $\Rightarrow f(xy)\in H' \Rightarrow xy\in f^{-1}(H')$.
+
+\noindent $f(x)\in H' \Rightarrow \big(f(x)\big)^{-1}\in H' \Rightarrow f(x^{-1})\in H' \Rightarrow x^{-1}\in f^{-1}(H')$.
+
+\bigskip
+\noindent (4). \ $f$ surj.\ \ $\Big|$ \ $\overset{?}{\Rightarrow} f(N)\trianglelefteq G'$;
+
+\noindent $N\trianglelefteq G$ \ $\Big|$
+
+\noindent $f(N)\leq G'$ de la (3)
+
+\bigskip
+\noindent $(\forall)\,a'\in G'$ şi $(\forall)\,x'\in f(N) \overset{?}{\Rightarrow} a'x'(a')^{-1}\in f(N)$.
+
+\noindent $f$ surj.\ $\Rightarrow \exists\,a\in G$ a.î.\ $f(a)=a'$. \quad şi $\exists\,x\in N$ a.î.\ $f(x)=x'$.
+
+\[
+\Rightarrow a'x'(a')^{-1} = f(a)\cdot f(x)\cdot f(a)^{-1} = f(axa^{-1}) \in f(N) \quad (N\trianglelefteq G)
+\]
+
+\bigskip
+\noindent (5) \ ($\Rightarrow$) \ $f=$inj., $x\in$ker$f \Rightarrow f(x)=e'=f(e) \Rightarrow x=e$
+
+\noindent ($\Leftarrow$). \ $f(x_1)=f(x_2) \Rightarrow f(x_1\cdot x_2^{-1})=e' \Rightarrow x_1x_2^{-1}\in\text{ker}\,f \Rightarrow x_1x_2^{-1}=e \Rightarrow x_1=x_2$
+
+\end{document}

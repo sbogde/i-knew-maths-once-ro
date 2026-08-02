@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent (6) \ ($\Rightarrow$)
+
+\noindent $f:G\to G'$, $f$=izomorfism $\Rightarrow \exists\,f':G'\to G$ a.î.\ $f\circ f'=1_{G'}$
+
+\noindent $f'\circ f=1_G$.
+
+\[
+f'=f^{-1}
+\]
+\[
+f^{-1}(x')=x \ \Leftrightarrow \ f(x)=x'.
+\]
+
+\bigskip
+\noindent ($\Leftarrow$). \ $x',y'\in G' \Rightarrow \exists!\,x,y\in G$ a.î.\ $f(x)=x'$, $f(y)=y'$.
+
+\[
+x'y' = f(x)\cdot f(y) = f(xy) \ \Rightarrow \ f^{-1}(x'y') = xy = f^{-1}(x')f^{-1}(y').
+\]
+
+\bigskip
+\noindent (7). \ $G \xrightarrow{f} G'$
+
+\noindent $f^{-1}\big(f(H)\big)= H$ \quad $(\forall)\,N\subseteq H\subseteq G$
+
+\noindent $f\big(f^{-1}(H')\big) = H'$ \quad $(\forall)\,H'\leq G'$.
+
+\[
+\beta\circ\alpha = 1_{\mathcal{L}_N(G)} \ ; \quad \alpha\circ\beta = 1_{\mathcal{L}(G')}.
+\]
+
+\bigskip
+\noindent Dacă $H_1\subseteq H_2$, \ $f(H_1)\subseteq f(H_2)$
+
+\[
+\alpha(H_1) \subseteq \alpha(H_2)
+\]
+
+\bigskip
+\noindent $H\subseteq f^{-1}\big(f(H)\big)$.\footnote{în original apare ,,$N$'' în loc de ,,$H$'' aici şi la concluzia finală -- corectat, întrucât argumentul foloseşte $N=\ker f\subseteq H$ ca ipoteză, iar obiectul despre care se demonstrează egalitatea este $H$, nu $N$.}
+
+\noindent $\overset{?}{\supseteq}$
+
+\noindent Fie $x\in f^{-1}\big(f(H)\big) \Rightarrow f(x)\in f(H) \Rightarrow \exists\,x_1\in H$ a.î.\ $f(x)=f(x_1) \Rightarrow$
+
+\noindent $f(x\cdot x_1^{-1}) = e' \Rightarrow xx_1^{-1}\in\ker f = N\subseteq H \Rightarrow xx_1^{-1} = x_2\in H \Rightarrow x=x_2x_1$
+
+\noindent $\Rightarrow H\supseteq f^{-1}\big(f(H)\big)$.
+
+\bigskip
+\noindent\underline{Aplicaţie}: det.\ subgrupurile lui $(\mathbb{Z}_{15},+,\hat 0)$.
+
+\noindent $f:(\mathbb{Z},+,0) \to (\mathbb{Z}_{15},+,\hat 0)$ \quad $f(a)=\hat a$.
+
+\bigskip
+\noindent Ker $f = \{x\in\mathbb{Z} \mid f(x)=\hat 0\}$; \quad $\hat x=\hat 0 \Leftrightarrow x\in 15\mathbb{Z}$.
+
+\noindent $\Rightarrow$ Ker$\,f = 15\mathbb{Z} \trianglelefteq \mathbb{Z}$
+
+\bigskip
+\noindent $\mathcal{L}_N(G)$.
+
+\noindent $\mathcal{L}_{15}(\mathbb{Z}) = \{15\mathbb{Z}\subseteq H\leq \mathbb{Z}\}$.
+
+\[
+\begin{aligned}
+&n\mathbb{Z}, \ n>0.\\
+&n\mid 15.
+\end{aligned}
+\]
+
+\bigskip
+\noindent $f(1\mathbb{Z}) = \hat 1 = \{\hat 0,\ldots,\hat{14}\} = \mathbb{Z}_{15}$
+
+\noindent $f(3\mathbb{Z}) = \{\hat 0,\hat 3,\hat 6,\hat 9,\hat{12}\}$.
+
+\bigskip
+\noindent $(\mathbb{Z}_n,+,\hat 0)$ \quad $n=p_1^{e_1}\cdots p_r^{e_r}$
+
+\[
+d(n) = \prod_{i=1}^{r}(1+e_i).
+\]
+
+\noindent $d(15) = 2\times 2 = 4$
+
+\noindent \footnotesize [fragment neclar în original]\normalsize
+
+\end{document}

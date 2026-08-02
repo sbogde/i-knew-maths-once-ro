@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\fbox{T} \ Orice grup $G$ este izomorf cu un grup de permutări.
+
+\bigskip
+\noindent\underline{Dem}: \ Fie $a\in G$.
+
+\noindent $\theta_a: G\to G$. \quad $\underline{\theta_a(x)=ax}$, \quad $\underline{\theta_a\in S_G}$.
+
+\[
+\theta_a(x_1)=\theta_a(x_2) \Rightarrow ax_1=ax_2 \Rightarrow x_1=x_2
+\]
+\[
+(\forall)\,y\in G \ \exists\,x\in G \text{ a.î. } \theta(x)=y. \quad \text{(iau } x=a^{-1}y\text{)}
+\]
+
+\bigskip
+\noindent\underline{$\theta_a\circ\theta_b = \theta_{ab}$}.
+
+\[
+(\theta_a\circ\theta_b)(x) = \theta_a\big(\theta_b(x)\big) = \theta_a(bx) = abx = \theta_{ab}(x).
+\]
+
+\bigskip
+\noindent Fie $f: G \to (S_G,\circ,1_G)$.
+
+\[
+f(a) = \theta_a
+\]
+\[
+f(ab) = \theta_{ab} = \theta_a\circ\theta_b = f(a)\cdot f(b)
+\]
+
+\bigskip
+\noindent\underline{$f$ e inj}
+
+\[
+f(a)=f(b) \Rightarrow \theta_a=\theta_b \Rightarrow \theta_a(e)=\theta_b(e) \Rightarrow ae=be \Rightarrow a=b.
+\]
+
+\bigskip
+\noindent ker$f=\{e\} \overset{\text{T.F.I}}{\Longrightarrow} \ \text{Im}f = f(G) \leq (S_G,\circ) \ \Big|$
+
+\noindent 2)
+
+\[
+\frac{G}{\text{ker}f} = \frac{G}{\{e\}} \cong G.
+\]
+
+\bigskip
+\noindent\underline{Exp}: \ gr.\ 4 elem.\ $(S_4,\circ,1_{S_4})$
+
+\bigskip
+\noindent\underline{ex}: \ $A \xrightarrow[\text{bij.}]{\ \lambda\ } B$ \qquad $\lambda^*(\sigma) = \lambda\circ\sigma\circ\lambda^{-1} \in S_B$.
+
+\[
+S_A \xrightarrow{\ \lambda^*\ } S_B
+\]
+
+\[
+\lambda^*(\sigma\circ\pi) = \lambda^*(\sigma)\circ\lambda^*(\pi).
+\]
+
+\bigskip
+\noindent $(M,\cdot,e) \xrightarrow{\ f\ } (M',\cdot,e')$ \quad $f:M\to M'$, \ $f(xy)=f(x)f(y)$, \ $f(e)=e'$.
+
+\bigskip
+\noindent $\varnothing \neq N \leq (M,\cdot,e)$
+
+\[
+\begin{cases}
+x,y\in N \Rightarrow xy\in N\\
+e\in N.
+\end{cases}
+\]
+
+\bigskip
+\noindent Găsiţi coresp.\ pt.\ T.\ lui Cayley.
+
+\bigskip
+\noindent $T_A = \{f \mid f:A\to A\}$
+
+\noindent $(T_A,\circ,1_A) \supseteq (S_A,\circ,1_A)$ \ $\to$ monoidul transformărilor
+
+\bigskip
+\noindent Numim monoid de transf.\ $(\forall)\,N\leq (T_A,\circ,1_A)$.
+
+\bigskip
+\noindent\underline{T.\ Cayley}: \ Orice monoid e izomorf cu un monoid de transf.
+
+\end{document}

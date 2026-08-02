@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{\textbf{Teorema fundamentală pt.\ morfisme de grupuri.}}
+
+\noindent\underline{\textbf{(Teorema de factorizare a morfismelor de grupuri)}}
+
+\bigskip
+\noindent $f:A\to B$ \qquad $R_f = \{(x,y)\in A\times A \mid f(x)=f(y)\}$.
+
+\noindent $R_f$=rel.\ de echivalenţă.
+
+\bigskip
+\noindent Fie $R\subseteq A\times A$ \qquad $\dfrac{A}{R} = \{\hat a \mid a\in A\}$ \qquad $\hat a = \{x\in A \mid xRa\}$.
+
+\[
+\begin{tikzcd}
+A \arrow[r,"\pi_R"] \arrow[d,"f"'] & A/R \arrow[dl, dashed,"f^*"] \\
+B &
+\end{tikzcd}
+\]
+
+\noindent $\pi_R$ surj., \quad $\pi_R(a) = \hat a$.
+
+\bigskip
+\noindent $\exists\,f^*: \dfrac{A}{R} \to B$ a.î.\ $f^*\circ\pi_R = f$ $\Leftrightarrow$
+\[
+\left\{\begin{aligned}
+&R\subseteq R_f.\\
+&f^*=\text{surj.} \Leftrightarrow f=\text{surj.}\\
+&f^*=\text{inj.} \Leftrightarrow R=R_f\\
+&f=\text{bij.} \Leftrightarrow \text{-- -- --}
+\end{aligned}\right.
+\]
+
+\noindent $f^*(\hat a) = f(a)$.
+
+\bigskip
+\noindent Fie $f:G\to G'$ morfism de gr.\ şi $N\trianglelefteq G$ şi $\pi_N(a) = \hat a = aN$
+
+\[
+\pi_N: G \to \dfrac{G}{N}.
+\]
+
+\begin{enumerate}
+\item[(1)] $\exists\,f^*: \dfrac{G}{N}\to G'$ morfism a.î.\ $f^*\circ\pi_N = f \ \Leftrightarrow \ N\subseteq\ker f$.
+\item[(2)] $f^*=$inj.\ $\Leftrightarrow N=\ker f$.
+\item[(3)] $f^*=$surj.\ $\Leftrightarrow f=$surj.
+\item[(4)] $f^*=$izomorfism $\Leftrightarrow N=\ker f$, $f=$surj.
+\end{enumerate}
+
+\[
+\begin{tikzcd}
+G \arrow[r,"f"] \arrow[d,"\pi_N"'] & G' \\
+G/N \arrow[ur, dashed,"f^*"'] &
+\end{tikzcd}
+\]
+
+\noindent $f^*(\hat a) = f(a)$.
+
+\bigskip
+\noindent $R_N^s = R_N^d = R_N \subseteq G\times G$ \ pt.\ $x\equiv x' \pmod N$, $y\equiv y' \pmod N \ \Rightarrow \ xy\equiv x'y' \pmod N$
+
+\bigskip
+\noindent $R_f$=rel.\ de ech.\ compatibilă cu $\cdot$ pe $G$.
+
+\[
+\left.\begin{aligned}
+xR_fx_1 &\Leftrightarrow f(x)=f(x_1)\\
+yR_fy_1 &\Leftrightarrow f(y)=f(y_1)
+\end{aligned}\right\} \ \Rightarrow \ xyR_fx_1y_1 \Leftrightarrow f(xy)=f(x_1y_1).
+\]
+
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent (7). \ $N\trianglelefteq G$ \ the map $\pi_N: G\to G/N$
+
+\noindent $\pi_N(a)=aN$ \ a surjective morphism.
+
+\bigskip
+\noindent $N=n\mathbb{Z} \Rightarrow$ (3).
+
+\bigskip
+\noindent\underline{Remark}: \ If $G \xrightarrow{f} G' \xrightarrow{g} G''$, $f,g$ morphisms $\Rightarrow g\circ f$ is a morphism.
+
+\[
+\underbrace{\hphantom{G \xrightarrow{f} G' \xrightarrow{g} G''}}_{g\circ f = h}
+\]
+
+\noindent $h(xy) = h(x)h(y)$.
+
+\[
+(g\circ f)(xy) = g\big(f(xy)\big) = g\big(f(x)\cdot f(y)\big) = g\big(f(x)\big)\,g\big(f(y)\big)
+\]
+
+\bigskip
+\noindent (8) \ $f:(\mathbb{R},+,0) \rightleftarrows (\mathbb{R}_+^*,\cdot,1)$
+
+\noindent $f(x)=2^x$ \qquad $g(y)=\log_2 y$ \ morphisms
+
+\bigskip
+\noindent\fbox{\textbf{Prop}}: \ Let $f:G\to G'$ be a group morphism.
+
+\noindent $(G,\cdot,e)$ \qquad $(G',\cdot,e')$
+
+\begin{enumerate}
+\item[(1)] $f(e)=e'$, \ $f(x^{-1})=f(x)^{-1}$ \ $(\forall)\,x\in G$.
+\item[(2).] Ker $f := \{x\in G \mid f(x)=e'\} \trianglelefteq G$.
+\item[(3)] $H\leq G \Rightarrow f(H)\leq G'$.
+
+\noindent $H'\leq G' \Rightarrow f^{-1}(H') \overset{\text{def}}{=} \{x\in G \mid f(x)\in H'\} \leq G$
+\item[(4).] $N'\trianglelefteq G' \Rightarrow f^{-1}(N')\trianglelefteq G$
+
+\noindent $f$ surjective and $N\trianglelefteq G \Rightarrow f(N)\trianglelefteq G'$.
+\item[(5).] $f$ injective $\Leftrightarrow$ ker $f=\{e\}$.
+\item[(6).] $f$ is an isomorphism $\Leftrightarrow f$ is bijective.
+\item[(7)] $f$ surjective, $N=\ker f$, $\mathcal{L}(G')=\{H' \mid H'\leq G'\}$
+
+\noindent $\mathcal{L}_N(G) = \{H \mid H\leq G,\ N\subseteq H\}$.
+
+\noindent $\Rightarrow$ the map $\alpha:\mathcal{L}_N(G) \to \mathcal{L}(G')$ is bijective; \ $\alpha(H)=f(H)$
+
+\noindent $\beta: \mathcal{L}(G') \to \mathcal{L}_N(G)$ \footnote{``is bijective'' is crossed out here in the original -- probably considered redundant, since the bijectivity of $\beta$ follows automatically from that of $\alpha$.} ; \ $\beta=\alpha^{-1}$; \ $\beta(H')=f^{-1}(H')$
+\end{enumerate}
+
+\end{document}

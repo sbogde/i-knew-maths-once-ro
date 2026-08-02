@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\fbox{\textbf{CURS 7}}
+\end{center}
+\begin{flushright}
+\textit{15-XI-94}
+\end{flushright}
+\noindent \footnotesize (antetul original scria ,,SEMINAR'', tăiat şi înlocuit cu ,,CURS 7''.)\normalsize
+
+\bigskip
+\noindent\underline{\textbf{Morfisme de grupuri.\ Izomorfisme de grupuri.}}
+
+\noindent Teorema fundamentală de izomorfism pt.\ gr.
+
+\bigskip
+\noindent\underline{Def}: Fie $G$ şi $G'$ 2 grupuri, $(G,\cdot,e)$, $(G',\cdot,e')$
+
+\noindent O aplicaţie $f:G\to G'$ s.n.\ \underline{morfism de grupuri (omomorfism)}
+
+\noindent dacă $f(xy)=f(x)f(y)$ $(\forall)\,x,y\in G$.
+
+\bigskip
+\noindent\underline{Def}: Un morfism de grupuri s.n.\ \underline{izomorfism} dacă
+
+\noindent $\exists\,f':G'\to G$ a.î.\ $f'\circ f=1_G$, $f\circ f'=1_{G'}$
+
+\bigskip
+\noindent Dacă $G=G'$ atunci $\begin{cases} f \text{ s.n.\ } \underline{\text{endomorfism}} \text{ (morfism)} \\ f \text{ s.n.\ } \underline{\text{automorfism}} \text{ (izomorfism)}\end{cases}$
+
+\bigskip
+\noindent\underline{Exp}
+
+\noindent (1) \ $f:(\mathbb{R},+,0) \to (\mathbb{C}^*,\cdot,1)$
+
+\noindent $f(x) = \cos 2\pi x + i\sin 2\pi x$.
+
+\noindent $f(x+y) = f(x)\cdot f(y)$ $(\forall)\,x,y\in\mathbb{R}$
+
+\bigskip
+\noindent (2). \ $GL_2(\mathbb{R}) = \{A\in M_2(\mathbb{R}) \mid \det A\neq 0\} \subset M_2(\mathbb{R})$.
+
+\noindent $(*)$ \ $\det(AB) = \det A\cdot \det B$.
+
+\[
+\big(GL_2(\mathbb{R}),\cdot,I_2\big) \xrightarrow{\ f\ } (\mathbb{R}^*,\cdot,1).
+\]
+
+\noindent $f(A) = \det A \overset{(*)}{\Longrightarrow} f$ morfism de gr.
+
+\bigskip
+\noindent (3) \ \footnotesize (,,$(G,\cdot,e)$'' tăiat în original)\normalsize \ $f:(\mathbb{Z},+,0) \to (\mathbb{Z}_n,+,\hat 0)$ \quad $f(a)=\hat a = a+n\mathbb{Z}$.
+
+\bigskip
+\noindent (4) \ $(G,\cdot,e)$, $a\in G$, \ $f_a:G\to G$, \ $f_a(x)=axa^{-1}\in G$.
+
+\noindent\underline{Ex}: Arăt că $f_a$ automorfism de gr.\ al lui $G$.
+
+\bigskip
+\noindent (5) \ $1_G: G\to G$ automorfism \ $1_G(x)=x$
+
+\bigskip
+\noindent (6) \ $\theta:G\to G'$, \ $\theta(x)=e'$ \ morfism de grupuri.
+
+\end{document}
