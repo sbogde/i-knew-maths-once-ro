@@ -1,0 +1,61 @@
+\section{Mulțimi, Produse Carteziene și Funcții (04-Oct-1994)}
+
+\subsection*{Teoria Naivă a Mulțimilor}
+
+\begin{definition}
+O \textbf{mulțime} este o colecție bine determinată de obiecte distincte, numite elementele mulțimii. Notăm apartenența prin $x \in A$.
+\end{definition}
+
+O mulțime poate fi definită prin enumerarea elementelor sale $A = \{a, b, c\}$ sau printr-o proprietate caracteristică:
+$$ M = \{x \in A \mid p(x)\} $$
+(mulțimea tuturor elementelor din $A$ care satisfac proprietatea $p$).
+
+\begin{definition}[Operații cu mulțimi]\leavevmode
+Fie $A$ și $B$ două mulțimi. Definim următoarele operații:
+\begin{itemize}
+    \item \textbf{Reuniunea:} $A \cup B = \{x \mid x \in A \text{ sau } x \in B\}$
+    \item \textbf{Intersecția:} $A \cap B = \{x \mid x \in A \text{ și } x \in B\}$
+    \item \textbf{Diferența:} $A \setminus B = \{x \mid x \in A \text{ și } x \notin B\}$
+    \item \textbf{Complementara:} Dacă $A \subseteq E$, complementara lui $A$ în raport cu $E$ este $\complement_E A = E \setminus A$.
+\end{itemize}
+\end{definition}
+
+\begin{remark}
+Mulțimea care nu conține niciun element se numește \textbf{mulțimea vidă}, notată $\emptyset$. Mulțimea tuturor submulțimilor lui $A$ se numește \textbf{mulțimea părților} lui $A$, notată $\mathcal{P}(A)$.
+\end{remark}
+
+\subsection*{Produsul Cartezian}
+
+\begin{definition}
+Fie $A$ și $B$ două mulțimi nevide. Se numește \textbf{pereche ordonată} un ansamblu de două elemente $(a, b)$ unde $a \in A$ și $b \in B$, având proprietatea că $(a, b) = (c, d) \iff a = c$ și $b = d$.
+\end{definition}
+
+\begin{definition}
+\textbf{Produsul cartezian} a două mulțimi $A$ și $B$ este mulțimea tuturor perechilor ordonate care se pot forma cu elemente din cele două mulțimi:
+$$ A \times B = \{(a, b) \mid a \in A \text{ și } b \in B\} $$
+\end{definition}
+
+\subsection*{Funcții (Aplicații)}
+
+\begin{definition}
+Fie $A$ și $B$ două mulțimi nevide. O \textbf{funcție} (sau aplicație) $f: A \to B$ este o lege de corespondență care asociază fiecărui element $x \in A$ un unic element $y \in B$, notat $y = f(x)$. 
+\end{definition}
+
+\begin{definition}[Tipuri de funcții]\leavevmode
+O funcție $f: A \to B$ se numește:
+\begin{enumerate}
+    \item \textbf{Injectivă:} dacă $(\forall) x_1, x_2 \in A, x_1 \neq x_2 \implies f(x_1) \neq f(x_2)$. (Echivalent: $f(x_1) = f(x_2) \implies x_1 = x_2$).
+    \item \textbf{Surjectivă:} dacă $(\forall) y \in B, (\exists) x \in A$ astfel încât $f(x) = y$. (Echivalent: $\text{Im} f = B$).
+    \item \textbf{Bijectivă:} dacă $f$ este simultan injectivă și surjectivă.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+Fie $f: A \to B$ și $g: B \to C$. \textbf{Compunerea} celor două funcții este o nouă funcție $g \circ f: A \to C$ definită prin:
+$$ (g \circ f)(x) = g(f(x)), \quad (\forall) x \in A $$
+\end{definition}
+
+\begin{proposition}
+Compunerea funcțiilor este \textbf{asociativă}. Dacă $f: A \to B$, $g: B \to C$ și $h: C \to D$, atunci:
+$$ h \circ (g \circ f) = (h \circ g) \circ f $$
+\end{proposition}
