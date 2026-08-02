@@ -87,3 +87,94 @@ k, & k\neq i,\ k\neq j
 
 
 
+
+% course 8, page 2
+\section*{Curs 8 - Pagina 2}
+
+\noindent $\tau \overset{\text{def}}{=} (i,j)$
+
+\noindent $\pi \overset{\text{def}}{=} \sigma\circ\tau$
+
+\[
+\pi(j) = \sigma\big(\tau(j)\big) = \sigma(i) = j
+\]
+
+\bigskip
+\noindent Dacă $\sigma(k)=k \Rightarrow \pi(k)=k \Rightarrow k\neq i, k\neq j \ \Rightarrow d_\pi<d_\sigma.$
+
+\[
+\pi(k) = \sigma\big(\tau(k)\big) = \sigma(k) = k.
+\]
+
+\noindent $\pi = \sigma\circ\tau \ \big| \ \tau.$
+
+\bigskip
+\noindent $\pi = \tau_1\circ\cdots\circ\tau_s$ \ (ip.\ de ind.) \ $\big|\tau \ \Rightarrow \ \tau_1\circ\cdots\circ\tau_s\circ\tau=\sigma.$
+
+\bigskip
+\noindent Dacă $\sigma\in S_n$ \ inv$(\sigma) \overset{\text{not}}{=} \text{card}\{(i,j) \mid 1\leq i<j\leq n,\ \sigma(i)>\sigma(j)\}.$
+
+\noindent (= nr.\ inversiunilor lui $\sigma$.)
+
+\[
+\sigma = \begin{pmatrix}1&2&\cdots&i&=&j&\cdots&n\\ \sigma(1)&\sigma(2)&\cdots&\sigma(i)&\cdots&\sigma(j)&\cdots&\sigma(n)\end{pmatrix} \quad C_n^2.
+\]
+
+\noindent inv$(e)=0$.
+
+\bigskip
+\noindent\fbox{Def}: \ Nr.\ $\varepsilon(\sigma) = (-1)^{\text{inv}(\sigma)}$ s.n.\ \underline{signatura}.
+
+\bigskip
+\noindent $\sigma$=pară dacă $\varepsilon(\sigma)=1$.
+
+\noindent \phantom{$\sigma$=}impară dacă $\varepsilon(\sigma)=-1$.
+
+\bigskip
+\noindent\fbox{T} \ Dacă $\sigma\in S_n$ şi $\sigma=\tau_1\circ\tau_2\circ\cdots\circ\tau_m \Rightarrow$ nr.\ $m$ şi inv$(\sigma)$ au aceeaşi
+
+\noindent paritate.
+
+\bigskip
+\noindent\fbox{Lemă} \ (a) \ Fie $\tau,\sigma\in S_n$, $\tau$=transpoziţie
+
+\noindent Atunci inv$(\sigma)$ şi inv$(\sigma\circ\tau)$ au parităţi diferite.
+
+\noindent (b) $(\forall)$ transp.\ e permut.\ impară.
+
+\bigskip
+\noindent\fbox{Dem\ Lemă} \ $\tau=(i,j)$ \quad $1\leq i<j\leq n$ şi $r=j-i\in\mathbb{N}^*$.
+
+\bigskip
+\noindent Dacă $r=1$
+
+\[
+\sigma = \begin{pmatrix}1&\cdots&i&i+1&\cdots&n\\ \sigma(1)&\cdots&\sigma(i)&\sigma(i+1)&\cdots&\sigma(n)\end{pmatrix}
+= \begin{pmatrix}1&\cdots&i&j&\cdots&n\\ \sigma(1)&\cdots&\sigma(i)&\sigma(j)&\cdots&\sigma(n)\end{pmatrix}
+\]
+
+\[
+\pi=\sigma\circ\tau = \begin{pmatrix}1&\cdots&i&j&\cdots&n\\ \sigma(1)&\cdots&\sigma(j)&\sigma(i)&\cdots&\sigma(n)\end{pmatrix}
+= \begin{pmatrix}1&\cdots&i&i+1&\cdots&n\\ \sigma(1)&\cdots&\sigma(i+1)&\sigma(i)&\cdots&\sigma(n)\end{pmatrix}
+\]
+
+\bigskip
+\noindent $r=1 \Rightarrow$ inv$(\sigma\circ\tau) =
+\begin{cases}
+\text{inv}(\sigma)+1, & \text{dacă } \sigma(i)<\sigma(i+1)\\
+\text{inv}(\sigma)-1, & \text{dacă } \sigma(i)>\sigma(i+1)
+\end{cases}$
+
+\bigskip
+\noindent\underline{Cazul general}: \ $\tau=(i,j) \Rightarrow j-i=r$, $r>1$.
+
+\noindent $\pi$ se obţine din $\sigma$ prin schimbarea lui $\sigma(i)$ cu $\sigma(j)$, realizată printr-o succesiune de transpoziţii de poziţii adiacente.\footnote{acest paragraf al demonstraţiei e foarte compactat în original; pasul exact (,,$d_\pi$ ... schimb ...'') n-a putut fi reconstituit cu certitudine deplină, dar argumentul standard e cel prezentat aici.}
+
+\[
+2r-1 \text{ etape}
+\]
+
+\noindent fiecare etapă schimbă paritatea lui inv (cazul $r=1$) $\Rightarrow$ după $2r-1$ etape (nr.\ impar)
+
+\noindent paritatea lui inv$(\sigma)$ se schimbă. \hfill parit.\ diferite \quad Q.E.D.
+
