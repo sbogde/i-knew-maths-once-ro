@@ -1,0 +1,89 @@
+\bigskip
+
+% course 8, page 1
+% \section*{Curs 8 - Pagina 1}
+
+
+\begin{center}
+\fbox{\textbf{ALGEBRA}}\\[2pt]
+\fbox{\textbf{CURS 8}}
+\end{center}
+\begin{flushright}
+\fbox{\textit{22-XI-1994}}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{Grupul $S_n$}}
+
+\bigskip
+\noindent $A=\{1,2,\ldots,n\}$ \quad $S_n \ni \sigma: A\to A$ \quad $\sigma = \begin{pmatrix}1&2&\cdots&n\\ \sigma(1)&\sigma(2)&\cdots&\sigma(n)\end{pmatrix}$
+
+\noindent $|S_n|=n!$ \qquad $A\xrightarrow{\ \pi\ }A\xrightarrow{\ \sigma\ }A.$
+
+\bigskip
+\noindent $(S_n,\circ,e)$=grup.
+
+\bigskip
+\noindent\fbox{Def}: \ Fie $p\in\mathbb{N}$, $1<p\leq n$. \ O permutare $\alpha\in S_n$ s.n.\ \underline{permut.\ ciclu}
+
+\noindent dacă $\exists\,i_1,\ldots,i_p\in\{1,2,\ldots,n\}$ distincte cu
+
+\[
+\alpha(i_1)=i_2, \ \alpha(i_2)=i_3, \ \ldots, \ \alpha(i_{p-1})=i_p, \ \alpha(i_p)=i_1
+\]
+
+\bigskip
+\noindent Un 2-ciclu s.n.\ \underline{transpoziţie}.
+
+\bigskip
+\noindent\fbox{Prop} \ Dacă $\alpha\in S_n$ e un p-ciclu, atunci ord$(\alpha)=p \ \Leftrightarrow \ \begin{cases}\alpha^p=e\\ \alpha^i\neq e \ (\forall)\,i=\overline{1,p-1}\end{cases}$
+
+\bigskip
+\noindent În particular $\tau\in S_n$, $\tau=(i,j) \Rightarrow o(\tau)=2$.
+
+\bigskip
+\noindent\underline{Dem}:
+
+\[
+\tau\big(\tau(k)\big)=
+\begin{cases}
+j, & k=i\\
+i, & k=j\\
+k, & k\neq i,\ k\neq j
+\end{cases}
+\qquad k\in\{1,2,\ldots,n\}
+\]
+
+\bigskip
+\noindent $(\alpha^p)(i_1) = \underbrace{\alpha\big(\alpha(\cdots\alpha(i_1))\big)}_{p \text{ ori}} = e.$
+
+\bigskip
+\noindent\underline{Obs}: \ În $S_n$ $\exists\,n!$ permutări şi $C_n^2$ transpoziţii,
+
+\bigskip
+\noindent\fbox{T} \ $(\forall)\,\sigma\in S_n$ \ $(n>1) \Rightarrow \exists\,\tau_1,\ldots,\tau_m\in S_n$ a.î.\ $\sigma=\tau_1\circ\cdots\circ\tau_m$.
+
+\bigskip
+\noindent\fbox{Dem} \ Dat $\sigma\in S_n$, \ $d_\sigma := \text{card}\{i \mid 0<i\leq n,\ \sigma(i)\neq i\}$
+
+\[
+0\leq d_\sigma\leq n.
+\]
+
+\bigskip
+\noindent Dacă $d_\sigma=0 \Rightarrow \sigma=1=e=\tau\circ\tau=\tau\circ\tau\circ\tau\circ\tau=\tau'\circ\tau'\circ\tau''\circ\tau''\circ\tau'''\circ\tau'''$
+
+\bigskip
+\noindent Inducţie după $d_\sigma$.
+
+\noindent I.p.\ de inducţie\footnote{eticheta exactă a acestei linii (,,1o.'' în original) e neclară.} $d_\sigma>0$.
+
+\bigskip
+\noindent Afirm.\ că e adevărată pt.\ $\pi\in S_n$ cu $d_\pi<d_\sigma$.
+
+\noindent Dem.\ că $\sigma$ poate fi scris ca produs finit de transpoziţii.
+
+\noindent $d_\sigma>0$ (din ip.) $\Rightarrow \exists\,i\in\{1,\ldots,n\}$ a.î.\ $\sigma(i)\neq i$
+
+
+

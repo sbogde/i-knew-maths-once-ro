@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\underline{\textbf{ALGEBRA}} \hfill \fbox{\textbf{Curs 9}}\\[4pt]
+\fbox{\textit{29-XI-94}}
+\end{center}
+
+\bigskip
+\noindent\underline{Subgr.\ generat de o mulţ.\ de elem.\ ale unui grup}
+
+\noindent\underline{Grupul comutator (derivat) al unui grup}
+
+\noindent\underline{Grupul diedral $\Delta_n$, $n\geq 3$}
+
+\bigskip
+\bigskip
+\noindent Fie $(G,\cdot,e)$ grup, $M\subseteq G$, $M\neq\varnothing$
+
+\noindent\underline{Problemă}: \ Să se descrie c.m.\ mic subgr.\ al lui $G$
+
+\noindent care conţ.\ pe $M$.
+
+\bigskip
+\noindent\underline{Prop.} \ Dacă $H_i$, $i\in I$ fam.\ de subgr.\ ale lui $G$ şi
+
+\[
+H=\bigcap_{i\in I} H_i \quad \text{atunci} \quad H\leq G.
+\]
+
+\bigskip
+\noindent\underline{Dem} \ BANALĂ!
+
+\noindent $H\neq\varnothing$ \quad $e\in H_i$ $(\forall)\,i \Rightarrow e\in H$
+
+\noindent Dacă $x,y\in H$ şi $\left.\begin{aligned}x,y&\in H_i\ (\forall)\,i \Rightarrow xy\in H_i\ (\forall)\,i\\ x^{-1}&\in H_i\ (\forall)\,i\end{aligned}\right\} \Rightarrow xy,x^{-1}\in H$
+
+\bigskip
+\noindent\underline{Obs.} \ (1) \ Dacă $H\leq G$ şi $M\subseteq H \Rightarrow \langle M\rangle \leq H$ \ unde
+
+\[
+\langle M\rangle = \{x_1^{\varepsilon_1}x_2^{\varepsilon_2}\cdots x_m^{\varepsilon_m} \mid m\geq 1,\ x_i\in M,\ \varepsilon_i=\pm 1\ (\forall)\,i\}
+\]
+
+\noindent (2) $\langle M\rangle \leq G$
+
+\noindent (3) $M\subseteq \langle M\rangle$ \quad (elem.\ lui $M$ = generatori; $\langle M\rangle$ = subgr.\ lui $G$ generat de $M$)
+
+\noindent (4) $\displaystyle\bigcap_{M\subseteq H\subseteq G} H$ = c.m.\ mic subgr.\ al lui $G$ care conţ.\ pe $M$ \quad (de dem.)
+
+\bigskip
+\noindent $\langle\varnothing\rangle := \langle\{e\}\rangle$
+
+\bigskip
+\noindent Dacă $M=\{a_1,\ldots,a_n\}$ atunci $\langle\{a_1,\ldots,a_n\}\rangle = \langle a_1,\ldots,a_n\rangle$
+
+\bigskip
+\noindent\underline{Def.} \ Fie $G$ grup.\ Spunem că $G$ este \underline{finit generat}
+
+\noindent dacă $\exists\,a_1,\ldots,a_m\in G$ a.î.\ $G=\langle a_1,\ldots,a_m\rangle$
+
+\bigskip
+\noindent $G$ \underline{ciclic} dacă $\exists\,a\in G$ a.î.\ $\langle a\rangle=G$
+
+\bigskip
+\noindent $S_n = \langle \tau \mid \tau\text{-transp.}\rangle$
+
+\noindent Dacă $M=\{\tau\in S_n \mid \tau \text{ transp.}\}$
+
+\bigskip
+\noindent\underline{Ex}/ \quad $\mathbb{Z} = \langle 1\rangle$
+
+\bigskip
+\noindent\underline{Ex}/ \quad Dem.\ că $\big\langle (1,2),(1,3),\ldots,(1,n)\big\rangle = S_n$
+
+\end{document}

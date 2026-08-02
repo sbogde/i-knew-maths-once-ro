@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\textit{-- 2 --}
+\end{center}
+
+\noindent\underline{\textbf{Grupul comutator (derivat) al unui grup.}}
+
+\bigskip
+\noindent Fie $(G,\cdot,e)$ grup.
+
+\noindent $a,b\in G$ \quad $[a,b] \overset{\text{def}}{=} aba^{-1}b^{-1}\in G$
+
+\noindent s.n.\ \underline{comutator} (comutatorul
+
+\noindent perechii de elem.\ $a,b$)
+
+\bigskip
+\noindent $[a,b]\,ba = ab$
+
+\noindent $c\in G \Rightarrow ab=cba$
+
+\bigskip
+\noindent\fbox{$G' = \big\langle aba^{-1}b^{-1} \mid a,b\in G\big\rangle$} \quad (mulţ.\ tuturor comutat.)
+
+\bigskip
+\noindent Se obs.\ că $[a,b]^{-1} = (aba^{-1}b^{-1})^{-1} = bab^{-1}a^{-1} = [b,a]$
+
+\noindent Deci $G' = \{$prod.\ finite de comutatori$\}$
+
+\bigskip
+\noindent Dacă $a,b,c\in G \Rightarrow a[b,c]a^{-1} = abcb^{-1}c^{-1}a^{-1} =$
+
+\[
+= aba^{-1}\cdot aca^{-1}\cdot ab^{-1}a^{-1}\cdot ac^{-1}a^{-1} = \big[aba^{-1},\,aca^{-1}\big]
+\]
+
+\noindent $\Rightarrow G'\trianglelefteq G$
+
+\bigskip
+\noindent Arăt că $axa^{-1}\in G'$ $(\forall)\,a\in G$, $(\forall)\,x\in G'$
+
+\[
+x=[b_1,c_1]\cdots[b_n,c_n]
+\]
+\[
+\Rightarrow axa^{-1} = \big[ab_1a^{-1},ac_1a^{-1}\big]\cdots\big[ab_na^{-1},ac_na^{-1}\big]
+\]
+
+\noindent (se intercalează produse de forma $a^{-1}a$)
+
+\bigskip
+\noindent\underline{Obs}/ \quad \fbox{$\dfrac{G}{G'}$ grup abelian}
+
+\bigskip
+\noindent Dacă $\hat a,\hat b\in \dfrac{G}{G'}$ arăt că $\hat a\hat b=\hat b\hat a$
+
+\[
+\Leftrightarrow ab\equiv_{d} ba \pmod{G'} \ \Leftrightarrow \ ab(ba)^{-1}\in G'
+\]
+\[
+aba^{-1}b^{-1}\in G' \ \Leftrightarrow \ [a,b]\in G' \quad (\forall)\text{ comut.}\in G'
+\]
+
+\noindent adev.\ $\Rightarrow \hat a\hat b=\hat b\hat a$
+
+\noindent $\Rightarrow \dfrac{G}{G'}$ abelian
+
+\bigskip
+\noindent\underline{Prop.}: \ \fbox{Dacă $N\trianglelefteq G$ a.î.\ $\dfrac{G}{N}$ abelian $\Rightarrow G'\subseteq N$}\footnote{în original prima literă a acestei propoziţii pare ,,$H$'' în loc de ,,$N$''; corectat aici la $N$ pentru consecvenţă cu restul demonstraţiei, care foloseşte exclusiv $N$.}
+
+\bigskip
+\noindent\underline{Dem} \ Fie $a,b\in G$. Atunci $\hat a\hat b=\hat b\hat a$ unde $\hat a=aN$
+
+\noindent $\hat b=bN$
+
+\[
+\Leftrightarrow ab\equiv_{d} ba \pmod{N} \ \Leftrightarrow \ ab(ba)^{-1}\in N
+\]
+\[
+[a,b]\in N \ \Rightarrow \ (\forall)\text{ comut.}\in N \ \Rightarrow \ G'\subseteq N
+\]
+
+\bigskip
+\noindent $\dfrac{G}{G'} = G^{ab}$ \ abelianizatul lui $G$.
+
+\end{document}

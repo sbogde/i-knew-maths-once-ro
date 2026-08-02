@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\fbox{Dem Teoremei} \ $\sigma=\tau_1\circ\tau_2\circ\cdots\circ\tau_m$ \ $\big|\tau_m \ \Rightarrow \ \sigma\circ\tau_m = \tau_1\circ\cdots\circ\tau_{m-1}.$
+
+\bigskip
+\noindent $\sigma\circ\tau_m\circ\tau_{m-1} = \tau_1\circ\tau_2\circ\cdots\circ\tau_{m-2}$
+
+\[
+\vdots
+\]
+
+\noindent $\sigma\circ\tau_m\circ\tau_{m-1}\circ\cdots\circ\tau_2 = \tau_1$. \quad $m-1$ paşi
+
+\bigskip
+\noindent $\sigma\circ\tau_m\circ\cdots\circ\tau_1 = e$ (pară) \quad $\Rightarrow$ \quad
+$\begin{cases} \text{pară}, & m=\text{par}\\ \text{impară}, & m=\text{impar} \end{cases}$
+
+\bigskip
+\noindent\fbox{T}. \ Dacă $n\geq 1$ aplicaţia $\varepsilon: S_n \to (\{-1,1\},\cdot,1)$
+
+\[
+\sigma \xrightarrow{\ \varepsilon\ } \varepsilon(\sigma) = (-1)^{\text{inv}(\sigma)}
+\]
+
+\noindent $n>1 \Rightarrow \exists\,\tau\in S_n$ a.î.\ $\varepsilon(\tau)=-1$.
+
+\bigskip
+\noindent $\varepsilon$ -- morfism surj.\ de grupuri,
+
+\[
+\varepsilon(\sigma\circ\pi) = \varepsilon(\sigma)\cdot\varepsilon(\pi).
+\]
+
+\bigskip
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$\sigma$ & $\pi$ & $\sigma\circ\pi$ & $\varepsilon(\sigma)$ & $\varepsilon(\pi)$ & $\varepsilon(\sigma\circ\pi)$ & $\varepsilon(\sigma)\cdot\varepsilon(\pi)$ \\
+\hline
+P & P & P & $1$ & $1$ & $1$ & $1$ \\
+\hline
+I & P & I & $-1$ & $1$ & $-1$ & $-1$ \\
+\hline
+P & I & I & $1$ & $-1$ & $-1$ & $-1$ \\
+\hline
+I & I & P & $-1$ & $-1$ & $1$ & $1$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\noindent\underline{Consecinţă}: \ Mulţimea $A_n \overset{\text{def}}{=} \ker\varepsilon \trianglelefteq S_n$ şi $|A_n| = \dfrac{n!}{2}$
+
+\noindent (mulţ.\ permut.\ pare din $S_n$.)
+
+\noindent $A_n$ s.n.\ \underline{grupul altern de ordin $n$}
+
+\bigskip
+\noindent T.F.I.\ $\Rightarrow \{-1,1\} = \text{Im}\,\varepsilon \cong \dfrac{S_n}{\ker\varepsilon} = \dfrac{S_n}{A_n} \ \Rightarrow \ [S_n:A_n]=2.$
+
+\bigskip
+\noindent T.\ Lagrange $\Rightarrow |S_n| = |A_n|\cdot[S_n:A_n] \ \Rightarrow \ |A_n| = \dfrac{n!}{2}$
+
+\[
+\underbrace{|S_n|}_{n!} = |A_n|\cdot\underbrace{[S_n:A_n]}_{2}
+\]
+
+\bigskip
+\noindent $I_n$= mulţ.\ permut.\ impare.
+
+\noindent $A_n\cap I_n=\varnothing$, \quad $S_n = A_n\cup I_n$.
+
+\bigskip
+\noindent $\sigma\in S_n$ transpoziţie. \qquad $A_n \underset{g}{\overset{f}{\rightleftarrows}} I_n$.
+
+\[
+f(\tau) = \tau\circ\sigma.
+\]
+\[
+g(\pi) = \pi\circ\sigma
+\]
+\[
+g\circ f = 1_{A_n}; \quad f\circ g = 1_{I_n}.
+\]
+\[
+(g\circ f)(\tau) = g\big(f(\tau)\big) = g(\tau\circ\sigma) = \tau\circ\sigma\circ\sigma = \tau.
+\]
+
+\end{document}
