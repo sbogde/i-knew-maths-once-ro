@@ -1,0 +1,88 @@
+% Curs 9, pagina 5 din 8 — transcriere a manuscrisului din 1994.
+% Fragment destinat adăugării la sfârşitul lui courses/course-09.tex.
+% Originalul nu a fost modificat. A se verifica notele editoriale.
+
+\section*{Curs 9 - Pagina 5}
+
+\noindent Not.\ cu $H=\langle a\rangle$, $\operatorname{ord}H=n$,
+\[
+H=\{e,a,\ldots,a^{n-1}\}.
+\]
+
+\noindent $b\notin H$.
+
+\noindent Altfel $b=a^i$. Folosim faptul că $ba=a^{n-1}b$:
+\[
+a^{i+1}=a^{n+i-1}\ \big|\ \cdot a^{-i-1}
+\quad\Longrightarrow\quad a^{n-2}=e\qquad\times
+\]
+
+\bigskip
+\noindent $H\cap Hb=\varnothing\ \Longrightarrow\ \underbrace{H\cup Hb}_{2n\ \text{elem.}}\subseteq G$.
+
+\bigskip
+\noindent Dem.\ că $H\cup Hb=G$, adică
+\[
+G=\{e,a,a^2,\ldots,a^{n-1},\ b,ab,a^2b,\ldots,a^{n-1}b\}.
+\]
+
+\noindent Arăt că $H\cup Hb$ e parte stabilă. Cum e finită, va rez.\ că e subgr.
+
+\[
+a^i b\cdot a^s b=a^i a^{s(n-1)}b^2\in\langle a\rangle=H.
+\]
+
+\bigskip
+\noindent Dacă $x\in G\ \Longrightarrow\ (\exists!)\,i,j$ cu
+\[
+0\leq i<n,\qquad 0\leq j<2,
+\]
+\noindent a.î.\ $x=a^i b^j$. Fie $y=a^s b^t$.\footnote{Exponenţii din a doua ramură a calculului următor sunt suprascrişi şi greu de descifrat în manuscris; $b^0$ este lectura provizorie, păstrată fără corecţie matematică. Este necesară verificarea cu originalul.}
+
+\[
+\begin{aligned}
+xy&=a^i b^j a^s b^t\\
+  &=\begin{cases}
+      a^{i+s}b^t, & j=0,\\[2pt]
+      a^{i+s(n-1)}b^0, & j=1.
+    \end{cases}
+\end{aligned}
+\]
+\bigskip
+\noindent $f:G\longrightarrow\Delta_n$,\quad
+$f(x)=R^iS^j\ \Longleftrightarrow\ x=a^i b^j$,
+\[
+0\leq i<n,\qquad 0\leq j<2.
+\]
+\noindent $f$ biject.
+
+\noindent Arăt că $f(xy)=f(x)f(y)$.
+
+\bigskip
+\noindent\underline{\textbf{Acţiunea unui grup pe o mulţ.\ ($G$-mulţ.)}}
+
+\bigskip
+\noindent $(G,A,\psi)$,\quad $\psi:G\times A\longrightarrow A$ --- lege de comp.\ ext.\
+pe $A$ cu operatori în $G$.
+
+\noindent $G$ --- grup;\quad $A$ --- mulţ.\ nevidă.
+
+\[
+\left\{\begin{aligned}
+(1)\quad &\psi(a,\psi(b,u))=\psi(ab,u), && a,b\in G,\ u\in A,\\
+(2)\quad &\psi(e,u)=u.
+\end{aligned}\right.
+\]
+
+\noindent Echivalent, scriind $\psi(a,u)=au$:
+\[
+\left\{\begin{aligned}
+(1)\quad &a(bu)=(ab)u,\\
+(2)\quad &eu=u.
+\end{aligned}\right.
+\]
+
+\bigskip
+\noindent\underline{Def.}\ Fie $G$ grup şi $A$ o mulţ.\ O aplic.\
+$\psi:G\times A\longrightarrow A$ s.\ n.\ \underline{acţiune a gr.\ $G$ pe mulţ.\ $A$}
+dacă avem satisfăcute (1) şi (2).
