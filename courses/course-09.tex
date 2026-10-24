@@ -272,3 +272,81 @@ S=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
 \end{enumerate}
 
 \noindent Atunci $G\cong D_n$ şi ord $G=2n$
+
+
+% course 9, page 4
+\section*{Curs 9 - Pagina 4}
+
+\noindent\fbox{Dem.\ prop} \quad $\begin{pmatrix}\cos\alpha & -\sin\alpha\\ \sin\alpha & \cos\alpha\end{pmatrix}^{\!n} = \begin{pmatrix}\cos n\alpha & -\sin n\alpha\\ \sin n\alpha & \cos n\alpha\end{pmatrix}$, \quad ord $R_{\frac{2\pi}{n}} = n$
+
+\bigskip
+\noindent $S\neq I_2$ şi $S^2=I_2 \Rightarrow$ ord $S=2$ \hfill verificare directă
+
+\bigskip
+\bigskip
+\noindent Arăt că $\langle R,S\rangle$ are $2n$ elem.
+
+\noindent Fie $H=\langle R\rangle = \{I_2,R,\ldots,R^{n-1}\}$
+
+\noindent $S\notin H$ (altfel $S=R^i$)
+
+\noindent $\det S = -1 = (\det R)^i = 1^i = 1$ \quad $\times$)
+
+\bigskip
+\noindent $HS = \{R^iS \mid i=\overline{0,n-1}\} \Rightarrow H\cap HS=\varnothing$
+
+\noindent Deci $H\cup HS \subseteq D_n \Rightarrow$ ord.\ $D_n\geq 2n$
+
+\bigskip
+\noindent\underline{Obs} \ Dacă $G$ grup, $H\subseteq G$, $H$ finită şi stabilă
+
+\noindent la înmul.\ ``$\cdot$'' $\Rightarrow H\leq G$.
+
+\bigskip
+\noindent\underline{Dem} \ Fie $a\in H$ şi cons.\ $aH \overset{\text{def}}{=} \{ax \mid x\in H\}$
+
+\noindent Atunci avem $aH=H$.
+
+\noindent ``$\subseteq$'' evident.
+
+\bigskip
+\noindent Dar $\left.\begin{aligned} H&\to aH\\ x&\mapsto ax \end{aligned}\right\}$ inject.\ $\Rightarrow aH=H$.
+
+\bigskip
+\noindent $\Rightarrow ax=a \Rightarrow x=e\in H.$
+
+\noindent Dar $e=ab \Rightarrow ba=b \Rightarrow b=a^{-1}\in H.$
+
+\bigskip
+\noindent\underline{Obs.} că $H\cup HS \ni R,S \Rightarrow \langle R,S\rangle \subseteq H\cup HS$
+
+\noindent $R^iS\cdot R^jS = R^{i-j}S$ etc.\footnote{acest calcul de verificare a închiderii lui $H\cup HS$ e foarte compactat în original; exponenţii exacţi n-au putut fi reconstituiţi cu certitudine deplină.}
+
+\bigskip
+\bigskip
+\noindent\underline{Exp}: \quad $\Delta_6$
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+\draw[->] (0,-2.3) -- (0,2.3) node[above] {$y$};
+\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+\coordinate (v1) at (1.7,1);
+\coordinate (v2) at (0,2);
+\coordinate (v3) at (-1.7,1);
+\coordinate (v4) at (-1.7,-1);
+\coordinate (v5) at (0,-2);
+\coordinate (v6) at (1.7,-1);
+\draw (v1) -- (v2) -- (v3) -- (v4) -- (v5) -- (v6) -- cycle;
+\node[above right] at (v1) {$1$};
+\node[above] at (v2) {$2$};
+\node[above left] at (v3) {$3$};
+\node[below left] at (v4) {$4$};
+\node[below] at (v5) {$5$};
+\node[below right] at (v6) {$6$};
+\draw[->] (0.9,0.6) arc (30:80:1.1);
+\end{tikzpicture}
+\end{center}
+
+\noindent $R_{\frac{2\pi}{6}} = R$
+
+\noindent $R^2, R^3,\ldots,R^5$
