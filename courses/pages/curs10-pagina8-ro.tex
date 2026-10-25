@@ -1,0 +1,83 @@
+% Curs 10 - Pagina 8 (6-XII-1994).
+% Fragment pentru \input{courses/pages/curs10-pagina8-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% Continuarea demonstratiei lemei 2 de pe pagina 7.
+% Nota de fidelitate: manuscrisul pare sa aiba "a in A_0",
+% desi A_0 este o submultime de clase aH. Lectura este pastrata.
+
+\subsection*{Curs 10 - Pagina 8}
+
+\noindent $a\in A_0\ \Longleftrightarrow\ haH=aH$, $(\forall)\,h\in H$
+\[
+\Longleftrightarrow\ a^{-1}haH=H,\quad(\forall)\,h\in H
+\]
+\[
+\Longleftrightarrow\ a^{-1}Ha=H
+\Longleftrightarrow\ H=aHa^{-1}
+\Longleftrightarrow\ a\in N_G(H).
+\]
+
+\noindent Deci
+\[
+|A_0|=\left|\frac{N_G(H)}{H}\right|=[N_G(H):H],
+\]
+\noindent iar $|A|=[G:H]$.
+
+\bigskip
+\noindent\underline{Corolar}. Aceleaşi ipoteze ca la lema 2 şi
+$p\mid[G:H]$.
+
+\noindent Atunci $H\subsetneq N_G(H)$.
+
+\bigskip
+\noindent\fbox{\textbf{Dem. T. lui Sylow 1}}\quad $p^i\mid |G|$.
+
+\medskip
+\noindent Inducţie după $i$.
+
+\noindent $i=1$: O.K. din T. lui Cauchy.
+
+\medskip
+\noindent Presupunem $1\leq i<t$ şi că există $H\leq G$ a.î.
+$|H|=p^i$.
+
+\noindent Demonstrăm că există $K\leq G$, $|K|=p^{i+1}$,
+şi $H\trianglelefteq K$.
+
+\medskip
+\noindent $p\mid[G:H]$, deoarece
+\[
+|G|=p^t m=[G:H]\,|H|=[G:H]p^i.
+\]
+\noindent $i<t\ \Longrightarrow\ p^{t-i}\mid[G:H]
+\ \Longrightarrow\ p\mid[G:H]$.
+
+\medskip
+\noindent Din corolar, $H\subsetneq N_G(H)$.
+Considerăm $N_G(H)/H$.
+
+\medskip
+\noindent Afirm că
+\[
+p\mid\left|\frac{N_G(H)}{H}\right|=[N_G(H):H],
+\]
+\noindent deoarece $p\mid[G:H]$ şi
+\[
+[N_G(H):H]\equiv[G:H]\pmod p.
+\]
+
+\noindent Din T. lui Cauchy, $(\exists)\,\hat a\in N_G(H)/H$
+a.î. $\operatorname{ord}(\hat a)=p$.
+
+\medskip
+\noindent Fie $K'\leq N_G(H)/H$, $K'=\langle\hat a\rangle$,
+$|K'|=p$.
+
+\[
+\varphi:N_G(H)\longrightarrow\frac{N_G(H)}{H},
+\qquad \varphi(a)=\hat a.
+\]
+\[
+\varphi\bigl(\varphi^{-1}(K')\bigr)=K'.
+\]
+% Demonstratia se continua pe pagina urmatoare a manuscrisului.
