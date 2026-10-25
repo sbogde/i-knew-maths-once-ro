@@ -1,0 +1,93 @@
+% Curs 10 - Pagina 3 (6-XII-1994).
+% Fragment independent pentru \input{courses/pages/curs10-pagina3-ro}.
+% Continuarea demonstratiei incepute pe pagina 2.
+
+\subsection*{Curs 10 - Pagina 3}
+
+\noindent (2) \quad
+$N\trianglelefteq G\ \Longleftrightarrow\ axa^{-1}\in N$,
+\quad $(\forall)\,a\in G$, $(\forall)\,x\in N$.
+
+\medskip
+\noindent Prin definiția lui $N_G(H)$,
+\[
+axa^{-1}\in H, \qquad
+(\forall)\,a\in N_G(H),\quad (\forall)\,x\in H.
+\]
+\noindent $\Longrightarrow\ H\trianglelefteq N_G(H)$.
+Pot considera grupul $N_G(H)/H$.
+
+\bigskip
+% Un semn izolat/cancelat preceda linia de separatie din manuscris.
+\hrule
+\bigskip
+
+\noindent Consider $A$ mulțime arbitrară, $|A|<\infty$.
+
+\medskip
+\noindent Fie $z_1,\ldots,z_q\in A$ o transversală a relației de echivalență
+asociată acțiunii lui $G$ pe $A$, ``$\sim_G$''.
+
+\[
+\left\{\begin{aligned}
+&i\neq j\ \Longrightarrow\ z_i\not\sim_G z_j,\\
+&(\forall)\,x\in A,\ (\exists)\,i\ \text{a.î.}\ x\sim_G z_i.
+\end{aligned}\right.
+\]
+
+\noindent În aceste condiții avem:
+\[
+A=\operatorname{Orb}(z_1)\cup\operatorname{Orb}(z_2)
+\cup\cdots\cup\operatorname{Orb}(z_q)
+\qquad (\text{reuniune disjunctă}).
+\]
+
+\[
+\Longrightarrow\quad
+|A|=\sum_{i=1}^{q}[G:\operatorname{Stab}_G(z_i)].
+\]
+\noindent \underline{Ecuația claselor acțiunii lui $G$ pe $A$}.
+
+\bigskip
+\noindent În particular, dacă $A=G$, considerând acțiunea prin conjugare
+a lui $G$ pe $G$ ($G$ grup finit),
+\[
+\Longrightarrow\quad
+\operatorname{ord}(G)=\sum_{i=1}^{q}[G:C_G(z_i)]
+\]
+\noindent - ecuația claselor de elemente conjugate.
+
+\bigskip
+\noindent Fie $x\in G$ a.î.
+\[
+C_G(x)=G\quad\Longleftrightarrow\quad
+|\operatorname{orb}_G(x)|=1,
+\]
+\noindent adică $ax=xa$, $(\forall)\,a\in G$.
+
+\bigskip
+\noindent Notăm:
+\[
+Z_G:=\{x\in G\mid ax=xa,\ (\forall)\,a\in G\}.
+\]
+
+\noindent $Z_G\trianglelefteq G$.
+\quad $Z_G$ se numește \underline{centrul grupului $G$}.
+
+\medskip
+\noindent $x,y\in Z_G\ \stackrel{?}{\Longrightarrow}\ xy^{-1}\in Z_G$;
+\quad și dacă $x\in Z_G$, $a\in G$,
+\[
+\stackrel{?}{\Longrightarrow}\ axa^{-1}\in Z_G
+\qquad (axa^{-1}=xaa^{-1}=x).
+\]
+
+\bigskip
+\noindent $Z_G$ este inclus în orice transversală; în particular,
+$Z_G\subseteq\{z_1,\ldots,z_q\}=T$.
+
+\[
+\operatorname{ord}(G)=\operatorname{ord}(Z_G)
++\sum_{\substack{z_i\in T\\z_i\notin Z_G}}[G:C_G(z_i)].
+\]
+% Pentru z_i in centru, [G:C_G(z_i)]=1 (adnotare "1" in manuscris).
