@@ -1,0 +1,101 @@
+% Curs 10 - Pagina 4 (6-XII-1994).
+% Fragment pentru \input{courses/pages/curs10-pagina4-ro}.
+% Continuarea ecuatiei claselor de la pagina 3; fara inceput de document sau intrerupere fortata de pagina.
+
+\subsection*{Curs 10 - Pagina 4}
+
+\noindent\underline{Aplicație}
+
+\medskip
+\noindent\underline{T. lui Cauchy}: $G$ grup finit și $|G|=n$;
+$p\mid |G|$, $p$ prim.
+
+\medskip
+\noindent Atunci $(\exists)\,a\in G$ a.î. $\operatorname{ord}(a)=p$.
+
+\bigskip
+\noindent\underline{Dem.}:
+\begin{align*}
+\text{Caz 1:}\quad & p\mid\operatorname{ord}(Z_G),\\
+\text{Caz 2:}\quad & p\nmid\operatorname{ord}(Z_G).
+\end{align*}
+
+\noindent\underline{Caz 1}: $\Longrightarrow (\exists)\,a\in Z_G$
+a.î. $\operatorname{ord}(a)=p$ (deoarece $Z_G$ este grup abelian).
+
+\medskip
+\noindent\underline{Caz 2}: $(\exists)\,z_j\in T$, $z_j\notin Z_G$
+a.î. $p\nmid [G:C_G(z_j)]$.
+
+\[
+\Longrightarrow\quad p\mid\operatorname{ord}(C_G(z_j))
+\quad\bigl(\operatorname{ord}(G)
+=\operatorname{ord}(C_G(z_j))\,[G:C_G(z_j)]\bigr).
+\]
+
+\noindent Dar $\operatorname{ord}(C_G(z_j))<\operatorname{ord}(G)$.
+
+\medskip
+\noindent Prin inducție după $n$:
+\[
+<n\ \longrightarrow\ n.
+\]
+% Ultima indicatie a inductiei este doar schematica in manuscris.
+% Justificarea separata a cazului abelian nu este scrisa aici.
+
+\bigskip
+\hrule
+\bigskip
+
+\noindent\underline{Lema 1}: Fie $G$ grup $p$, $|G|=p^n$,
+$n\geq 1$, și $A$ o $G$-mulțime finită.
+
+\medskip
+\noindent Fie
+\[
+A_0=\{x\in A\mid ax=x,\ (\forall)\,a\in G\}
+   =\{x\in A\mid \operatorname{Stab}_G(x)=G\}.
+\]
+
+\noindent Atunci
+\[
+|A|\equiv |A_0|\pmod p.
+\]
+
+\bigskip
+\noindent\underline{Caz particular}: $A=G$, $|G|=p^n$
+și acțiunea prin conjugare.
+\[
+\Longrightarrow\quad |G|\equiv |Z_G|\pmod p.
+\]
+
+\bigskip
+\noindent\underline{Dem.}: Fie $T=\{z_1,\ldots,z_q\}$
+o transversală pentru relația de echivalență a acțiunii lui $G$ pe $A$.
+
+\[
+A_0\subseteq T,\qquad
+x\in A_0\ \Longrightarrow\
+|\widehat{x}|=[G:\operatorname{Stab}_G(x)]=1
+=|\operatorname{Orb}_G(x)|.
+\]
+
+\[
+|A|=|A_0|+
+\sum_{\substack{z_i\in T\\z_i\notin A_0}}
+[G:\operatorname{Stab}_G(z_i)].
+\]
+
+\noindent Pentru $z_i\notin A_0$:
+\[
+[G:\operatorname{Stab}_G(z_i)]\mid |G|,
+\qquad [G:\operatorname{Stab}_G(z_i)]>1.
+\]
+\[
+\Longrightarrow\quad p\mid[G:\operatorname{Stab}_G(z_i)].
+\]
+
+\noindent Deci
+\[
+p\mid\bigl(|A|-|A_0|\bigr).
+\]
