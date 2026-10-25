@@ -536,3 +536,84 @@ H\times\{1,2,\ldots,n\}\longrightarrow\{1,2,\ldots,n\}
 \sigma^h\cdot i=\sigma^h(i)\in\{1,\ldots,n\}.
 \]
 
+
+
+
+\bigskip
+
+% course 9, page 7
+\section*{Curs 9 - Pagina 7}
+
+
+\noindent\underline{Prop.} Fie $G$ gr. şi $A$ o $G$-mulţ. Rel. binară pe $A$
+\[
+x\sim_G y\ \overset{\mathrm{def}}{\Longleftrightarrow}
+(\exists)\,a\in G\text{ a.î. }a x=y,\qquad x,y\in A.
+\]
+\noindent (rel. de echiv.)
+
+\bigskip
+\noindent Clasele de echiv. ale ac. rel. s.n. \underline{orbitele acţ. lui $G$ pe $A$}.
+
+\bigskip
+\noindent\underline{Dem.} Arăt că:
+\begin{align*}
+&x\sim_G x,\qquad (\forall)\,x\in A,\\
+&x\sim_G y\ \Longrightarrow\ y\sim_G x,\\
+&x\sim_G y\text{ şi }y\sim_G z\ \Longrightarrow\ x\sim_G z.
+\end{align*}
+\noindent Reflexivitatea rezultă din (2) (de la def. $G$-mulţimii).
+
+\bigskip
+\noindent $(\exists)\,a\in G$ a.î. $a x=y$ $\Longrightarrow$
+\[
+x=e x=(a^{-1}a)x=a^{-1}(a x)=a^{-1}y.
+\]
+
+\bigskip
+\noindent $(\exists)\,a,b\in G$ a.î.
+\[
+\left.\begin{aligned}
+ a x&=y,\\
+ b y&=z
+\end{aligned}\right\}
+\quad\Longrightarrow\quad z=b(a x)=(ba)x.
+\]
+
+\bigskip
+\noindent\underline{Obs.} Dacă $x\in A$, $\operatorname{Orb}(x)=\operatorname{Orb}_G(x)$
+(orbita lui $x$ prin acţ. lui $G$).
+\[
+\operatorname{Orb}(x)=\{a x\mid a\in G\}=Gx.
+\]
+\[
+\operatorname{Orb}(x)=\widehat{x}
+=\{y\in A\mid y\sim_G x\}.
+\]
+
+\bigskip
+\noindent\underline{Def.} Dacă $A$ e o $G$-mulţ. şi $x\in A$,
+\[
+\operatorname{Stab}_G(x)\ \overset{\mathrm{def}}{=}
+\{a\in G\mid a\cdot x=x\}
+\]
+\noindent stabilizatorul lui $x$ (în $G$).
+
+\noindent Evident $e\in\operatorname{Stab}_G(x)$.
+
+\bigskip
+\noindent\fbox{T} Dacă $A$ e o $G$-mulţ. şi $x\in A$, atunci:
+\begin{enumerate}
+\item[(1)] $\operatorname{Stab}_G(x)\leq G$.
+\item[(2)] $\operatorname{card}(\operatorname{Orb}(x))
+=[G:\operatorname{Stab}_G(x)]$.
+\item[(3)] $G$ finit $\Longrightarrow\operatorname{card}(\operatorname{Orb}(x))\mid\operatorname{ord}G$.
+\end{enumerate}
+
+\bigskip
+\noindent $S_n\times A\longrightarrow A$, \qquad $A=\{1,2,\ldots,n\}$,
+\[
+\operatorname{Stab}_{S_n}(n)
+=\{\sigma\in S_n\mid\sigma(n)=n\}.
+\]
+\noindent $\sigma\cdot n=\sigma(n)\in A$.
