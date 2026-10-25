@@ -1,0 +1,113 @@
+% Curs 10 - Pagina 9 (6-XII-1994).
+% Fragment pentru \input{courses/pages/curs10-pagina9-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% Continuarea demonstratiei T. lui Sylow 1 de pe pagina 8.
+% Note editoriale: pasajele incerte sau logic problematice sunt semnalate
+% prin comentarii sau note, nu corectate tacit.
+
+\subsection*{Curs 10 - Pagina 9}
+
+\noindent $\varphi(K)=\dfrac{K}{H}=K'.$
+
+\medskip
+\noindent Iar $H\trianglelefteq K$ pentru că $H\trianglelefteq N_G(H)$.
+
+\medskip
+\noindent Aplicăm Lagrange:
+\[
+|K|=|H|\cdot[K:H]=|H|\cdot[\,\ldots\,]
+\quad\Longrightarrow\quad p\mid|K'|.
+\]
+% In manuscris, termenul dintre ultimele paranteze patrate este omis/neclar.
+% La capatul randului pare scris „p | |K'|”; argumentul matematic
+% ar trebui sa stabileasca |K|=p^{i+1}. Nu inlocuim lectura originala.
+
+\bigskip
+\noindent\fbox{\textbf{Dem. T. lui Sylow 2}}
+
+\medskip
+\noindent Fie $P\in\operatorname{Syl}_p(G)$. Fie
+\[
+A=\{aP\mid a\in G\}.
+\]
+
+\noindent $H\times A\longrightarrow A$,
+\[
+(h,aP)\longmapsto(ha)P\in A,
+\]
+\noindent acţiune prin translaţie.
+
+\noindent Verifică că este o acţiune.
+
+\medskip
+\noindent Considerăm $A_0$ corespunzător:
+\[
+A_0=\{aP\mid haP=aP,\ (\forall)\,h\in H\}.
+\]
+
+\noindent $A_0\neq\varnothing$, fiindcă $p\nmid[G:P]$ şi
+$|P|=p^t$.
+
+\medskip
+\noindent Din lema 2 $\Longrightarrow$
+\[
+p\nmid[N_G(P):P].
+\]
+% Lectura „[N_G(P):P]” este vizibila, dar aplicarea lemei la
+% actiunea lui H pe G/P ar cere mai intai concluzia p\nmid|A_0|.
+% Necesita verificare in manuscris; nu s-a corectat tacit.
+
+% Linia „Aplic. lema 2” este taiata in manuscris.
+\medskip
+\noindent
+\[
+|A_0|\equiv|A|\pmod p
+\quad\Longrightarrow\quad p\nmid|A_0|
+\quad\Longrightarrow\quad A_0\neq\varnothing.
+\]
+\noindent $|A|=m$ şi $p\nmid m$.
+
+\medskip
+\noindent $(\exists)\,aP\in A_0$. Atunci
+\[
+haP=aP,\quad(\forall)\,h\in H
+\quad\Longleftrightarrow\quad
+ a^{-1}haP=P,\quad(\forall)\,h\in H.
+\]
+\[
+\Longleftrightarrow\quad a^{-1}Ha\leq P
+\quad\Longrightarrow\quad H\leq aPa^{-1}.
+\]
+
+\medskip
+\noindent Fie $Q\in\operatorname{Syl}_p(G)$. Atunci
+\[
+aQa^{-1}\leq P.
+\]
+\noindent Dar
+\[
+|P|=p^t,\qquad |Q|=p^t
+\quad\Longrightarrow\quad |aQa^{-1}|=p^t
+\quad\Longrightarrow\quad aQa^{-1}=P.
+\]
+
+\bigskip
+\noindent\underline{Aplicaţie}: $|G|=pq$, $p>q$, $q\nmid(p-1)$.
+
+\medskip
+\noindent Cauchy: $(\exists)\,a,b\in G$ cu
+$o(a)=p$, $o(b)=q$.
+
+\noindent $P=\langle a\rangle$, $Q=\langle b\rangle$.
+
+\noindent Din T. 3:
+\[
+|\operatorname{Syl}_p(G)|\mid pq,
+\qquad |\operatorname{Syl}_p(G)|\equiv1\pmod p
+\quad\Longrightarrow\quad |\operatorname{Syl}_p(G)|=1.
+\]
+
+\noindent $P\in\operatorname{Syl}_p(G)\ \ni Q$.%
+% Lectura finala „\ni Q” este nesigura si, interpretata ca
+% incluziune Q<=P, ar fi incompatibila cu |Q|=q si |P|=p.
+% Pasajul se incheie aici pe pagina 9.
