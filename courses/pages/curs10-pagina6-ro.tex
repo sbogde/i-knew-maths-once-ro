@@ -1,0 +1,77 @@
+% Curs 10 - Pagina 6 (6-XII-1994).
+% Fragment pentru \input{courses/pages/curs10-pagina6-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+
+\subsection*{Curs 10 - Pagina 6}
+
+\noindent\underline{Def.}: Un grup $G$ s.n. \textbf{$p$-grup}, $p$ prim, dacă:
+\[
+(\forall)\,a\in G,\qquad o(a)=p^t,\quad t\geq 0.
+\]
+% In manuscris, cuvantul „p-grup” din prima linie apare taiat,
+% desi este termenul definit de expresia care urmeaza.
+
+\medskip
+\noindent\underline{Obs.}: Dacă $G$ este grup finit, atunci
+\[
+\boxed{G\text{ este }p\text{-grup}\quad\Longleftrightarrow\quad
+\operatorname{ord}(G)=p^n}.
+\]
+
+\noindent\underline{Dem.}: ``$\Leftarrow$'' evident.
+
+\noindent ``$\Rightarrow$'': R.A. $\operatorname{ord}(G)\neq p^n$.
+Atunci $(\exists)\,q$ prim, $q\neq p$, a.î. $q\mid\operatorname{ord}(G)$.
+
+\noindent Conform teoremei lui Cauchy,
+$(\exists)\,a\in G$ a.î. $o(a)=q$; cum $G$ este $p$-grup,
+rezultă $p=q$, contradicţie.
+
+\bigskip
+\noindent-- Fie
+\[
+U_{p^n}=\{z\in\mathbb{C}\mid z^{p^n}=1\},
+\qquad U_{p^n}\leq(\mathbb{C}^{*},\cdot).
+\]
+\noindent Şi $\operatorname{ord}(U_{p^n})=p^n$.
+
+\[
+\bigcup_{n\geq 1}U_{p^n}\ \leq\ (\mathbb{C}^{*},\cdot).
+\]
+\noindent Este $p$-grup infinit.
+
+\bigskip
+\noindent\underline{Def.}: Fie $G$ grup şi $H\leq G$.
+$H$ e \underline{$p$-subgrup} al lui $G$ dacă şi numai dacă
+$(H,\cdot)$ este $p$-grup.
+
+\bigskip
+\noindent\fbox{\textbf{T. lui Sylow 1}}.
+Fie $G$ grup finit şi $\operatorname{ord}(G)=p^t m$,
+$t\geq 1$ şi $p\nmid m$.
+
+\medskip
+\noindent Atunci $(\forall)\,i=\overline{1,t}$ există $H\leq G$
+cu $|H|=p^i$.
+
+\medskip
+\noindent Mai mult, dacă $1\leq i<t$, atunci există $H\leq G$,
+$|H|=p^i$, care este normal într-un subgrup al lui $G$
+de ordin $p^{i+1}$.
+
+\bigskip
+\noindent\underline{Dem.}: Pentru $i=1$, O.K. din T. Cauchy.
+
+\medskip
+\noindent În aceleaşi ipoteze, un $p$-subgrup al lui $G$
+de ordin $p^t$ s.n. \underline{$p$-subgrup Sylow} al lui $G$.
+\quad (Not. $A=\operatorname{Syl}_p(G)$.)
+
+\bigskip
+\noindent\underline{Obs.}: Pe $A=\operatorname{Syl}_p(G)$,
+$G\times A\longrightarrow A$ acţionează prin conjugare:
+\[
+P\in A,\ a\in G,\qquad
+(a,P)\longmapsto aPa^{-1}
+\quad\text{(conjugatul lui $P$ prin $a$)}.
+\]
