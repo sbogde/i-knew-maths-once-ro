@@ -1,0 +1,87 @@
+% Curs 11 - Pagina 3 (13-XII-1994).
+% Fragment pentru \input{courses/pages/curs11-pagina3-ro}.
+% Fara preambul sau schimbare fortata de pagina.
+% Este pastrata succesiunea din manuscris; observatiile editoriale sunt comentarii.
+
+\subsection*{Curs 11 - Pagina 3}
+
+\[
+\left.\begin{aligned}
+P &\trianglelefteq G\\
+Q &\trianglelefteq G
+\end{aligned}\right\}
+\Longrightarrow [a,b]\in P\cap Q=\{e\}.
+\]
+
+\[
+|P\cap Q|\mid |P|=p,\qquad
+|P\cap Q|\mid |Q|=q
+\Longrightarrow |P\cap Q|=1.
+\]
+
+\[
+\Longrightarrow ab=ba=c,\qquad
+\operatorname{ord}(c)=pq
+\Longrightarrow G=\langle c\rangle
+\Longrightarrow G\cong\mathbb{Z}_{pq}.
+\]
+% Primele randuri presupun ca P si Q sunt normale in G.
+% Justificarea pentru ambele afirmatii nu este dezvoltata integral
+% in paginile precedente; nu este adaugata aici.
+
+\bigskip
+\noindent $|A|\equiv1\pmod p$,\qquad $|A|=ph+1$ \quad (din Sylow III),
+
+\noindent $|B|\equiv1\pmod q$,\qquad $|B|=qt+1$.
+
+\medskip
+\noindent $|A|=q\Longrightarrow ph=q-1$, imposibil.
+
+\bigskip
+\noindent\underline{Calculul nr. orbitelor acțiunii unui gr. finit}
+
+\noindent\underline{pe o mulțime finită}
+
+\medskip
+\noindent Fie $G$ grup, $|G|=m$, și $A$ o $G$-mulțime finită, $|A|=n$.
+
+\medskip
+\noindent Dacă $\{z_1,\ldots,z_q\}\subseteq A$ e transversală pentru relația
+ de echivalență pe $A$, $\sim_G$, atunci
+\[
+A=\operatorname{orb}(z_1)\cup\operatorname{orb}(z_2)
+\cup\cdots\cup\operatorname{orb}(z_q).
+\]
+
+\noindent Dacă $a\in G$, $\operatorname{Fix}a=\{x\in A\mid ax=x\}\subseteq A$.
+
+\medskip
+\noindent\fbox{T. lui Burnside}
+\qquad
+\(\displaystyle q=\frac{\sum_{a\in G}|\operatorname{Fix}a|}{|G|}.\)
+
+\bigskip
+\noindent $G=S_n$,\qquad $A=\{1,2,\ldots,n\}$,
+\[
+S_n\times A\longrightarrow A,\qquad (\sigma,i)\longmapsto\sigma(i).
+\]
+
+\noindent Atunci $q=1$,\quad
+$\operatorname{Fix}\sigma=\{i\in A\mid\sigma(i)=i\}$.
+
+\[
+\sum_{\sigma\in S_n}|\operatorname{Fix}\sigma|=n!.
+\]
+
+\bigskip
+\noindent\underline{Obs.}: $x\sim_G y\Longleftrightarrow
+(\exists)\,a\in G$ a.î. $ax=y$.
+
+\[
+\Downarrow
+\]
+\[
+\operatorname{Stab}_G(y)=a\bigl(\operatorname{Stab}_G(x)\bigr)a^{-1}
+\Longrightarrow
+|\operatorname{Stab}_G(y)|=|\operatorname{Stab}_G(x)|.
+\]

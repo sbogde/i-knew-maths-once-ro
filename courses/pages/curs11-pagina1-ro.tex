@@ -1,0 +1,101 @@
+% Curs 11 - Pagina 1 (13-XII-1994).
+% Fragment pentru \input{courses/pages/curs11-pagina1-ro}.
+% Fara preambul. Pagina intai a unui curs nou incepe pe pagina noua.
+% Prescurtarile si ordinea manuscrisului sunt pastrate pe cat posibil.
+
+\clearpage
+\subsection*{Curs 11}
+
+\begin{center}
+% \fbox{\textbf{CURS 11}}
+\end{center}
+\begin{flushright}
+\textit{13-XII-94}
+\end{flushright}
+
+\begin{enumerate}
+    \item T. lui Sylow + apl.
+    \item T. de izomorfisme + 1 apl.
+    \item T. lui Burnside + apl.
+    \item Tablă de materii - ghid pt. pregătirea ex. de alg.
+\end{enumerate}
+
+\medskip
+\noindent $G$ - grup, $|G|=n=p^t m$, $t\geq 1$ şi $p\nmid m$.
+% In original, semnul dinaintea lui "p | m" este suprascris/taiat;
+% lectura p\nmid m este cea mai probabila si concorda cu ipoteza Sylow.
+
+\bigskip
+\noindent\underline{T$_1$ - Sylow I.}\quad
+$(\forall)\,i$, $1\leq i\leq t$, $(\exists)\,H\leq G$ cu $|H|=p^i$.
+
+\medskip
+\noindent $\operatorname{Syl}_p(G)$ - mulţimea $p$-subgrupurilor Sylow ale lui $G$,
+$\operatorname{Syl}_p(G)\neq\varnothing$.
+
+\bigskip
+\noindent\underline{Sylow II.}
+\[
+G\times\operatorname{Syl}_p(G)\longrightarrow\operatorname{Syl}_p(G),
+\qquad (a,P)\longmapsto aPa^{-1}\in\operatorname{Syl}_p(G).
+\]
+\noindent $\varphi_a(P)=aPa^{-1}$.
+% Simbolul functiei, scris sub formula in manuscris, pare "phi_a(P)".
+
+\medskip
+\noindent Acţiunea e tranzitivă $\Longleftrightarrow$ are o singură orbită.
+
+\[
+\Longleftrightarrow\quad
+(\forall)\,P,Q\in\operatorname{Syl}_p(G),\ (\exists)\,a\in G
+\text{ a.î. }aPa^{-1}=Q,
+\quad \operatorname{Orb}_G(P)=\operatorname{Syl}_p(G).
+\]
+
+\bigskip
+\noindent\fbox{Sylow III.}\quad
+$|\operatorname{Syl}_p(G)|\mid\operatorname{ord}(G)$ şi
+\[
+|\operatorname{Syl}_p(G)|=pk+1\equiv1\pmod p.
+\]
+
+\bigskip
+\noindent\fbox{Lema III.}\quad
+Fie $P\in\operatorname{Syl}_p(G)$.
+\[
+\operatorname{Orb}_G(P)=\operatorname{Syl}_p(G).
+\]
+\[
+|\operatorname{Syl}_p(G)|=|\operatorname{Orb}_G(P)|
+=[G:\operatorname{Stab}_G(P)]
+\overset{\text{Lagrange}}{\Longrightarrow}
+|\operatorname{Syl}_p(G)|\mid|G|.
+\]
+
+\medskip
+\noindent Fie $P\in\operatorname{Syl}_p(G)$. Consider aplicaţia
+(acţiune prin conjugare):
+\[
+P\times\operatorname{Syl}_p(G)\longrightarrow\operatorname{Syl}_p(G),
+\qquad (a,Q)\longmapsto aQa^{-1}\in\operatorname{Syl}_p(G).
+\]
+
+\noindent Fie $A=\operatorname{Syl}_p(G)$.
+
+\medskip
+\noindent\underline{Lema 1.}\quad
+$G$ - $p$-grup, $|G|=p^a$, $A$ - $G$-mulţime finită,
+\[
+A_0=\{x\in A\mid ax=x,\ (\forall)\,a\in G\}.
+\]
+\noindent Atunci $|A|\equiv|A_0|\pmod p$.
+
+\medskip
+\noindent
+\[
+A_0=\{Q\in A\mid aQa^{-1}=Q,\ (\forall)\,a\in P\}.
+\]
+\noindent $A_0\neq\varnothing$, pentru că $P\in A_0$
+$(aPa^{-1}=P\ \Longleftarrow\ a\in P)$.
+% Am pastrat implicatia intr-un singur sens, asa cum pare a fi scrisa.
+% Manuscrisul se incheie aici: demonstratia congruentei continua mai departe.
