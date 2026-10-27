@@ -1,0 +1,92 @@
+% Curs 12 - Pagina 8 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina8-ro}.
+% Fara preambul sau salt de pagina fortat.
+% NOTE EDITORIALE:
+% - Pagina continua constructia grupului liber FG[A] de la pagina 7.
+% - In enuntul proprietatii universale, tinta aplicatiei zeta seamana
+%   cu G^* in manuscris, desi grupul din diagrama este G. Se pastreaza
+%   citirea aparenta G^*, fara corectie tacita.
+% - Textul si diagrama a doua sunt foarte comprimate. Zeta_1 este
+%   prelungirea functiei zeta la alfabetul A reunit cu A'.
+% - Pe linia f o zeta_{A unite A'} = zeta_1, litera poate semana cu
+%   f sau o alta litera; lectura f este determinata de continuarea
+%   demonstratiei si ramane provizorie.
+% - Manuscrisul noteaza (xx',1) in R si verifica f(xx')=f(1).
+% - Ultimele doua randuri pun problema cuvintelor sub forma unei
+%   intrebari despre un algoritm finit; raspunsul foarte palid se
+%   citeste probabil "nu totdeauna".
+
+\subsection*{Curs 12 - Pagina 8}
+
+\noindent\fbox{T}
+\begin{enumerate}
+\item[(1)] $\mathrm{FG}[A]$ este grup.
+\item[(2)] Aplica\c{t}ia $\zeta_A:A\longrightarrow\mathrm{FG}[A]$
+este injectiv\u{a}.
+\end{enumerate}
+
+\medskip
+\noindent $(\forall)\,(G,\cdot,e)$ grup,
+$(\forall)\,\zeta:A\longrightarrow G^*$,
+\[
+\exists!\,g:\mathrm{FG}[A]\longrightarrow G
+\quad\text{a.\^{i}.}\quad g\circ\zeta_A=\zeta.
+\]
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[dr,"\zeta"']
+  & \mathrm{FG}[A] \arrow[d,dashed,"g"]\\
+& G
+\end{tikzcd}
+\]
+
+\medskip
+\noindent $A\subseteq A\cup A'$,
+\[
+A\cup A'\xrightarrow{\ \zeta_{A\cup A'}\ }(A\cup A')^*
+\xrightarrow{\ \rho\ }
+\frac{(A\cup A')^*}{R^*}
+=\langle\overline{A}\cup\overline{A'}\rangle.
+\]
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A\cup A' \arrow[r,"\zeta_{A\cup A'}"] \arrow[dr,"\zeta_1"']
+  & (A\cup A')^* \arrow[r,"\rho"] \arrow[d,dashed,"f"]
+  & \mathrm{FG}[A] \arrow[dl,dashed,"g"]\\
+& G &
+\end{tikzcd}
+\]
+
+\noindent
+\[
+\zeta_1(x)=\zeta(x)\quad(\forall)\,x\in A,
+\qquad
+\zeta_1(x')=\zeta(x)^{-1}\quad(\forall)\,x'\in A'.
+\]
+
+\noindent $f\circ\zeta_{A\cup A'}=\zeta_1$,
+\qquad $R^*\subseteq R_f$.
+
+\medskip
+\noindent $(xx',1)\in R\subseteq R_f$.
+\[
+f(xx')=f(x)f(x')=e=f(1),
+\]
+\noindent unde $f(x)=\zeta_1(x)=\zeta(x)$ \c{s}i
+$f(x')=\zeta_1(x')=\zeta(x)^{-1}$.
+
+\bigskip
+\noindent\underline{\textit{``Word problem''} (problema cuvintelor)}
+\[
+R\subseteq A^*\times A^*,\qquad
+R^*\subseteq A^*\times A^*,\qquad
+u,v\in A^*,\quad u\,R^*\,v.
+\]
+
+\noindent $\exists$ algoritm a.\^{i}.\ ob\c{t}inem $v$ din $u$
+\^{i}n num\u{a}r finit de pa\c{s}i?
+
+\medskip
+\noindent\textit{Nu totdeauna.}

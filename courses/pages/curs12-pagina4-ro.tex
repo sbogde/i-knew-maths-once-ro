@@ -1,0 +1,84 @@
+% Curs 12 - Pagina 4 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina4-ro}.
+% Transcriere in ordinea manuscrisului; fara preambul si fara salt fortat de pagina.
+
+\subsection*{Curs 12 - Pagina 4}
+
+\noindent\underline{Dem.}\quad Fie $u\in A^+$,
+$u=x_1x_2\cdots x_m$, $x_i\in A$.
+
+\[
+f(u)\ \overset{?}{=}\ \zeta(x_1)\zeta(x_2)\cdots\zeta(x_m)\in S.
+\]
+% Semnul intrebarii deasupra egalitatii apare in manuscris,
+% inaintea verificarii ca aplicatia astfel propusa este un morfism.
+
+\noindent $v\in A^+$, $v=y_1y_2\cdots y_n$.
+\[
+f(v)=\zeta(y_1)\cdots\zeta(y_n).
+\]
+\[
+f(uv)=\zeta(x_1)\cdots\zeta(x_m)\zeta(y_1)\cdots\zeta(y_n)
+=f(u)f(v).
+\]
+
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[dr,"\zeta"'] & A^+ \arrow[d,"f"] \\
+& S
+\end{tikzcd}
+\]
+
+\medskip
+\noindent $(!)$ Lu\u{a}m $g:A^+\longrightarrow S$ morfism de semigrup
+\c{s}i $g\circ\zeta_A=\zeta\Rightarrow g=f$.
+
+\medskip
+\noindent $u\in A^+$,
+\[
+u=x_1\cdots x_m=\zeta_A(x_1)\cdots\zeta_A(x_m).
+\]
+\begin{align*}
+g(u)
+ &=g\bigl(\zeta_A(x_1)\cdots\zeta_A(x_m)\bigr)\\
+ &=g\bigl(\zeta_A(x_1)\bigr)\cdots g\bigl(\zeta_A(x_m)\bigr)\\
+ &=\zeta(x_1)\cdots\zeta(x_m)=f(u),
+ \qquad (\forall)\,u\in A^+.
+\end{align*}
+
+\bigskip
+\noindent\fbox{T.}\quad\underline{Pentru monoidul liber}
+
+\medskip
+\noindent $A\neq\varnothing$, $A^+$,
+\quad $A\xrightarrow{\ \zeta_A\ }A^+$.
+
+\medskip
+\noindent $(\forall)$ monoid $(M,\cdot,e)$, $(\forall)$ aplica\c{t}ie de mul\c{t}imi
+$\zeta:A\longrightarrow M$,
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[d,"\zeta"'] & A^+ \arrow[dl,dashed,"\exists!\,f"] \\
+M &
+\end{tikzcd}
+\]
+\noindent $\exists!\,f:A^+\longrightarrow M$ a.\^{\i}. $f\circ\zeta_A=\zeta$.
+
+\medskip
+\noindent\underline{Dem.}\quad Analog $+$ $f(1)\overset{\mathrm{def}}{=}e\in M$.
+% NOTA EDITORIALA: Titlul spune „monoidul liber” si se defineste f(1),
+% dar in enunt si in diagrama apare A^+, nu A^*. Am pastrat lectura manuscrisului;
+% pentru proprietatea universala a monoidului liber s-ar astepta A^*.
+
+\bigskip
+\noindent\underline{Congruen\c{t}e pe $A^+$ generate de o rela\c{t}ie binar\u{a}}
+$R\subseteq A^+\times A^+$.
+
+\[
+R=\bigl\{(w_i,w_i')\in A^+\times A^+\mid i\in I\bigr\}.
+\]
+% Nota: litera care indexeaza perechile apare ca I (sau un simbol apropiat).
+
+\noindent $(1)$\quad
+$R^{-1}=\bigl\{(v,u)\mid (u,v)\in R\bigr\}$.
+% Pagina se incheie aici; continuarea definitiilor ramane pentru pagina urmatoare.

@@ -1,0 +1,101 @@
+% Curs 12 - Pagina 6 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina6-ro}.
+% Fara preambul sau salt de pagina; ordinea manuscrisului este pastrata.
+% NOTE EDITORIALE:
+% - La inceput, afirmatia R* subset C necesita ca C sa fie o congruenta;
+%   in manuscris C este numita doar submultime a lui A* x A*.
+% - Definitia lui R de aici (x,y litere din A, x != y) este mai restransa
+%   decat relatia folosita in Aplicatia 1, la pagina 5.
+% - Prima egalitate care mentioneaza generatorii A* si A-bar este putin
+%   neclara; aici A* = <A> si A*/R* = <A-bar> exprima lectura contextuala.
+% - In demonstratia punctului (2) apar sageti/semne de intrebare; sunt
+%   pastrate, fara a completa finalul demonstratiei din pagina urmatoare.
+
+\subsection*{Curs 12 - Pagina 6}
+
+\noindent $R^*$ e tranzitiv\u{a}.
+\[
+R\subseteq S_R\subseteq R^*.
+\]
+
+\noindent Fie $C\subseteq A^*\times A^*$ a.\^{\i}.\ $R\subseteq C$
+$\Rightarrow R^*\subseteq C$.
+
+\bigskip
+\noindent\underline{Proprietatea de universalitate a monoidului comutativ generat de $A$}
+
+\medskip
+\noindent\fbox{T}\quad Fie $A\neq\varnothing$,
+\[
+R=\bigl\{(xy,yx)\in A^*\times A^*\mid x,y\in A,\ x\neq y\bigr\},
+\]
+\noindent \c{s}i $R^*$ congruen\c{t}a pe $A^*$ generat\u{a} de $R$.
+
+\medskip
+\noindent\textbf{1.} Monoidul $\dfrac{A^*}{R^*}$ e comutativ.
+
+\medskip
+\noindent\textbf{2.} Aplica\c{t}ia $\eta_A:A\longrightarrow\dfrac{A^*}{R^*}$,
+\[
+\eta_A=\Bigl(A^*\xrightarrow{\ \rho\ }\frac{A^*}{R^*}\Bigr)
+\circ\bigl(A\xrightarrow{\ \zeta_A\ }A^*\bigr),
+\]
+\noindent $A\xrightarrow{\eta_A}\dfrac{A^*}{R^*}$, pentru orice
+$(M,\cdot,e)$ monoid comutativ \c{s}i orice $\eta:A\to M$,
+\[
+\exists!\,g:\frac{A^*}{R^*}\longrightarrow M
+\quad\text{a.\^{\i}.}\quad g\circ\eta_A=\eta.
+\]
+
+\bigskip
+\noindent\underline{Dem.}
+
+\medskip
+\noindent\textbf{(1)} $A\subseteq A^*$.
+\[
+A^*=\langle A\rangle\quad\Longrightarrow\quad
+\frac{A^*}{R^*}=\langle\overline A\rangle,
+\qquad \overline A=\{\overline x\mid x\in A\},
+\quad\overline x\in\frac{A^*}{R^*}.
+\]
+
+\noindent Ar\u{a}t\u{a}m c\u{a}
+\[
+\overline x\,\overline y=\overline y\,\overline x
+\qquad (\forall)\,x,y\in A,
+\]
+\noindent deoarece $(xy,yx)\in R$.
+\[
+\overline{xy}=\overline{yx},\qquad
+\overline u\,\overline v=\overline{uv}
+\quad (\forall)\,\overline u,\overline v\in\frac{A^*}{R^*}.
+\]
+
+\medskip
+\noindent\textbf{(2)}
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[dr,"\eta"']
+  \arrow[rr,bend left=28,"\eta_A"]
+  & A^* \arrow[r,"\rho"] \arrow[d,dashed,"{\exists!\,f}"']
+  & \dfrac{A^*}{R^*} \arrow[dl,dashed,"{\exists!\,g}"] \\
+& M &
+\end{tikzcd}
+\]
+
+\noindent $\exists!\,f$ a.\^{\i}.\ $f\circ\zeta_A=\eta$.
+\[
+R^*\subseteq R_f\quad\Longleftarrow\quad R\subseteq R_f.
+\]
+\noindent $(xy,yx)\in R$,
+\[
+f(xy)\overset{?}{=}f(yx)
+\quad\Longrightarrow\quad (xy,yx)\in R_f.
+\]
+\[
+f(xy)=f(x)f(y)=f(y)f(x),
+\qquad f\circ\zeta_A=\eta,\quad g\circ\rho=f,\quad
+ g\circ\eta_A=\eta.
+\]
+% Ultima linie a demonstratiei este foarte compacta in manuscris;
+% egalitatile de compunere de la final sunt citite contextual.

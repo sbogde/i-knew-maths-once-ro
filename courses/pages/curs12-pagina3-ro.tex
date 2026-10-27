@@ -1,0 +1,110 @@
+% Curs 12 - Pagina 3 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina3-ro}.
+% Transcriere fidelă în ordinea manuscrisului, fără preambul şi fără salt forţat de pagină.
+
+\subsection*{Curs 12 - Pagina 3}
+
+\noindent\underline{Monoidul liber generat de o mul\c{t}ime}
+
+\bigskip
+\noindent Fie $A\neq\varnothing$, $1\notin A$ ($A$ se nume\c{s}te \underline{alfabet},
+ elementele lui $A$ se numesc \underline{litere}).
+
+\bigskip
+\noindent
+\[
+A^{+}:=\bigl\{u\mid u:\mathbb{N}^{*}\longrightarrow A\cup\{1\},\ \exists\, n\geq 1
+\text{ a.\^{\i}. }
+\begin{array}{ll}
+ u(i)\in A, & (\forall)\ i=1,\ldots,n,\\
+ u(i)=1, & (\forall)\ i>n
+\end{array}
+\bigr\}.
+\]
+
+\noindent $u=(x_1,x_2,\ldots,x_m,1,\ldots)$,
+\qquad $v\in A^{+}$, $v=(y_1,\ldots,y_n,1,\ldots)$.
+
+\medskip
+\noindent Avem
+\[
+u=v\quad\Longleftrightarrow\quad m=n\ \text{\c{s}i}\ x_i=y_i
+\quad(\forall)\ i=1,\ldots,m=n.
+\]
+
+\bigskip
+\noindent $A^{+}\ni u,v$,
+\[
+u\cdot v\ \overset{\mathrm{def}}{=}
+(x_1,\ldots,x_m,y_1,\ldots,y_n,1,\ldots).
+\]
+\noindent\hspace*{3em}\textit{concatenare}\hspace{5em}\textit{juxtapunere}
+% Manuscrisul indică aceste două denumiri prin săgeţi sub produs şi şirul rezultat.
+
+\bigskip
+\noindent $(A^{+},\cdot)$ este semigrup (asociativ).
+
+\bigskip
+\noindent $A^{*}=A^{+}\cup\{1\}$.
+
+\noindent Extindem opera\c{t}ia ``$\cdot$'' la $A^{*}$:
+\[
+u\cdot 1=1u=1,\qquad (\forall)\ u\in A, \qquad 1\cdot 1=1.
+\]
+% ATENŢIE: partea finală „=1” a primei relaţii pare a fi în manuscris.
+% Pentru element neutru ar trebui „=u”; nu se corectează tacit.
+% Şi domeniul „u în A” este redat aşa cum apare, deşi extinderea
+% ar cere de regulă u în A^*.
+
+\bigskip
+\noindent\underline{Obs.}\quad $(A^{*},\cdot,1)$ este monoid,
+numit \underline{monoidul liber generat de $A$}.
+
+\medskip
+\noindent $A\subseteq A^{*}$.
+% Manuscrisul notează includerea mulţimii de litere în monoid printr-o acoladă.
+
+\noindent
+\[
+\zeta_A:A\longrightarrow A^{+},\qquad
+\zeta_A(x)=(x,1,1,\ldots),\qquad\text{aplica\c{t}ie injectiv\u{a}}.
+\]
+% Simbolul aplicaţiei pare „zeta_A” în manuscris; de verificat dacă este iota_A.
+
+\medskip
+\noindent\underline{Obs.}\quad
+$u=(x_1,x_2,\ldots,x_m,1,1,\ldots)
+=\zeta_A(x_1)\zeta_A(x_2)\cdots\zeta_A(x_m)$.
+
+\medskip
+\noindent Elementele lui $A^{+}$ se numesc \underline{cuvinte peste $A$};
+$m$ se nume\c{s}te lungimea cuv\^{a}ntului.
+
+\bigskip
+\noindent $(A^{*},\cdot,1)$ este monoid ``tare'' necomutativ:
+\[
+x,y\in A,\quad x\neq y\quad\Longrightarrow\quad xy\neq yx.
+\]
+
+\bigskip
+\noindent\fbox{T.}\quad
+\underline{Proprietatea de universalitate a semigrupului liber generat de o mul\c{t}ime}
+
+\medskip
+\noindent Fie $A\neq\varnothing$,
+\[A\xrightarrow{\ \zeta_A\ } A^{+}.\]
+
+\noindent $(\forall)$ semigrup $(S,\cdot)$ \c{s}i
+$(\forall)$ aplica\c{t}ie de mul\c{t}imi $\zeta:A\longrightarrow S$,
+\[
+(\exists!)\ f:A^{+}\longrightarrow S\quad\text{morfism de semigrup}
+\]
+\noindent a.\^{\i}. $f\circ\zeta_A=\zeta$.
+
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[dr,"\zeta"'] & A^{+} \arrow[d,dashed,"f"] \\
+& S
+\end{tikzcd}
+\]
+% Teorema este numai enunţată pe această pagină; nu adăugăm demonstraţie.

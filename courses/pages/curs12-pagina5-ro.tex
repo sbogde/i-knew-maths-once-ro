@@ -1,0 +1,90 @@
+% Curs 12 - Pagina 5 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina5-ro}.
+% Transcriere in ordinea manuscrisului; fara preambul si fara salt fortat de pagina.
+% NOTE EDITORIALE: Formulele/propozitiile cu semnul intrebarii reflecta
+% intrebarile din manuscris si nu sunt completate cu demonstratii inventate.
+
+\subsection*{Curs 12 - Pagina 5}
+
+\noindent\underline{Aplica\c{t}ie 1}\quad
+``Monoid liber comutativ generat de o mul\c{t}ime''.
+
+\[
+R=\bigl\{(xy,yx)\mid x,y\in A^*\bigr\},\qquad R^{-1}=R.
+\]
+
+\medskip
+\noindent\underline{Apl. 2}\quad Grup liber generat de o mul\c{t}ime.
+
+\bigskip
+\noindent\textbf{1.} Dac\u{a} $u,v\in A^*$, spunem c\u{a} $v$ se ob\c{t}ine
+ din $u$ printr-o \underline{$R$-substitu\c{t}ie} dac\u{a}
+\[
+\exists\,(w,w')\in R\cup R^{-1}\cup\{(1,1)\},
+\qquad \exists\,p,q\in A^*
+\]
+\noindent a.\^{\i}. 
+\[
+u=pwq,\qquad v=pw'q.
+\]
+
+\noindent (Adic\u{a} ele admit ca subcuvinte elementele unei perechi;
+ au aceea\c{s}i parte ini\c{t}ial\u{a} \c{s}i final\u{a}.)
+
+\bigskip
+\noindent $S_R\subseteq A^*\times A^*$, rela\c{t}ie binar\u{a},
+\[
+u\,S_R\,v\quad\Longleftrightarrow\quad
+v\text{ se ob\c{t}ine din }u\text{ printr-o }R\text{-substitu\c{t}ie}.
+\]
+
+\noindent $S_R$ e reflexiv\u{a}, simetric\u{a}, compatibil\u{a} la
+ st\^{a}nga \c{s}i dreapta cu ``$\cdot$'' din $A^*$.
+\[
+u\,S_R\,v\ \overset{?}{\Longrightarrow}\
+\begin{cases}
+zu\,S_R\,zv, & (\forall)\,z\in A^*,\\
+uz\,S_R\,vz, & (\forall)\,z\in A^*.
+\end{cases}
+\]
+\noindent $zu=zpwq$ \c{s}i $zv=zpw'q$.
+
+\medskip
+\noindent $u\,S_R\,u\;?$ \quad $(\forall)\,u\in A^*$.
+\[
+u=u\cdot1\cdot1,\qquad u=u\cdot1\cdot1
+\quad\bigl(w=w'=1\bigr).
+\]
+
+\noindent $u\,S_R\,v\ \overset{?}{\Longrightarrow}\ v\,S_R\,u$.
+
+\bigskip
+\noindent\underline{Obs.}\quad $R\subseteq S_R$.
+\[
+(w,w')\in R,\qquad p=q=1
+\quad\Longrightarrow\quad (w,w')\in S_R.
+\]
+
+\bigskip
+\noindent $R^*\subseteq A^*\times A^*$, unde, pentru $u,v\in A^*$,
+\[
+(u,v)\in R^*\ \Longleftrightarrow\
+\begin{gathered}
+\exists\,u_1,\ldots,u_n\in A^*,\quad n\text{ finit},\\
+u=u_1,\quad v=u_n,\quad
+u_i\,S_R\,u_{i+1}\quad (\forall)\,i=1,\ldots,n-1.
+\end{gathered}
+\]
+% In manuscris, termenul de deasupra lui n este taiat si inlocuit cu „finit”.
+
+\bigskip
+\noindent\underline{Ex.}\quad $A=\{x,y,z\}$,
+\[
+R=\bigl\{(xy,yx),(yz,zy),(zx,xz)\bigr\}.
+\]
+\[
+u=xxzyyx,\qquad v=yzxxyx.
+\]
+% VERIFICARE MANUSCRIS: Ultimele doua cuvinte sunt scrise compact.
+% Citirile „xxzyyx” si „yzxxyx” sunt provizorii.
+% Pagina se opreste la aceste exemple, fara o derivare suplimentara.

@@ -1,0 +1,83 @@
+% Curs 12 - Pagina 7 (3-I-1995).
+% Fragment pentru \input{courses/pages/curs12-pagina7-ro}.
+% Fara preambul si fara salt de pagina fortat.
+% NOTE EDITORIALE:
+% - Fragmentul continua demonstratia proprietatii universale a monoidului
+%   comutativ liber, inceputa pe pagina 6.
+% - Textul foarte palid din mijlocul paginii (despre grupul liber si o
+%   multime A') pare a fi o incercare anterioara, stearsa sau abandonata;
+%   nu a fost inclus ca text activ. Se pastreaza insa exemplul clar scris.
+% - Identificarea A'={a' | a in A} este lectura contextuala a unei linii
+%   palide; notatia A' apare clar in exemplul de jos.
+% - Simbolul 1 din relatiile R desemneaza cuvantul vid/unitatea monoidului.
+% - Literele pentru sagetile de la final sunt redate potrivit lecturii
+%   aparente: zeta pentru includerea in monoidul liber si rho pentru proiectie.
+
+\subsection*{Curs 12 - Pagina 7}
+
+\noindent $(\mathbb{N}^{(A)},+,0)$, unde
+$f:A\longrightarrow\mathbb{N}$ este de suport finit.
+
+\medskip
+\noindent $f+g\quad\Longrightarrow\quad$ monoid comutativ.
+
+\bigskip
+\noindent $x\in A$, \quad $e_x:A\longrightarrow\mathbb{N}$,
+\[
+e_x(y)=
+\begin{cases}
+1, & y=x,\\
+0, & y\neq x.
+\end{cases}
+\]
+
+\[
+\begin{tikzcd}[column sep=huge, row sep=large]
+A \arrow[r,"\eta_A"] \arrow[d,"\eta"']
+  & \dfrac{A^*}{R^*} \arrow[dl,dashed,"{\exists\,g}"]\\
+\mathbb{N}^{(A)} &
+\end{tikzcd}
+\qquad g\circ\eta_A=\eta.
+\]
+
+\noindent $\eta(x)=e_x$.
+\[
+\eta\text{ injectiv\u{a}}\quad\Longrightarrow\quad
+\eta_A\text{ injectiv\u{a}}.
+\]
+
+\medskip
+\noindent\underline{Exerci\c{t}iu}
+\[
+\frac{A^*}{R^*}\cong(\mathbb{N}^{(A)},+,0).
+\]
+
+\bigskip
+\noindent\underline{Ex.}\quad Fie $a\in A$, 
+$A'=\{a'\mid a\in A\}$.
+
+\medskip
+\noindent Consider\u{a}m monoidul liber $(A\cup A')^*$
+\c{s}i rela\c{t}ia
+\[
+\begin{aligned}
+R={}&\{(aa',1)\mid a\in A\}
+  \cup\{(a'a,1)\mid a\in A\}\\
+&\subseteq (A\cup A')^*\times(A\cup A')^*.
+\end{aligned}
+\]
+
+\[
+\mathrm{FG}[A]=\frac{(A\cup A')^*}{R^*}.
+\]
+\noindent\textit{Free group} (grup liber).
+
+\medskip
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A \arrow[r,hook] \arrow[rrr,bend right=30,"\zeta_A"']
+& A\cup A' \arrow[r,"\zeta_{A\cup A'}"]
+& (A\cup A')^* \arrow[r,"\rho"]
+& \dfrac{(A\cup A')^*}{R^*}
+\end{tikzcd}
+\]
