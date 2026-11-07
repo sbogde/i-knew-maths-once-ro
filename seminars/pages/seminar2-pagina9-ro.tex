@@ -1,0 +1,113 @@
+% Seminar 2 - Pagina 9. Fragment pentru \input{seminars/pages/seminar2-pagina9-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Prima parte continua problema 11 de la pagina 8. In dezvoltarea
+%   termenului final manuscrisul pare sa scrie (-1)^{n-2} C_n^{n-1},
+%   desi suma generala care urmeaza impune (-1)^{n-1}. Am pastrat
+%   exponentul vizibil si nu am corectat expresia tacit.
+% - Problema despre deranjamente este numerotata 12. Urmeaza o problema
+%   de corespondente Hom, al carei numar pare 13, iar demonstratia de
+%   deranjamente din partea de jos are din nou numarul 12 in manuscris.
+% - Exemplul de permutari pentru n=3 contine o a treia linie corectata;
+%   sunt redate cele doua permutari lizibile nebarate.
+% - La punctul a), o expresie initiala Hom(X,Y x Z) este taiata in
+%   manuscris si apoi inlocuita cu Hom(X x Y,Z). Este redata a doua.
+% - Ultima formula pentru deranjamente are limita superioara n-1, asa
+%   cum pare scris. Formula completa standard ar mai include termenul
+%   k=n. Am pastrat limita din manuscris, semnaland aici neconcordanta.
+% - Desenele din dreapta sunt scheme pentru proiectiile produsului;
+%   diagrama TikZ reprezinta relatiile lizibile, fara a completa alte probe.
+
+\subsection*{Seminar 2 - Pagina 9}
+
+\noindent\underline{Continuare - problema 11.} Dacă $n<m$, atunci
+\[
+\begin{aligned}
+ s(m,n)={}&n^m-\binom{n}{1}(n-1)^m
+          +\binom{n}{2}(n-2)^m-\binom{n}{3}(n-3)^m+\cdots\\
+         &+(-1)^{n-2}\binom{n}{n-1}
+          =\boxed{\displaystyle\sum_{k=0}^{n-1}(-1)^k\binom{n}{k}(n-k)^m}.
+\end{aligned}
+\]
+
+\noindent\underline{Consecinţă:} pentru $m=n$,
+\[
+ \boxed{\displaystyle n!=\sum_{k=0}^{n}(-1)^k\binom{n}{k}(n-k)^n}.
+\]
+
+\bigskip
+\noindent\fbox{12}\quad $\sigma\in S_n$ se numeşte \underline{deranjament}
+ dacă $\sigma(i)\neq i$ pentru orice $i=\overline{1,n}$.
+
+\noindent $\delta(n)$ - numărul deranjamentelor. Calculaţi $\delta(n)$.
+
+\noindent\underline{Exemplu} ($n=3$):
+\[
+ \begin{pmatrix}1&2&3\\3&1&2\end{pmatrix},\qquad
+ \begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}.
+\]
+
+\medskip
+\noindent\fbox{TEMĂ}
+
+\medskip
+\noindent\fbox{13}\quad Fie $X,Y,Z$ trei mulţimi. Atunci:
+\[
+ \text{a)}\quad
+ \operatorname{Hom}(X\times Y,Z)
+ \overset{\alpha}{\cong}
+ \operatorname{Hom}\bigl(X,\operatorname{Hom}(Y,Z)\bigr),
+\]
+\[
+ \text{b)}\quad
+ \operatorname{Hom}(X,Y\times Z)
+ \overset{\beta}{\cong}
+ \operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+\noindent La b), aplicaţia este dată de
+\[
+ \beta(f)=\bigl(P_Y\circ f,\,P_Z\circ f\bigr).
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ & X \arrow[dl,swap,"P_Y\circ f"] \arrow[d,"f"]
+     \arrow[dr,"P_Z\circ f"] & \\
+ Y & Y\times Z \arrow[l,"P_Y"] \arrow[r,swap,"P_Z"] & Z
+\end{tikzcd}
+\]
+\noindent $P_Y(y,z)=y$, $P_Z(y,z)=z$.
+
+\bigskip
+\noindent\fbox{12}\quad \underline{Calculul deranjamentelor (continuare).}
+
+\noindent $\delta(n)=n!$ minus numărul permutărilor pentru care
+ există $i$ a.î. $\sigma(i)=i$.
+\[
+ A_i=\{\sigma\in S_n\mid\sigma(i)=i\}.
+\]
+\noindent Avem
+\[
+ |A_i|=(n-1)!,\qquad
+ |A_i\cap A_j|=(n-2)!,\qquad
+ |A_i\cap A_j\cap A_k|=(n-3)!.
+\]
+\[
+ \delta_n=n!-\bigl|A_1\cup A_2\cup\cdots\cup A_n\bigr|.
+\]
+\noindent Prin principiul includerii şi excluderii,
+\[
+\begin{aligned}
+ \bigl|A_1\cup\cdots\cup A_n\bigr|
+  ={}&n(n-1)!-\binom{n}{2}(n-2)!+\binom{n}{3}(n-3)!+\cdots\\
+     &+(-1)^{n-2}\binom{n}{n-1}\cdot1\\
+  ={}&\sum_{k=1}^{n-1}\binom{n}{k}(-1)^{k-1}(n-k)!.
+\end{aligned}
+\]
+\noindent Rezultă, în notaţia manuscrisului,
+\[
+\begin{aligned}
+ \delta_n
+  &=n!-\sum_{k=1}^{n-1}(-1)^{k-1}\binom{n}{k}(n-k)!\\
+  &=\boxed{\displaystyle\sum_{k=0}^{n-1}(-1)^k\binom{n}{k}(n-k)!}.
+\end{aligned}
+\]

@@ -1,0 +1,85 @@
+% Seminar 2, pagina 1 - manuscris datat 10-oct.-1994.
+% Ultima cifră a anului este parţial acoperită de colţul deteriorat al foii;
+% anul 1994 este dedus din cronologia notiţelor.
+% Acesta este un fragment pentru \input, fără preambul şi fără \clearpage.
+% \subsection*{Seminar 2 - Pagina 1}
+\phantomsection
+\subsection*{Seminar 2}
+\addcontentsline{toc}{subsection}{Seminar 2}
+
+\begin{center}
+% \underline{\textbf{ALGEBRA}}\\[2pt]
+% \textit{(Seminar 2)}
+\end{center}
+\begin{flushright}
+\textit{10-oct.-1994}
+\end{flushright}
+
+\noindent Luni:\quad seminar alg. 3 ore;\quad seminar geom. 3 ore.
+
+\bigskip
+\noindent\fbox{1}\quad Fie $n\in\mathbb{N}^{*}$. Să se calculeze
+\[
+ d(n)=\left|\left\{
+ f:\{1,2,\ldots,n\}\longrightarrow\{e_1,e_2,-e_1,-e_2\}
+ \ \middle|\ \sum_{k=1}^{n}f(k)=0
+ \right\}\right|,
+\]
+\noindent unde $e_1=(1,0)$, $e_2=(0,1)$.
+
+\medskip
+\noindent\underline{Soluţie:}
+\[
+ d(n)=\begin{cases}
+ 0, & n\text{ impar},\\[2pt]
+ \text{de calculat}, & n\text{ par}.
+ \end{cases}
+\]
+
+\noindent Fie $n=2m$. Atunci
+\[
+ d(2m)=\sum_{j=0}^{m}
+ \binom{2m}{j}\binom{2m-j}{j}\binom{2m-2j}{m-j}.
+\]
+\[
+\begin{aligned}
+ d(2m)
+ &=\sum_{j=0}^{m}
+ \frac{(2m)!}{j!(2m-j)!}\,
+ \frac{(2m-j)!}{j!(2m-2j)!}\,
+ \frac{(2m-2j)!}{(m-j)!(m-j)!}\\[4pt]
+ &=\sum_{j=0}^{m}\frac{(2m)!}{(m!)^2}
+ \left(\frac{m!}{j!(m-j)!}\right)^2\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\sum_{j=0}^{m}\binom{m}{j}^{2}\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\binom{2m}{m}\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\cdot\frac{(2m)!}{m!\,m!}
+ =\frac{(n!)^2}{\left[\left(\frac n2\right)!\right]^4}.
+\end{aligned}
+\]
+% În manuscris apare lângă prima sumă o schiţă de repartizare a celor 2m
+% poziţii, cu etichetele j şi 2m-2j; formula combinatorică este păstrată.
+
+\bigskip
+\noindent\fbox{2}\quad\underline{(Caracterizare fct. inj.)}
+
+\noindent Fie $f:A\longrightarrow B$. Să se arate echivalenţa:
+\begin{enumerate}
+\item[a)] $f$ e injectivă.
+\item[b)] $f$ are o retractă, adică există $r:B\longrightarrow A$
+ a.î.\ $r\circ f=1_A$.
+\item[c)] $f$ este monomorfism: pentru orice mulţime $X$ şi
+ $f_1,f_2:X\longrightarrow A$,
+ \[
+ f\circ f_1=f\circ f_2\ \Longrightarrow\ f_1=f_2.
+ \]
+ \[
+ \begin{tikzcd}[column sep=large]
+ X \arrow[r, shift left=.55ex, "f_1"]
+   \arrow[r, shift right=.55ex, "f_2"']
+ & A \arrow[r, "f"] & B
+ \end{tikzcd}
+ \]
+\end{enumerate}
+% Nota marginală uneşte grafic (a) şi (c); nu este un pas de demonstraţie.
+% Enunţul (a) <=> (b) presupune A nevidă (ori o convenţie corespunzătoare
+% pentru cazurile cu mulţimi vide); această condiţie nu apare în manuscris.

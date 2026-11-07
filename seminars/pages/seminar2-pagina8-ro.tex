@@ -1,0 +1,95 @@
+% Seminar 2 - Pagina 8. Fragment pentru \input{seminars/pages/seminar2-pagina8-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Primele formule continua inductia pentru principiul includerii si
+%   excluderii din pagina 7. Semnele + din expresia intermediara cu
+%   (A_i \cap A_{n+1}) sunt redate ca in manuscris, desi semnul necesar
+%   pentru formula finala ar fi minus; nu s-a facut corectarea tacita.
+% - In problema 11, manuscrisul foloseste A_i' la definitia multimii
+%   de functii care omit b_i, dar omite uneori prima in formulele
+%   pentru reuniune si intersectie. In LaTeX se pastreaza A_i' in
+%   formulele de numarare pentru a indica aceeasi familie de multimi.
+% - La sfarsitul ultimei sume apare un termen taiat / rescris; se reda
+%   ultima forma lizibila +(-1)^{n-1} 0, fara a reconstitui termenul taiat.
+% - Schemele marginale reprezinta doar exemple de corespondente intre
+%   multimi finite; afirmatia explicita s(2,1)=1 este pastrata.
+
+\subsection*{Seminar 2 - Pagina 8}
+
+\noindent\textit{(Continuarea demonstraţiei principiului includerii şi excluderii.)}
+\[
+\begin{aligned}
+&\cdots+(-1)^{n-1}\bigl|A_1\cap\cdots\cap A_n\bigr|\\
+&\quad+\bigl|(A_1\cap A_{n+1})\cup(A_2\cap A_{n+1})
+    \cup\cdots\cup(A_n\cap A_{n+1})\bigr|\\
+&=\sum_{i=1}^{n+1}|A_i|
+  -\sum_{1\leq i<j\leq n}|A_i\cap A_j|
+  +\cdots+(-1)^{n-1}|A_1\cap\cdots\cap A_n|\\
+&\quad+\sum_{i=1}^{n}|A_i\cap A_{n+1}|
+  -\sum_{1\leq i<j\leq n}|A_i\cap A_j\cap A_{n+1}|
+  +\cdots\\
+&\quad+(-1)^{n-1}|A_1\cap A_2\cap\cdots\cap A_n\cap A_{n+1}|.
+\end{aligned}
+\]
+\[
+\begin{aligned}
+&=\sum_{i=1}^{n+1}|A_i|
+  -\sum_{1\leq i<j\leq n+1}|A_i\cap A_j|\\
+&\quad+\sum_{1\leq i<j<k\leq n+1}|A_i\cap A_j\cap A_k|
+  -\cdots\\
+&\quad+(-1)^n|A_1\cap A_2\cap\cdots\cap A_n\cap A_{n+1}|.
+\end{aligned}
+\]
+
+\bigskip
+\noindent\fbox{11}\quad $|M|=m$, $|N|=n$.
+
+\noindent Definim
+\[
+ s(m,n)=\bigl|\{f:M\longrightarrow N\mid f\text{ surjectivă}\}\bigr|.
+\]
+\noindent Calculaţi $s(m,n)$. \hfill $s(2,1)=1$.
+
+\noindent\underline{Sol.}
+\[
+ s(m,n)=0\qquad\text{când }n>m.
+\]
+\noindent Dacă $n=m$, atunci
+\[
+ s(m,n)=n!.
+\]
+\noindent Dacă $n<m$, atunci
+\[
+ |\operatorname{Hom}(M,N)|=n^m.
+\]
+\noindent Fie $P=\{f:M\longrightarrow N\mid f\text{ nu este surjectivă}\}$.
+Atunci
+\[
+ s(m,n)=n^m-|P|.
+\]
+\noindent Scriem
+\[
+ M=\{a_1,a_2,\ldots,a_m\},\qquad
+ N=\{b_1,b_2,\ldots,b_n\}.
+\]
+\noindent Pentru $i=1,\ldots,n$ notăm
+\[
+ A_i'=\{f:M\longrightarrow N\mid b_i\notin\operatorname{Im}f\}.
+\]
+\noindent Rezultă
+\[
+ |P|=\bigl|A_1'\cup A_2'\cup\cdots\cup A_n'\bigr|,
+\]
+\[
+ |A_i'|=(n-1)^m\quad(\forall i),\qquad
+ |A_i'\cap A_j'|=(n-2)^m.
+\]
+\noindent Aplicând principiul includerii şi excluderii,
+\[
+\begin{aligned}
+ |P|={}&\binom{n}{1}(n-1)^m
+       -\binom{n}{2}(n-2)^m\\
+      &+\binom{n}{3}(n-3)^m-\cdots
+       +(-1)^{n-1}0.
+\end{aligned}
+\]

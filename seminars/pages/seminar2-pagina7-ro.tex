@@ -1,0 +1,99 @@
+% Seminar 2 - Pagina 7. Fragment pentru \input{seminars/pages/seminar2-pagina7-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Primele randuri continua exercitiul 10 de pe pagina 6: surjectivitatea
+%   corespondentei dintre submultimi si functiile caracteristice.
+% - La exercitiul 9, textul manuscrisului argumenteaza prin multimea M
+%   si noteaza apoi imposibilitatea unei injectii P(X) -> X; acest ultim
+%   pas nu este demonstrat separat pe pagina.
+% - Formula incluziunii-excluziunii si inductia au fost pastrate in
+%   ordinea din manuscris. Ultimul calcul se opreste la marginea paginii.
+% - Semnele taiate si schita din marginea opusa nu sunt reconstruite.
+
+\subsection*{Seminar 2 - Pagina 7}
+
+\noindent\underline{Sol. 10 (continuare).} $\varphi$ este surjectivă.
+
+\noindent Fie $\varphi:X\longrightarrow\{0,1\}$. Caut $A\subseteq X$ a.î.
+$\varphi=\varphi_A$. Aleg
+\[
+ A:=\varphi^{-1}(1)=\{x\in X\mid\varphi(x)=1\}.
+\]
+\noindent Atunci
+\[
+ \varphi_A=\varphi_{\varphi^{-1}(1)}=\varphi,
+\]
+\[
+ \varphi_{\varphi^{-1}(1)}(y)=
+ \begin{cases}
+  1,& y\in\varphi^{-1}(1),\\
+  0,& y\notin\varphi^{-1}(1)
+ \end{cases}
+ =
+ \begin{cases}
+  1,&\varphi(y)=1,\\
+  0,&\varphi(y)=0.
+ \end{cases}
+\]
+
+\bigskip
+\noindent\fbox{9}\quad\underline{Sol.} Nu există
+$f:X\longrightarrow\mathcal{P}(X)$ surjectivă.
+
+\noindent Presupunem prin reducere la absurd că există
+$f:X\longrightarrow\mathcal{P}(X)$, $f$ surjectivă.
+
+\noindent Fie
+\[
+ M:=\{a\in X\mid a\notin f(a)\}=f(b),\qquad b\in X.
+\]
+\noindent Atunci
+\[
+ b\in M\ \Longleftrightarrow\ b\notin f(b)=M,\qquad\text{absurd},
+\]
+\[
+ b\notin M\ \Longleftrightarrow\ b\in f(b)=M.
+\]
+\noindent Asta implică că nu există
+$i:\mathcal{P}(X)\longrightarrow X$ injectivă.
+
+\noindent $\mathcal{P}(X)$ nu se poate scufunda în $X$.
+
+\bigskip
+\noindent\underline{Principiul includerii şi excluderii.}
+
+\noindent Fie $A_1,A_2,\ldots,A_n$ mulţimi finite. Atunci
+\[
+\begin{aligned}
+ \bigl|A_1\cup\cdots\cup A_n\bigr|
+ ={}&\sum_{i=1}^{n}|A_i|
+ -\sum_{1\leq i<j\leq n}|A_i\cap A_j|\\
+ &+\sum_{1\leq i<j<k\leq n}|A_i\cap A_j\cap A_k|
+ -\cdots\\
+ &+(-1)^{n-1}|A_1\cap\cdots\cap A_n|.
+\end{aligned}
+\]
+
+\noindent\underline{Sol.} Inducţie după $n$.
+
+\noindent $n=1$: O.K., $|A_1|=|A_1|$.
+
+\noindent $n=2$:
+\[
+ |A_1\cup A_2|=|A_1|+|A_2|-|A_1\cap A_2|,
+ \qquad\text{O.K.}
+\]
+
+\noindent $n\longmapsto n+1$:
+\[
+\begin{aligned}
+ &|A_1\cup\cdots\cup A_n\cup A_{n+1}|\\
+ &\quad=|A_1\cup\cdots\cup A_n|+|A_{n+1}|
+ -|(A_1\cup\cdots\cup A_n)\cap A_{n+1}|\\
+ &\quad=\sum_{i=1}^{n+1}|A_i|
+ -\sum_{1\leq i<j\leq n}|A_i\cap A_j|
+ +\sum_{1\leq i<j<k\leq n}|A_i\cap A_j\cap A_k|
+ -\cdots
+\end{aligned}
+\]
+% Calculul inductiv continua dincolo de sfarsitul paginii manuscrisului.

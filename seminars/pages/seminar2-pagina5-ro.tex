@@ -1,0 +1,100 @@
+% Seminar 2 - Pagina 5. Fragment pentru \input{seminars/pages/seminar2-pagina5-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Sub exercitiul 5 exista un calcul taiat (aparent g(x)-f(x)>0?);
+%   nu a fost inclus in transcrierea curata.
+% - In demonstratia exercitiului 5, pasul f(n_2) in A rezulta din
+%   inegalitatea stricta f(n_2)<g(n_2); manuscrisul il noteaza prescurtat.
+% - In exercitiul 7, conditia este citita f(n+1)>f(f(n)).
+% - Ultimele randuri de pe pagina stabilesc numai f(n)>=n;
+%   nu este transcrisa o continuare inexistenta a demonstratiei f=id.
+
+\subsection*{Seminar 2 - Pagina 5}
+
+\noindent\fbox{5}\quad Fie $f,g:\mathbb{N}\longrightarrow\mathbb{N}$,
+$f$ injectivă, $g$ surjectivă. Dacă
+\[
+ f(n)\leq g(n)\qquad (\forall n\in\mathbb{N}),
+\]
+\noindent atunci $f=g$.
+
+\medskip
+\noindent\fbox{6}\quad Fie $f,g:\mathbb{N}\longrightarrow\mathbb{N}$. Dacă
+\[
+ \max(f,g)\ \text{este surjectivă},\qquad
+ \min(f,g)\ \text{este injectivă},
+\]
+\noindent atunci $f=g$.
+
+\medskip
+\noindent\underline{Sol. 5.} Presupunem $f\neq g$. Atunci există
+$n\in\mathbb{N}$ astfel încât
+\[
+ f(n)\neq g(n)\quad\Longrightarrow\quad f(n)<g(n).
+\]
+\noindent Fie
+\[
+ A=\{f(n)\mid f(n)\neq g(n)\}\neq\varnothing.
+\]
+\noindent $A$ este o mulţime de numere naturale; există
+\[
+ m=\min A=f(n_1)\in\mathbb{N}.
+\]
+\noindent Deoarece $g$ este surjectivă, există $n_2\in\mathbb{N}$ astfel încât
+\[
+ g(n_2)=m=f(n_1),\qquad n_1\neq n_2.
+\]
+\noindent Prin injectivitatea lui $f$,
+\[
+ f(n_1)\neq f(n_2).
+\]
+\noindent Dar
+\[
+ f(n_2)\leq g(n_2)=f(n_1)
+ \quad\Longrightarrow\quad f(n_2)<f(n_1).
+\]
+\noindent Rezultă $f(n_2)\in A$ şi
+\[
+ f(n_2)<\min A,\qquad \text{fals}.
+\]
+\noindent Deci $A=\varnothing$, de unde $f=g$.
+
+\medskip
+\noindent\underline{Sol. 6.}
+\[
+ \min(f,g)\leq\max(f,g)
+ \quad\Longrightarrow\quad
+ \min(f,g)=\max(f,g)
+ \quad\Longrightarrow\quad f=g.
+\]
+
+\bigskip
+\noindent\fbox{7}\quad Fie
+$f:\mathbb{N}^{*}\longrightarrow\mathbb{N}^{*}$ astfel încât
+\[
+ f(n+1)>f(f(n))\qquad (\forall n\in\mathbb{N}^{*}).
+\]
+\noindent Atunci $f=1_{\mathbb{N}^{*}}$.
+
+\medskip
+\noindent\underline{Sol.} $f(k)\geq k$, pentru orice
+$k\in\mathbb{N}^{*}$.
+
+\noindent Mai general:
+\[
+ n\geq k\quad\Longrightarrow\quad f(n)\geq k.
+\]
+\noindent Inducţie după $k$.
+
+\noindent $k=1$: nu avem nimic de arătat.
+
+\noindent $k\longmapsto k+1$: dacă $n\geq k+1$, atunci
+\[
+ n-1\geq k\quad\Longrightarrow\quad f(n-1)\geq k.
+\]
+\noindent Prin ipoteza de inducţie şi condiţia din enunţ,
+\[
+ f(n)>f\bigl(f(n-1)\bigr)\geq k
+ \quad\Longrightarrow\quad f(n)>k.
+\]
+% Demonstratia continua, daca exista, pe urmatoarea pagina a manuscrisului.

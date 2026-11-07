@@ -1,0 +1,123 @@
+% Seminar 2 - Pagina 4. Fragment pentru \input{seminars/pages/seminar2-pagina4-ro}.
+% Fara preambul si fara comanda de schimbare fortata a paginii.
+% NOTE EDITORIALE:
+% - Pagina continua demonstratia inceputa la punctul c) pe pagina 3.
+%   Manuscrisul revine mai intai la demonstratiile a) si b), apoi la c).
+% - La punctul b), egalitatea in cazul f injectiva este demonstrata
+%   cu antecedente a_i care au aceeasi imagine; se presupune o familie
+%   indexata nevida, fara a explicita aceasta conditie.
+% - Exemplul cu A={-1,0,1} si f(x)=x^2 pare sa scrie f(X_1)=A,
+%   desi matematic f({-1,1})={1}. Am pastrat citirea provizorie A.
+% - Notele din dreapta despre imaginile unor intervale par sa foloseasca
+%   tot f(x)=x^2, dar domeniul nu este precizat acolo. In manuscris
+%   f([-1,3]) pare notata [1,9], care ar trebui sa fie [0,9].
+%   Am pastrat expresia citita si am semnalat aceasta neconcordanta.
+% - Calculul din chenar are semne de interval greu de distins;
+%   semnele [ ] de mai jos sunt lecturi provizorii.
+% - Ultimul rand al punctului c) se intrerupe in manuscris;
+%   nu este completat argumentul si nici punctul d).
+
+\subsection*{Seminar 2 - Pagina 4}
+
+\noindent\underline{Sol. (continuare)}
+
+\medskip
+\noindent $a)$ \underline{$\subseteq$}.
+Fie $y\in f\left(\bigcup_{i\in I}X_i\right)$. Atunci
+\[
+\exists\,x\in\bigcup_{i\in I}X_i\quad\text{a.î.}\quad f(x)=y.
+\]
+\noindent Rezultă că există $i_0\in I$ cu $x\in X_{i_0}$ şi $f(x)=y$, deci
+\[
+ y\in f(X_{i_0})\subseteq\bigcup_{i\in I}f(X_i).
+\]
+\noindent \underline{$\supseteq$}.
+Există $i_0\in I$ a.î.
+$y\in f(X_{i_0})$, de unde
+\[
+ y\in f\left(\bigcup_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent $b)$ Fie
+\[
+ y\in f\left(\bigcap_{i\in I}X_i\right).
+\]
+\noindent Există $x\in\bigcap_{i\in I}X_i$ cu $f(x)=y$, deci
+\[
+ y\in\bigcap_{i\in I}f(X_i).
+\]
+\noindent P.p.\ $f$ injectivă. Dacă
+$y\in\bigcap_{i\in I}f(X_i)$, atunci
+$y\in f(X_i)$ pentru orice $i\in I$. Prin urmare,
+\[
+ (\forall i\in I)(\exists a_i\in X_i):\ f(a_i)=y.
+\]
+\noindent Din injectivitate, $a_i=a_j$ pentru orice $i,j\in I$.
+Notăm acest element comun cu $a$. Atunci
+\[
+ f(a)=y,\qquad a\in\bigcap_{i\in I}X_i,
+ \qquad y\in f\left(\bigcap_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent\underline{Ex.} În manuscris apare şi exemplul
+\[
+ A=\{-1,0,1\},\qquad B=\{0,1\},\qquad f(x)=x^2,
+\]
+\[
+ X_1=\{-1,1\},\qquad X_2=\{-1,0\},
+\]
+\[
+ f(X_1)=A,\qquad f(X_2)=\{0,1\}.
+\]
+
+% Schita marginala a parabolei y=x^2.
+\begin{center}
+\begin{tikzpicture}[>=stealth,scale=.77]
+  \draw[->] (-1.8,0)--(3.0,0) node[right] {$x$};
+  \draw[->] (0,-.25)--(0,3.45) node[above] {$y$};
+  \foreach \x in {-1,0,1,2,3}{\draw (\x,.06)--(\x,-.06) node[below] {\scriptsize $\x$};}
+  \draw[domain=-1.35:2.35,samples=70,smooth,thick] plot (\x,{.5*\x*\x});
+\end{tikzpicture}
+\end{center}
+
+% Exemple marginale: semnele de interval si unele limite sunt greu lizibile.
+\noindent\underline{Calcule din margine (lecturi provizorii):}
+\[
+\begin{aligned}
+ f([1,2])&=[1,4], & f([-1,3])&=[1,9],\\
+ f([1,2])&=f([1,3]\cap[1,2])=[1,4].
+\end{aligned}
+\]
+\[
+\boxed{\begin{aligned}
+ f([-1,0])&=[0,1],\\
+ f([0,2])&=[0,4],\\
+ f([-1,0]\cap[0,2])&=f(0)=0,\\
+ f([-1,0])\cap f([0,2])&=[0,1].
+\end{aligned}}
+\]
+
+\medskip
+\noindent $c)$ \underline{$\subseteq$}.
+Fie
+\[
+ x\in f^{-1}\left(\bigcup_{j\in J}Y_j\right).
+\]
+\noindent Atunci
+\[
+ f(x)\in\bigcup_{j\in J}Y_j
+ \quad\Longrightarrow\quad
+ (\exists j_0\in J):\ f(x)\in Y_{j_0}
+ \quad\Longrightarrow\quad
+ x\in f^{-1}(Y_{j_0})
+ \subseteq\bigcup_{j\in J}f^{-1}(Y_j).
+\]
+\noindent \underline{$\supseteq$}.
+Dacă $x\in\bigcup_{j\in J}f^{-1}(Y_j)$, există $j_0\in J$
+astfel încât $x\in f^{-1}(Y_{j_0})$, de unde
+\[
+ f(x)\in Y_{j_0}\ \Longrightarrow\ f(x)\in\bigcup_{j\in J}Y_j.
+\]
+% Sfarsitul paginii: argumentul nu este dus mai departe.

@@ -1,0 +1,98 @@
+% Seminar 2 - Pagina 6. Fragment pentru \input{seminars/pages/seminar2-pagina6-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Continuarea exercitiului 7 incepe la mijlocul demonstratiei de pe pagina 5.
+% - Unele relatii intermediare sunt taiate / suprascrise; doar relatiile
+%   lizibile si netaiate sunt incluse in transcrierea principala.
+% - In argumentul prin sir descrescator, indicii u_1,u_2,u_3 sunt cititi
+%   conform scrisului, dar cuantificarea este prescurtata in manuscris.
+% - La exercitiul 8, simbolul Hom(A,B) este utilizat pentru toate
+%   aplicatiile A -> B; nu este vorba explicit despre morfisme algebrice.
+% - Exercitiul 9 afirma inexistenta unei surjectii X -> P(X), dar nu
+%   contine demonstratie pe aceasta pagina.
+% - La exercitiul 10 este demonstrata doar injectivitatea lui phi;
+%   nu este adaugata o dovada a surjectivitatii.
+
+\subsection*{Seminar 2 - Pagina 6}
+
+\noindent\underline{Sol. 7 (continuare).}
+\[
+\Longrightarrow f(n)\geq k+1.
+\]
+\noindent Deci
+\[
+ f(k)\geq k\qquad (\forall k\in\mathbb{N}^{*}).
+\]
+
+\noindent Presupunem prin reducere la absurd că există
+$k\in\mathbb{N}^{*}$ a.î.
+\[
+ f(k)>k.
+\]
+\noindent Arătăm că, dacă $n>k$, atunci $f(n-1)>k$.
+\[
+ n>k\ \Longrightarrow\ n\geq k+1\ \Longrightarrow\ n-1\geq k
+ \ \Longrightarrow\ f(n-1)\geq k.
+\]
+\noindent Presupunem $f(n-1)=k$. Atunci
+\[
+ k=f(n-1)\geq n-1\geq k
+ \quad\Longrightarrow\quad n-1=k
+ \quad\Longrightarrow\quad f(k)=k,\quad\text{fals}.
+\]
+
+\noindent Fie $u_1>k$. Atunci
+\[
+ f(u_1)>f(u_2),\qquad u_2=f(u_1-1)>k.
+\]
+\noindent În mod similar,
+\[
+ f(u_2)>f(u_3),\qquad u_3=f(u_2-1)>k.
+\]
+\noindent Continuând la infinit, obţinem un şir infinit strict
+ descrescător de numere naturale.
+
+\bigskip
+\noindent\fbox{8}\quad
+\[
+ \operatorname{Hom}(A,B)\overset{\mathrm{def}}{=}
+ \{f\mid f:A\longrightarrow B\}.
+\]
+\noindent $\mathcal{P}(X)$ în bijecţie cu
+\[
+ \operatorname{Hom}(X,\{0,1\})
+   =\{\varphi\mid\varphi:X\longrightarrow\{0,1\}\}.
+\]
+
+\medskip
+\noindent\fbox{9}\quad Nu există aplicaţie surjectivă
+\[
+ f:X\longrightarrow\mathcal{P}(X).
+\]
+
+\medskip
+\noindent\fbox{10}\quad
+\[
+ \varphi:\mathcal{P}(X)\longrightarrow
+ \operatorname{Hom}(X,\{0,1\}).
+\]
+\noindent Dacă $A\subseteq X$, atunci
+$\varphi(A)=\varphi_A:X\longrightarrow\{0,1\}$, unde
+\[
+ \varphi_A(x)=
+ \begin{cases}
+  1,&x\in A,\\
+  0,&x\notin A.
+ \end{cases}
+\]
+\noindent $\varphi$ este injectivă: dacă
+\[
+ \varphi(A)=\varphi(B),\qquad \varphi_A=\varphi_B,
+\]
+\noindent atunci
+\[
+ x\in A\ \Longleftrightarrow\ \varphi_A(x)=1
+ \ \Longleftrightarrow\ \varphi_B(x)=1
+ \ \Longleftrightarrow\ x\in B
+ \quad\Longrightarrow\quad A=B.
+\]

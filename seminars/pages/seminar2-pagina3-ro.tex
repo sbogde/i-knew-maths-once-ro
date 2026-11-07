@@ -1,0 +1,107 @@
+% Seminar 2 - Pagina 3. Fragment pentru \input{seminars/pages/seminar2-pagina3-ro}.
+% Fara preambul si fara intrerupere fortata de pagina.
+% NOTE EDITORIALE:
+% - Fotografia este numerotata cu 3 in coltul din dreapta jos, desi
+%   cererea mentioneaza pagina 2. Acest fragment este deci pagina 3.
+% - In manuscris, f(X) si f^{-1}(Y) sunt definite la inceputul exercitiului;
+%   anumite semne din dreptul cuantificatorilor sunt suprascrise.
+% - Exemplul din dreapta despre f:Z->{0,1} contine intervale/notatii
+%   greu lizibile. Sunt redate numai citirile provizorii [-1,0] si [1,2].
+%   Manuscrisul noteaza rezultatele ca 1 si 0, nu ca multimi singleton.
+% - Sub punctul b) exista etape taiate; au fost omise. In sens strict,
+%   si demonstratia de la a) foloseste nejustificat acelasi antecedent x
+%   pentru egalitatea imaginilor, desi f nu este presupusa injectiva.
+% - Egalitatea la b) pentru o familie vida ar necesita in plus f(A)=B;
+%   manuscrisul nu discuta aceasta exceptie.
+%   afirmatia f(x) in f(intersectie) nu implica x in toate X_i fara
+%   injectivitate: e nevoie de un martor potrivit in intersectie.
+% - Pagina se termina cu inceputul punctului c) din demonstratie,
+%   fara alte randuri; nu a fost inventata continuarea.
+
+\subsection*{Seminar 2 - Pagina 3}
+
+\noindent\fbox{4}\quad Fie $f:A\longrightarrow B$, $X\subseteq A$, $Y\subseteq B$.
+\[
+ f(X)=\{f(x)\mid x\in X\}, \qquad
+ f^{-1}(Y)=\{a\in A\mid f(a)\in Y\}.
+\]
+\noindent (Preimaginea lui $Y$; fibra lui $Y$.)
+
+\medskip
+\noindent Fie $f:A\longrightarrow B$,
+$(X_i)_{i\in I}\subseteq\mathcal{P}(A)$,
+$(Y_j)_{j\in J}\subseteq\mathcal{P}(B)$.
+\begin{enumerate}
+\item[a)]
+\[
+ f\left(\bigcup_{i\in I}X_i\right)
+  =\bigcup_{i\in I}f(X_i).
+\]
+\item[b)]
+\[
+ f\left(\bigcap_{i\in I}X_i\right)
+  \subseteq\bigcap_{i\in I}f(X_i).
+\]
+\noindent Dacă $f$ este injectivă, avem egalitate.
+\item[c)]
+\[
+ f^{-1}\left(\bigcup_{j\in J}Y_j\right)
+  =\bigcup_{j\in J}f^{-1}(Y_j).
+\]
+\item[d)]
+\[
+ f^{-1}\left(\bigcap_{j\in J}Y_j\right)
+  =\bigcap_{j\in J}f^{-1}(Y_j).
+\]
+\end{enumerate}
+
+% Exemplul din marginea dreapta a manuscrisului (citire provizorie).
+\noindent\underline{Ex.} $f:\mathbb Z\longrightarrow\{0,1\}$,
+\[
+ f(x)=\begin{cases}
+  0, & x>0,\\
+  1, & x\leq 0.
+ \end{cases}
+ \qquad
+ f([-1,0])=1,\quad f([1,2])=0.
+\]
+
+\medskip
+\noindent\underline{Sol.}
+
+\noindent $a)$ Fie
+$ f(x)\in f\left(\bigcup_{i\in I}X_i\right)$.
+Atunci $x\in\bigcup_{i\in I}X_i$, deci există $i_1\in I$
+astfel încât $x\in X_{i_1}$, de unde
+\[
+ f(x)\in f(X_{i_1})\subseteq\bigcup_{i\in I}f(X_i).
+\]
+\noindent Rezultă incluziunea $\subseteq$.
+
+\smallskip
+\noindent Reciproc, dacă
+$f(x)\in\bigcup_{i\in I}f(X_i)$, există $i_1\in I$
+a.î.\ $f(x)\in f(X_{i_1})$. Prin urmare,
+\[
+ x\in X_{i_1}\subseteq\bigcup_{i\in I}X_i
+ \quad\Longrightarrow\quad
+ f(x)\in f\left(\bigcup_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent $b)$ Dacă
+$f(x)\in f\left(\bigcap_{i\in I}X_i\right)$, atunci
+$x\in X_i$ pentru orice $i\in I$, de unde
+\[
+ f(x)\in f(X_i)\quad(\forall i\in I)
+ \quad\Longrightarrow\quad
+ f(x)\in\bigcap_{i\in I}f(X_i).
+\]
+\noindent Dacă $f$ este injectivă, din
+$f(x)\in\bigcap_{i\in I}f(X_i)$ rezultă
+$f(x)\in f(X_i)$ pentru orice $i$, deci
+$x\in\bigcap_{i\in I}X_i$.
+
+\medskip
+\noindent $c)$
+% Demonstratia punctului c) continua pe urmatoarea pagina de manuscris.
