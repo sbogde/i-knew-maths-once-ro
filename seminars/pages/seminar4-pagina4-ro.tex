@@ -1,0 +1,95 @@
+% Seminar 4 - Pagina 4. Fragment pentru
+% \input{seminars/pages/seminar4-pagina4-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Enunțul introductiv pare să compare monoizii multiplicativi
+%   mN+1 și tN+1 cu U(Z_m), U(Z_t), probabil grupurile elementelor
+%   inversabile ale inelelor de clase de resturi. Simbolul manuscris
+%   seamănă cu U mare; această interpretare rămâne provizorie.
+%   Pentru enunțul inițial nu există demonstrație pe această pagină.
+% - În exercițiul 9, ENUNȚUL cere element neutru la stânga ex=x
+%   și invers la DREAPTA xx'=e pentru fiecare x; combinația nu este
+%   suficientă pentru un grup (există contraexemplu de semigrup drept-zero).
+%   DEMONSTRAȚIA manuscrisă alege însă inverse la STÂNGA x'x=e,
+%   x''x'=e și deduce xx'=e și xe=x. Păstrăm separat cele două
+%   lecturi, fără corectarea tacită a enunțului.
+% - La exercițiul 10 trebuie adăugată ipoteza H nevidă pentru
+%   caracterizarea subgrupului; demonstrația presupune h în H.
+% - Manuscrisul notează elementul neutru atât cu 1, cât și cu e.
+% - Nu am reconstruit pasajele barate ori urmele de pe verso.
+
+\subsection*{Seminar 4 - Pagina 4}
+
+\noindent\underline{Arătați că:}
+\[
+\begin{gathered}
+ (m\mathbb N+1,\cdot)\cong(t\mathbb N+1,\cdot),
+ \qquad m,t\in\mathbb N \\[2pt]
+ \Longleftrightarrow\\[-2pt]
+ (\mathcal U(\mathbb Z_m),\cdot)
+   \cong (\mathcal U(\mathbb Z_t),\cdot).
+\end{gathered}
+\]
+\noindent (În manuscris, $\mathcal U(\mathbb Z_m)$ este indicat drept grup.)
+
+\medskip
+\noindent\underline{Exercițiul 9.}
+Fie $(G,\cdot)$ semigrup. Atunci $G$ este grup dacă și numai dacă
+\begin{enumerate}
+ \item există $e\in G$ astfel încât $ex=x$, pentru orice $x\in G$;
+ \item pentru orice $x\in G$ există $x'\in G$ cu
+       $xx'=e$ (așa cum apare în enunț).
+\end{enumerate}
+
+\noindent\underline{Demonstrație (reciproca, după manuscris).}
+Fie $x\in G$. Există $x'\in G$ astfel încât $x'x=e$ și
+există $x''\in G$ astfel încât $x''x'=e$. Atunci
+\[
+\begin{aligned}
+ xx'&=(ex)x'=(x''x')xx'
+       =x''(x'x)x'=x''ex'=x''x'=e,\\
+ xe&=x(x'x)=(xx')x=ex=x.
+\end{aligned}
+\]
+
+\medskip
+\noindent\underline{Exercițiul 10.}
+Fie $(G,\cdot)$ grup, $H\subseteq G$, $H$ finită. Atunci
+\[
+ H\leq G\quad\Longleftrightarrow\quad
+ H\text{ este parte stabilă la înmulțire}.
+\]
+
+\noindent\underline{Demonstrație.}
+Implicația directă este evidentă. Reciproc, fie $h\in H$ și
+\[
+ hH=\{hx\mid x\in H\},\qquad
+ H^2=\{xy\mid x,y\in H\}.
+\]
+Din stabilitatea lui $H$ rezultă
+\[
+ hH\subseteq H^2\subseteq H.
+\]
+Aplicația
+\[
+ \varphi_h:H\longrightarrow hH,\qquad
+ \varphi_h(x)=hx
+\]
+este bijectivă. Deoarece $H$ este finită, $|hH|=|H|$, deci
+\[
+ hH=H^2=H.
+\]
+Cum $h\in H=hH$, există $x\in H$ cu $h=hx$, de unde
+$x=1_G$. Astfel $1_G\in H$. Mai mult,
+\[
+ 1_G\in hH\ \Longrightarrow\
+  1_G=hx\ (x\in H)\ \Longrightarrow\
+  x=h^{-1}\in H.
+\]
+
+\medskip
+\noindent\underline{Teorema Cantor-Bernstein.}
+Dacă $\alpha=|A|$, $\beta=|B|$, iar
+\[
+ \alpha\leq\beta,\qquad\beta\leq\alpha,
+ \qquad\text{atunci}\qquad \alpha=\beta.
+\]

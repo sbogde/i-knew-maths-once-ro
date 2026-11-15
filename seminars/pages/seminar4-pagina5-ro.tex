@@ -1,0 +1,84 @@
+% Seminar 4 - Pagina 5. Fragment pentru
+% \input{seminars/pages/seminar4-pagina5-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Prima observație reprezintă un contraexemplu la o analogie de tip
+%   Cantor-Bernstein pentru grupuri: fiecare grup poate fi izomorf cu
+%   un subgrup al celuilalt, fără ca grupurile să fie izomorfe.
+%   Săgeata urmată de G_1 neizomorf cu G_2 este păstrată în acest sens,
+%   nu ca implicație general valabilă.
+% - Manuscrisul scrie (q_0,q_1,...,q_n), dar aplicația de deplasare
+%   phi((q_0,...,q_n))=(0,q_0,...) este izomorfismul dorit doar dacă
+%   șirul de coordonate continuă la infinit. Ambiguitatea de indexare
+%   NU este corectată tacit în formulele afișate. La n finit fix,
+%   Q^(n+1) nu este izomorf cu 0 x Q^n.
+% - Manuscrisul nu demonstrează neizomorfismul G_1, G_2. Pentru șiruri
+%   infinite, G_1 este divizibil, iar G_2, cu prima coordonată întreagă,
+%   nu este divizibil.
+% - Ultima notă indică ordinele 4,5,6,7, dar enumeră explicit doar
+%   grupurile de ordine 4,5,6; cazul 7 nu este completat în manuscris.
+% - Înaintea liniei Z_6/S_3 există o corectură cu cerneală; au fost
+%   transcrise numai denumirile lizibile. Urmele de pe verso sunt omise.
+
+\subsection*{Seminar 4 - Pagina 5}
+
+\noindent Fie $G_1,G_2$ grupuri. Manuscrisul consideră situația
+\[
+\begin{gathered}
+ G_1\text{ izomorf cu un subgrup al lui }G_2,\\
+ G_2\text{ izomorf cu un subgrup al lui }G_1,
+\end{gathered}
+\qquad\text{dar}\qquad G_1\not\cong G_2.
+\]
+
+\medskip
+\noindent Definim
+\[
+ G_1:=\bigl\{x=(q_0,q_1,\ldots,q_n)\mid q_i\in\mathbb Q\bigr\}.
+\]
+Atunci $(G_1,+)$ este grup. Pentru
+$y=(u_0,u_1,\ldots,u_n)$,
+\[
+ x+y=(q_0+u_0,\ldots,q_n+u_n).
+\]
+
+\noindent De asemenea,
+\[
+ \begin{aligned}
+ G_2:=\bigl\{\,&x=(q_0,q_1,\ldots,q_n)\mid
+     q_0\in\mathbb Z,\quad q_i\in\mathbb Q\ 
+     (1\leq i\leq n)\,\bigr\}\subseteq G_1.
+ \end{aligned}
+\]
+$(G_2,+)$ este grup și $G_2\leq G_1$
+($G_2$ subgrup al lui $G_1$).
+
+\medskip
+\noindent Fie
+\[
+ H:=\bigl\{x=(0,q_1,\ldots,q_n)\mid
+     q_i\in\mathbb Q\ (1\leq i\leq n)\bigr\}.
+\]
+Atunci $H\leq G_2$. În manuscris este dată aplicația
+\[
+ \begin{aligned}
+ \varphi:G_1&\longrightarrow H,\\
+ \varphi\bigl((q_0,\ldots,q_n)\bigr)&=(0,q_0,\ldots),
+ \end{aligned}
+\]
+și se notează că $\varphi$ este izomorfism de grupuri.
+
+\medskip
+\noindent\textbf{Concluzie (după manuscris).}
+$G_1$ și $G_2$ nu sunt grupuri izomorfe.
+
+\medskip
+\noindent\underline{Grupuri de ordin mic.}
+Manuscrisul enumeră $|G|\in\{4,5,6,7\}$ și consemnează
+\[
+\begin{array}{r@{\quad\Longrightarrow\quad}l}
+ |G|=4 & G\cong\mathbb Z_4\quad\text{sau}\quad
+               \mathbb Z_2\times\mathbb Z_2,\\[2pt]
+ |G|=5 & G\cong\mathbb Z_5,\\[2pt]
+ |G|=6 & G\cong\mathbb Z_6\quad\text{sau}\quad S_3.
+\end{array}
+\]

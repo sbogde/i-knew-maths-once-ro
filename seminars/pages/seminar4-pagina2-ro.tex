@@ -1,0 +1,90 @@
+% Seminar 4 - Pagina 2. Fragment pentru
+% \input{seminars/pages/seminar4-pagina2-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Exercițiul 6 are două puncte. Demonstrația tratează separat
+%   cazul unui monoid și cazul unui semigrup fără element neutru.
+% - Sursa notează x*infinit = infinit*x = x, dar nu scrie separat
+%   infinit*infinit = infinit; această egalitate este necesară pentru
+%   ca operația să fie definită pe întregul M ca monoid.
+% - Manuscrisul folosește generic Z_n. Egalitatea ulterioară
+%   3-căciulă*2-căciulă = 1-căciulă*2-căciulă, cu 3 != 1,
+%   este valabilă pentru n=4, nu pentru orice n. Păstrăm Z_n.
+% - Exemplul final cu matrice este doar indicat în manuscris;
+%   nu adăugăm o demonstrație care nu este scrisă acolo.
+% - Prescurtările și textul foarte șters nu sunt reconstruite
+%   dincolo de pasajele lizibile.
+
+\subsection*{Seminar 4 - Pagina 2}
+
+\noindent\underline{Exercițiul 6.}
+
+\noindent\textbf{(a)} Să se arate că orice semigrup $S$ se poate
+scufunda într-un monoid: există un monoid $M$ și un morfism injectiv
+de semigrupuri
+\[
+  f:S\longrightarrow M,\qquad f(xy)=f(x)f(y).
+\]
+
+\noindent\textbf{(b)} Există și un monoid care nu se poate scufunda
+într-un grup: există un monoid $M$ astfel încât nu există un grup $G$
+și un morfism injectiv de monoizi $f:M\to G$.
+
+\medskip
+\noindent\underline{Demonstrație.}
+
+\noindent\textbf{(a)} Fie $S$ un semigrup.
+
+\smallskip
+\noindent\textbf{I.} Dacă $S$ este monoid, luăm $M=S$ și
+\[
+  i:S\longrightarrow M=S,\qquad i(x)=x.
+\]
+
+\noindent\textbf{II.} Dacă $S$ este semigrup, dar nu este monoid,
+fie $\infty\notin S$ și notăm
+\[
+  M\overset{\mathrm{not}}{=}S\cup\{\infty\}.
+\]
+Pentru $x,y\in M$, operația este definită în manuscris prin
+\[
+\begin{gathered}
+  x\circ y\ \overset{\mathrm{def}}{=}\ xy
+     \quad(x,y\in S),\\
+  \infty\circ x\ \overset{\mathrm{def}}{=}\
+     x\circ\infty\ \overset{\mathrm{def}}{=}\ x
+     \quad(x\in S).
+\end{gathered}
+\]
+Atunci $(M,\circ,\infty)$ este monoid. Fie
+\[
+  f:S\longrightarrow S\cup\{\infty\}=M,\qquad f(x)=x;
+\]
+$f$ este morfism injectiv de semigrupuri.
+
+\medskip
+\noindent\textbf{(b)} $(\mathbb Z_n,\cdot)$ este monoid, unde
+\[
+  \mathbb Z_n=\{\widehat{0},\widehat{1},\ldots,
+       \widehat{n-1}\}.
+\]
+Presupunem că există un grup $G$ și un morfism injectiv de monoizi
+$f:\mathbb Z_n\to G$, astfel încât
+\[
+  f(xy)=f(x)f(y),\qquad f(\widehat{1})=e.
+\]
+Argumentul prin simplificare din manuscris este
+\[
+\begin{aligned}
+  f(\widehat{3})f(\widehat{2})
+    &=f(\widehat{1})f(\widehat{2})\\
+  &\Longrightarrow f(\widehat{3})=f(\widehat{1})\\
+  &\overset{f\,\mathrm{inj.}}{\Longrightarrow}
+      \widehat{3}=\widehat{1}\qquad\text{(fals).}
+\end{aligned}
+\]
+
+\noindent La sfârșitul paginii mai este indicat monoidul de matrice
+$(M_n(K),\cdot)$, cu $A,B,C\in M_n(K)$ astfel încât
+\[
+  AB=CB,\qquad A\neq C.
+\]

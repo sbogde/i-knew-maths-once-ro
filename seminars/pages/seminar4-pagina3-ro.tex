@@ -1,0 +1,117 @@
+% Seminar 4 - Pagina 3. Fragment pentru
+% \input{seminars/pages/seminar4-pagina3-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - La exercițiul 7, manuscrisul pare să scrie "nu e inj.".
+%   Incluziunea canonică Z -> Q ESTE injectivă, însă nu este surjectivă.
+%   Păstrăm lectura aparentă, marcată "ca în manuscris", fără corectare
+%   tacită.
+% - Monoizii din exercițiul 7 sunt priviți cu înmulțirea.
+%   Diagrama arată definiția epimorfismului prin egalitatea a două
+%   morfisme din Q care coincid pe Z.
+% - În calculul pentru v, manuscrisul folosește o linie lungă în locul
+%   repetării pașilor; păstrăm această prescurtare.
+% - În exercițiul 8 se presupune un izomorfism ipotetic: funcția este
+%   bijectivă și respectă produsul, iar la final se folosește injectivitatea.
+% - Notația de lângă acolada pentru f(a)f(b)=4 are un al doilea rând
+%   greu de citit (f(b)=...?); f(a)=1 => a=1 este clar.
+% - "Numere prime" se referă la numere prime în N^*.
+% - Textul șters și corecturile barate nu sunt reconstruite.
+
+\subsection*{Seminar 4 - Pagina 3}
+
+\noindent\underline{Exercițiul 7.}
+Incluziunea
+\[
+ i:(\mathbb Z,\cdot)\longrightarrow(\mathbb Q,\cdot),
+ \qquad i(x)=x,
+\]
+este epimorfism de monoizi care \emph{nu e injectiv}
+(așa cum apare în manuscris).
+
+\smallskip
+\noindent\underline{Epimorfism.}
+Pentru orice monoid $M$ și orice morfisme de monoizi $u,v$
+astfel încât $u\circ i=v\circ i$, avem $u=v$.
+\[
+\begin{tikzcd}[column sep=large]
+ \mathbb Z \arrow[r,"i"] &
+ \mathbb Q \arrow[r,shift left=.7ex,"u"]
+            \arrow[r,shift right=.7ex,swap,"v"] & M
+\end{tikzcd}
+\]
+
+\noindent Fie $(M,\cdot)$ monoid și $u,v:\mathbb Q\to M$
+morfisme de monoizi cu $u\circ i=v\circ i$. Atunci
+\[
+ u(m)=v(m)\qquad(\forall m\in\mathbb Z).
+\]
+Vrem să arătăm că $u(r)=v(r)$ pentru orice $r\in\mathbb Q$.
+Fie $m\in\mathbb Z$, $m\ne0$. Avem
+\[
+\begin{aligned}
+ e=u(1)
+  &=u\!\left(\frac{m}{m}\right)
+   =u\!\left(m\cdot\frac1m\right)
+   =u(m)u\!\left(\frac1m\right)
+   =u\!\left(\frac1m\right)u(m),\\
+ e=v(1)
+  &=\cdots
+   =v\!\left(\frac1m\right)v(m).
+\end{aligned}
+\]
+Deci $u(1/m)$ este inversul lui $u(m)$, iar $v(1/m)$ este
+inversul lui $v(m)$. Cum $u(m)=v(m)$, rezultă
+\[
+ u\!\left(\frac1m\right)=v\!\left(\frac1m\right).
+\]
+Pentru $r=n/m\in\mathbb Q$, cu $m\ne0$,
+\[
+ u(r)=u(n)u\!\left(\frac1m\right)
+     =v(n)v\!\left(\frac1m\right)=v(r).
+\]
+Prin urmare $u=v$.
+
+\smallskip
+\noindent [Orice epimorfism de grupuri este surjectiv.]
+
+\medskip
+\noindent\underline{Exercițiul 8.}
+Monoizii
+\[
+ (\mathbb N^*,\cdot),\qquad
+ (3\mathbb N+1,\cdot),\qquad
+ 3\mathbb N+1=\{3k+1\mid k\in\mathbb N\},
+\]
+nu sunt izomorfi.
+
+\noindent\underline{Demonstrație.}
+Presupunem că există un izomorfism
+\[
+ f:\mathbb N^*\longrightarrow 3\mathbb N+1,
+ \qquad f(xy)=f(x)f(y)
+ \quad(\forall x,y\in\mathbb N^*).
+\]
+Din surjectivitatea lui $f$ rezultă că există $x_1,x_2,x_3\in\mathbb N^*$
+astfel încât
+\[
+ f(x_1)=4,\qquad f(x_2)=10,\qquad f(x_3)=25.
+\]
+Arătăm că $x_1,x_2,x_3$ sunt numere prime.
+Dacă $x_1=ab$, cu $a,b>1$, atunci
+\[
+ f(x_1)=f(a)f(b)=4
+ \quad\Longrightarrow\quad f(a)=1
+ \quad\Longrightarrow\quad a=1,
+ \qquad\text{fals.}
+\]
+Analog, $x_2$ și $x_3$ sunt numere prime.
+Dar $4\cdot25=10^2$, deci
+\[
+\begin{aligned}
+ f(x_1)f(x_3)&=f(x_2)^2,\\
+ f(x_1x_3)&=f(x_2^2),\\
+ x_1x_3&=x_2^2
+  \quad\Longrightarrow\quad x_1=x_2=x_3,
+  \qquad\text{fals.}
+\end{aligned}
+\]

@@ -1,0 +1,117 @@
+% Seminar 4 - Pagina 1. Fragment pentru
+% \input{seminars/pages/seminar4-pagina1-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Antetul este "ALGEBRA (Seminar 4)", iar data scrisă pare să fie
+%   "31-OCT-95". Cronologia față de Seminarul 3 (24-oct.-1994) este
+%   neclară; păstrăm anul 95, fără a-l corecta tacit.
+% - La suma cardinalelor, manuscrisul pare să folosească A_i REUNIUNE
+%   {i}, în loc de produsul cartezian A_i x {i}. Formula uzuală a
+%   sumei folosește o reuniune disjunctă, de ex. |union_i(A_i x {i})|.
+%   Păstrăm expresia manuscrisului.
+% - Afirmația "operațiile sunt corect definite" este însoțită numai
+%   de diagrama transferului unei aplicații B -> A prin bijecții.
+% - Numerotările Ex. 4 și Ex. 5 apar de câte două ori; le păstrăm.
+% - Paradoxul lui Cantor este formulat în termenii "mulțimii tuturor
+%   cardinalelor". Distincția modernă de clasă proprie nu este inserată
+%   în conținutul manuscrisului.
+% - Demonstrația pentru majorarea unei mulțimi de cardinali folosește
+%   formula sumei menționate mai sus, care cere o reuniune disjunctă.
+% - Pasajele barate și urmele foarte slabe nu sunt reconstruite.
+
+\phantomsection
+\subsection*{Seminar 4}
+\addcontentsline{toc}{subsection}{Seminar 4}
+\begin{flushright}
+\textit{31-oct.-1995 
+% (conform manuscrisului)
+}
+\end{flushright}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\underline{Operații cu numere cardinale.}
+Fie $\alpha=|A|$, $\beta=|B|$. Definim
+\[
+  \alpha\beta\ \overset{\mathrm{def}}{=}\ |A\times B|,
+  \qquad
+  \alpha^{\beta}\ \overset{\mathrm{def}}{=}\
+     |\operatorname{Hom}(B,A)|.
+\]
+Pentru $\alpha=2$,
+\[
+  2^{\beta}=|\mathcal P(B)|.
+\]
+Fie $(\alpha_i)_{i\in I}$ o familie de numere cardinale,
+$\alpha_i=|A_i|$. În manuscris suma este definită prin
+\[
+  \sum_{i\in I}\alpha_i\ \overset{\mathrm{def}}{=}\
+  \left|\bigcup_{i\in I}(A_i\cup\{i\})\right|.
+\]
+
+\noindent\underline{Operațiile sunt corect definite.}
+Presupunem că
+\[
+\begin{aligned}
+ \alpha=|A|=|A'|&\iff\exists\,f:A\longrightarrow A'\text{ bijectivă},\\
+ \beta=|B|=|B'|&\iff\exists\,g:B\longrightarrow B'\text{ bijectivă}.
+\end{aligned}
+\]
+Pentru orice $h:B\longrightarrow A$, se obține
+\[
+  \varphi(h)=f\circ h\circ g^{-1},\qquad\varphi\text{ bijectivă}.
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ B\arrow[r,"h"] & A\arrow[d,"f"]\\
+ B'\arrow[u,"g^{-1}"]\arrow[r,"f\circ h\circ g^{-1}"'] & A'
+\end{tikzcd}
+\]
+
+\medskip
+\noindent\underline{Exercițiul 4.}
+Fie $K$ o mulțime de numere cardinale. Să se arate că există un
+număr cardinal mai mare decât orice cardinal din $K$.
+
+\smallskip
+\noindent\underline{Exercițiul 5 (paradoxul lui Cantor).}
+Mulțimea tuturor numerelor cardinale duce la contradicție.
+
+\smallskip
+\noindent\underline{Exercițiul 4 (numerotare repetată în manuscris).}
+Pentru $\alpha=|A|$ și $\beta=|B|$, definițiile notate sunt
+\[
+ \alpha\leq\beta\ \overset{\mathrm{def}}{\iff}\
+ \exists\,f:A\longrightarrow B\text{ injectivă},
+ \qquad
+ \alpha<\beta\ \overset{\mathrm{def}}{\iff}\
+ \alpha\leq\beta\ \text{și}\ \alpha\neq\beta.
+\]
+\noindent\underline{Observație.}
+Nu există aplicație surjectivă $A\longrightarrow\mathcal P(A)$,
+iar $h:A\longrightarrow\mathcal P(A)$, $h(a)=\{a\}$, este injectivă.
+Prin urmare,
+\[
+ \alpha=|A|<|\mathcal P(A)|\iff\alpha<2^{\alpha}.
+\]
+
+\noindent\underline{Demonstrația primului exercițiu 4.}
+Scriem $K=\{\alpha_i\mid i\in I\}$ și notăm
+$\beta\overset{\mathrm{not}}{=}\sum_{i\in I}\alpha_i$.
+În manuscris se folosesc aplicațiile
+\[
+ \varphi_i:A_i\longrightarrow\bigcup_{i\in I}(A_i\cup\{i\}),
+ \qquad\varphi_i(x)=x,
+\]
+și rezultă $\alpha_i\leq\beta$ pentru orice $i\in I$.
+Cum $\beta<2^{\beta}$, notăm $\gamma=2^{\beta}$. Atunci
+$\alpha_i<\gamma$ pentru orice $i\in I$.
+
+\noindent\underline{Exercițiul 5 (reluat).}
+Dacă $\mathcal C$ este mulțimea tuturor numerelor cardinale,
+argumentul precedent dă $\gamma\in\mathcal C$ cu
+$\gamma>\alpha$ pentru orice $\alpha\in\mathcal C$,
+ceea ce este o contradicție.
+\endgroup
