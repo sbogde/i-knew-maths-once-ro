@@ -1,0 +1,77 @@
+% Seminar 3 - Pagina 10. Fragment pentru
+% \input{seminars/pages/seminar3-pagina10-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Această ultimă pagină continuă discuția despre cardinalitate de pe
+%   pagina 9 a Seminarului 3.
+% - Pentru cardinalul 1, mulțimea manuscrisului pare a fi {{vid}},
+%   nu {vid}. Ambele au un singur element, deci au cardinalul 1.
+% - La suma cardinalelor, manuscrisul pare să scrie A_i REUNIUNE {i},
+%   nu A_i PRODUS CARTEZIAN {i}. Prima formulă nu dă în general o
+%   reuniune disjunctă și nici suma cardinalelor. Formula standard este
+%     | \bigcup_{i\in I} (A_i \times \{i\}) |.
+%   Am păstrat citirea aparentă a manuscrisului în formula afișată.
+% - Manuscrisul afirmă că definițiile sunt corecte fără a demonstra că
+%   ele nu depind de alegerea mulțimilor reprezentante A_i, A și B.
+% - "Paradoxul lui Cantor" este redat ca în notițe. Distincția modernă
+%   dintre mulțime și clasă proprie nu este adăugată în text.
+% - Ultimele comparații de cardinali nu dezvoltă premisele axiomatice;
+%   ele sunt păstrate în forma din manuscris.
+
+\subsection*{Seminar 3 - Pagina 10}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent Primele numere cardinale sunt notate astfel:
+\[
+\begin{aligned}
+0 &:= \operatorname{card}(\varnothing),\\
+1 &:= \operatorname{card}\bigl(\{\{\varnothing\}\}\bigr),\\
+2 &:= \operatorname{card}\bigl(\{\{\varnothing\},\{\{\varnothing\}\}\}\bigr).
+\end{aligned}
+\]
+
+\medskip
+\noindent\underline{Operații cu numere cardinale.}
+
+Fie $\alpha=|A|$. Dacă $(\alpha_i)_{i\in I}$ este o familie de numere
+cardinale, cu $\alpha_i=|A_i|$, definim
+\[
+\sum_{i\in I}\alpha_i\ \overset{\mathrm{def}}{=}
+\left|\bigcup_{i\in I}\bigl(A_i\cup\{i\}\bigr)\right|.
+\]
+
+\noindent Pentru $\alpha=|A|$ și $\beta=|B|$, definim
+\[
+\alpha\cdot\beta\ \overset{\mathrm{def}}{=}\ |A\times B|,
+\qquad
+\alpha^{\beta}\ \overset{\mathrm{def}}{=}
+\bigl|\operatorname{Hom}(B,A)\bigr|.
+\]
+
+\noindent Definițiile sunt corecte.
+
+\medskip
+\noindent\underline{Paradoxul lui Cantor.}
+Mulțimea tuturor numerelor cardinale este contradictorie
+(se obține $\alpha<\alpha$).
+
+\medskip
+\noindent Pentru $\alpha=|A|$ și $\beta=|B|$,
+\[
+\alpha\leq\beta\ \iff
+\exists\, f:A\longrightarrow B\text{ injectivă}.
+\]
+Inegalitatea strictă este dată prin
+\[
+\alpha<\beta\quad\iff\quad
+\begin{cases}
+\text{există o aplicație injectivă }f:A\longrightarrow B,\\
+\text{nu există o aplicație bijectivă }A\longrightarrow B.
+\end{cases}
+\]
+
+\noindent Definiția este corectă.
+\endgroup

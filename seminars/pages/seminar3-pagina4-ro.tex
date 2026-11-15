@@ -1,0 +1,94 @@
+% Seminar 3 - Pagina 4. Fragment pentru
+% \input{seminars/pages/seminar3-pagina4-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Primele trei rânduri continuă exercițiul 2 de pe pagina 3.
+% - Cardinalul intersecției im(f) cu [n,n+1) pare să fie <= 1.
+% - Simbolurile pentru relația de echivalență și sistemul de reprezentanți
+%   au fost culese tipografic pentru lizibilitate, fără a schimba demonstrația.
+% - Manuscrisul scrie S sub familia (x_i)_{i in I} și rezumă condițiile.
+% - Diagrama proprietății de universalitate este redesenată sub forma
+%   unui triunghi comutativ, cu aceleași aplicații.
+% - Teorema proprietății de universalitate este doar enunțată aici.
+
+\subsection*{Seminar 3 - Pagina 4}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{Exercițiul 2 (continuare).} Din pagina anterioară,
+\[
+ \operatorname{im}(f)=\bigcup_{n\in\mathbb Z}
+ \bigl(\operatorname{im}(f)\cap[n,n+1)\bigr).
+\]
+Din $|f(x)-f(y)|>1$ pentru $x\neq y$ rezultă
+$|\operatorname{im}(f)\cap[n,n+1)|\leq1$.
+Deci $\operatorname{im}(f)$ este finită sau numărabilă: contradicție.
+
+\medskip
+\noindent\underline{Relații de echivalență}
+
+\noindent O relație $R\subseteq M\times M$ se numește
+\emph{relație de echivalență} dacă satisface:
+\[
+\begin{array}{ll}
+ \text{(R) Reflexivitate:}&(x,x)\in R,\\[2pt]
+ \text{(S) Simetrie:}&(x,y)\in R\ \Longrightarrow\ (y,x)\in R,\\[2pt]
+ \text{(T) Tranzitivitate:}&
+  \left.\begin{array}{l}(x,y)\in R\\(y,z)\in R\end{array}\right\}
+  \Longrightarrow (x,z)\in R.
+\end{array}
+\]
+Notăm $x\sim y$ dacă $(x,y)\in R$. Clasa de echivalență a
+lui $x\in M$ este
+\[
+ \widehat{x}=\{y\in M\mid y\sim x\}.
+\]
+Mulțimea factor și proiecția canonică sunt
+\[
+ M/{\sim}:=\{\widehat{x}\mid x\in M\},
+ \qquad
+ \pi:M\longrightarrow M/{\sim},
+ \quad \pi(x)=\widehat{x}.
+\]
+
+\noindent Un \emph{sistem de reprezentanți} este o familie
+$S=(x_i)_{i\in I}$ astfel încât
+\[
+ \begin{cases}
+   x_i\not\sim x_j,&i\neq j,\\[2pt]
+   \forall x\in M\ \exists i\in I:\ x\sim x_i.
+ \end{cases}
+\]
+Pentru submulțimea corespunzătoare $S\subseteq M$, restricția
+$\pi|_S:S\to M/{\sim}$ este bijectivă.
+
+\medskip
+\noindent\underline{Proprietatea de universalitate}
+
+\noindent\textbf{Observație.} Fie $f:M\to X$. Definim
+\[
+ R_f:=\{(x,y)\in M\times M\mid f(x)=f(y)\}.
+\]
+Atunci $x\sim y\iff f(x)=f(y)$ definește relația de echivalență
+indusă de $f$ pe $M$.
+
+\noindent\fbox{T}\quad \textbf{Proprietatea de universalitate a mulțimii factor.}
+Fie $\sim$ o relație de echivalență pe $M$ și fie
+$\pi:M\to M/{\sim}$ proiecția canonică.
+Pentru orice aplicație $f:M\to X$ cu $\sim\,\subseteq R_f$,
+există o unică aplicație $\overline f:M/{\sim}\to X$ astfel încât
+\[
+ \overline f\circ\pi=f.
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ M\arrow[r,"\pi"]\arrow[dr,"f"']
+   & M/{\sim}\arrow[d,dashed,"{\overline f}"]\\
+ & X
+\end{tikzcd}
+\]
+% Manuscrisul se oprește după enunțul proprietății de universalitate.
+
+\endgroup

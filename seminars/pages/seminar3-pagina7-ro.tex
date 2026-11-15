@@ -1,0 +1,83 @@
+% Seminar 3 - Pagina 7. Fragment pentru
+% \input{seminars/pages/seminar3-pagina7-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Pagina continuă exemplele din paginile 5-6. Numerotarea vizibilă
+%   (ii), (iii), (iv) este păstrată, chiar dacă diferă pe paginile vecine.
+% - Cele două diagrame triunghiulare sunt reproduse cu tikz-cd.
+% - Pentru aplicația argumentului pe C*, manuscrisul nu precizează alegerea
+%   argumentului; normalizarea z/|z| exprimă corespondența indicată.
+% - La reflexivitatea din (iv), manuscrisul pare să scrie „0 in R”, nu
+%   „0 in Q”, cum ar cere demonstrația. Textul aparent este păstrat.
+% - Diagrama cu o aplicație R -> R/~ și condiția f(x)=f(y) iff x-y in Q
+%   sunt barate în manuscris; nu sunt prezentate drept afirmații valide.
+% - R/~ ~ R exprimă o echivalență de cardinalitate, nu o bijecție canonică.
+% - Propoziția de după p:R -> R/~ pare să spună că R nu este, ca atare,
+%   un sistem de reprezentanți; descifrarea exactă rămâne nesigură.
+
+\subsection*{Seminar 3 - Pagina 7}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{(ii) Clasele numerelor cu același modul (continuare).}
+Proiecția canonică $p$ și aplicația modulului $f$ dau diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C\arrow[r,"p"]\arrow[d,"f"'] & \mathbb C/{\sim}\\
+ {[0,+\infty)}\arrow[ur,dashed,"\overline f"'] &
+\end{tikzcd}
+\qquad f(z)=|z|.
+\]
+Aici $\sim=R_f$, adică
+\[
+ x\sim y\iff f(x)=f(y).
+\]
+
+\noindent\textbf{(iii) Clasele numerelor cu același argument (continuare).}
+Pentru $\mathbb C^*=\mathbb C\setminus\{0\}$ și cercul unitate $S'$:
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C^*\arrow[r,"p"]\arrow[d,"f"'] & \mathbb C^*/{\sim}\\
+ S'\arrow[ur,dashed,"\overline f"'] &
+\end{tikzcd}
+\]
+Scriind $z=r(\cos t+i\sin t)$, în notițe apare
+\[
+ f(z)=f\bigl(r(\cos t+i\sin t)\bigr)=\cos t+i\sin t.
+\]
+
+\noindent\textbf{(iv) Echivalența modulo $\mathbb Q$ pe $\mathbb R$.}
+Definim
+\[
+ x\sim y\overset{\mathrm{def}}\iff x-y\in\mathbb Q,
+ \qquad \mathbb R/{\sim}\cong\mathbb R.
+\]
+Verificăm cele trei proprietăți:
+\[
+\begin{aligned}
+\text{(R)}\quad &x\sim x\quad(0\in\mathbb R),\\
+\text{(S)}\quad &x-y\in\mathbb Q\Longrightarrow y-x\in\mathbb Q,\\
+\text{(T)}\quad &x-y\in\mathbb Q,\ y-z\in\mathbb Q
+      \Longrightarrow x-z\in\mathbb Q.
+\end{aligned}
+\]
+Proiecția este $p:\mathbb R\to\mathbb R/{\sim}$.
+Notițele remarcă faptul că $\mathbb R$ nu este, ca atare,
+un sistem de reprezentanți. Pentru un sistem de reprezentanți
+$S=(x_i)_{i\in I}$,
+\[
+ p|_S:S\longrightarrow\mathbb R/{\sim}\quad\text{este bijecție}.
+\]
+Deoarece
+\[
+ \mathbb R=\bigcup_{i\in I}\widehat{x_i},\qquad
+ \widehat{x_i}=\{y\in\mathbb R\mid y-x_i\in\mathbb Q\}
+   =x_i+\mathbb Q\cong\mathbb Q,
+\]
+fiecare $\widehat{x_i}$ este o mulțime numărabilă. Dacă $I$ ar fi
+numărabilă, atunci $\mathbb R$ ar fi numărabilă - contradicție.
+Prin urmare, $I$ este nenumărabilă.
+
+\endgroup

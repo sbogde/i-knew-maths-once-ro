@@ -1,0 +1,117 @@
+% Seminar 3 - Pagina 5. Fragment pentru
+% \input{seminars/pages/seminar3-pagina5-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Primele rânduri continuă proprietatea de universalitate de pe pagina 4.
+%   Termenul din al doilea criteriu este suprascris și poate fi „inj.” ori
+%   „bij.”. Am adoptat provizoriu „injectivă”; dacă scria „bijectivă”,
+%   ar trebui inclusă și condiția de surjectivitate.
+% - În exemplul numerelor raționale apare Z x Z, fără excluderea
+%   numitorului zero. Înmulțirea în cruce nu dă o relație de echivalență
+%   pe întregul Z x Z; nu am adăugat tacit restricția necesară.
+% - Șirurile Cauchy sunt interpretate ca șiruri cu termeni în Q,
+%   potrivit notației compacte din manuscris.
+% - Schița proiecției din exemplul (i) a fost refăcută ca diagramă.
+% - Însemnările foarte palide din marginea dreaptă și cercul hașurat
+%   nu au un rol matematic sigur și nu sunt incluse în textul principal.
+% - Identificarea R/~ cu R de la (iv) este abstractă, nu canonică.
+
+\subsection*{Seminar 3 - Pagina 5}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{Proprietatea de universalitate (continuare).}
+Pentru aplicația $\overline f$ de pe pagina anterioară,
+\[
+\begin{aligned}
+ \overline f\text{ este surjectivă}
+   &\iff f\text{ este surjectivă},\\
+ \overline f\text{ este injectivă}
+   &\iff {\sim}\;=R_f.
+\end{aligned}
+\]
+Mai mult, pentru un sistem de reprezentanți $(x_i)_{i\in I}$,
+\[
+ M=\bigcup_{i\in I}\widehat{x_i}.
+\]
+
+\medskip
+\noindent\underline{Exemple de mulțimi factor}
+
+\noindent\textbf{(a) Numere raționale.}
+Considerăm $\mathbb Z\times\mathbb Z$ și relația
+\[
+ (m,n)\sim(m',n')
+ \overset{\mathrm{def}}{\iff}mn'=nm'.
+\]
+În notițe mulțimea factor este identificată cu
+\[
+ (\mathbb Z\times\mathbb Z)/{\sim}
+   \overset{\mathrm{def}}{=}\mathbb Q,
+ \qquad
+ r\in\mathbb Q,\quad r=\widehat{(m,n)}.
+\]
+% Observație: pentru construcția dorită trebuie n,n' != 0.
+
+\noindent\textbf{(b) Numere reale prin șiruri Cauchy.}
+Fie
+\[
+ \mathcal C=\bigl\{(x_n)_{n\geq1}\text{ cu }x_n\in\mathbb Q
+       \mid (x_n)_{n\geq1}\text{ este șir Cauchy}\bigr\}.
+\]
+Definim
+\[
+ (x_n)_n\sim(y_n)_n
+ \overset{\mathrm{def}}{\iff}
+ \lim_{n\to\infty}(x_n-y_n)=0.
+\]
+Aceasta este o relație de echivalență; cu notația manuscrisului,
+\[
+ \mathcal C/{\sim}\ \overset{\mathrm{not.}}{=}\ \mathbb R,
+ \qquad
+ r=\widehat{(x_n)_n}\in\mathbb R.
+\]
+
+\medskip
+\noindent\textbf{(i)} Pe $\mathbb R$ definim
+\[
+ x\sim y\iff x-y\in\mathbb Z.
+\]
+Aceasta este relație de echivalență și\enspace\(\mathbb R/{\sim}\cong[0,1)\).
+Schița proiecției factor:
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb R\arrow[r,"p_{\sim}"]\arrow[d,"{x\mapsto x-\lfloor x\rfloor}"']
+    & \mathbb R/{\sim} \\
+ {[0,1)}\arrow[ur,dashed,"\cong"'] &
+\end{tikzcd}
+\]
+% Eticheta aplicației „parte fracționară” explicitează săgeata manuscrisului.
+
+\noindent\textbf{(ii)} Pe $\mathbb C$ definim
+\[
+ z_1\sim z_2\overset{\mathrm{def}}{\iff}|z_1|=|z_2|.
+\]
+Aceasta este relație de echivalență pe $\mathbb C$, iar\enspace\(\mathbb C/{\sim}\cong[0,+\infty)\).
+
+\noindent\textbf{(iii)} Pe $\mathbb C^*$ definim
+\[
+ z_1\sim z_2\overset{\mathrm{def}}{\iff}
+ \arg(z_1)=\arg(z_2).
+\]
+Aceasta este relație de echivalență pe $\mathbb C^*$ și
+\[
+ \mathbb C^*/{\sim}\;\cong\;S^1,
+ \qquad S^1=\{z\in\mathbb C\mid |z|=1\}.
+\]
+% Egalitatea argumentelor necesită o alegere consecventă/modulo 2pi.
+
+\noindent\textbf{(iv)} Pe $\mathbb R$ definim
+\[
+ x\sim y\iff x-y\in\mathbb Q.
+\]
+Manuscrisul notează $\mathbb R/{\sim}\cong\mathbb R$.
+
+\endgroup

@@ -1,0 +1,121 @@
+% Seminar 3 - Pagina 1, manuscris datat 24-oct.-1994.
+% Fragment pentru \input{seminars/pages/seminar3-pagina1-ro}; fără preambul.
+% NOTE EDITORIALE:
+% - Problema 1 reia deranjamentele de la Seminarul 2.
+%   La început notația seamănă cu delta(n), iar în ultima formulă
+%   apare D_n. Sunt redate ambele notații în pozițiile respective.
+% - Demonstrația prin principiul includerii și excluderii este redată
+%   în ordinea manuscrisului, inclusiv termenul pentru k=n.
+% - În problema 2(a), o parte din expresia inițială Hom este tăiată;
+%   este folosită expresia finală lizibilă Hom(X x Y, Z).
+% - Aplicația inversă a lui alpha este numită beta în demonstrație;
+%   beta a fost folosit și pentru cealaltă corespondență pe pagina
+%   precedentă a Seminarului 2. Denumirea locală este păstrată.
+% - Au fost omise doar calcule și simboluri barate, greu lizibile.
+% - Manuscrisul afirmă corespondența de la (b), dar demonstrează
+%   numai punctul (a) pe această pagină; nu am adăugat demonstrația (b).
+
+% \phantomsection
+\section{Seminar 3}
+% \addcontentsline{toc}{subsection}{Seminar 3}
+\begin{flushright}
+\textit{24-oct.-1994}
+\end{flushright}
+
+\noindent\fbox{1}\quad O permutare $\sigma\in S_n$ se numeşte
+\emph{deranjament} dacă
+\[
+  \sigma(i)\neq i,\qquad \forall i=1,\ldots,n.
+\]
+Fie $n\in\mathbb N^{*}$; notăm
+\[
+ \delta(n)=\bigl|\{\sigma\in S_n\mid\sigma\text{ este deranjament}\}\bigr|.
+\]
+Să se calculeze $\delta(n)$.
+
+\medskip
+\noindent Fie
+\[
+ A_i=\{\sigma\in S_n\mid\sigma(i)=i\},
+ \qquad |A_i|=(n-1)!.
+\]
+Atunci
+\[
+ \delta(n)=n!-\bigl|\{\sigma\in S_n\mid
+                   \sigma\text{ nu este deranjament}\}\bigr|.
+\]
+Notăm cu $B$ mulţimea dintre acolade. Deci
+\[
+ B=A_1\cup\cdots\cup A_n.
+\]
+Din principiul includerii şi excluderii,
+\[
+\begin{aligned}
+ |B|
+ &=|A_1\cup\cdots\cup A_n|\\
+ &=\sum_{i=1}^{n}|A_i|
+    -\sum_{1\le i<j\le n}|A_i\cap A_j|+\cdots
+      +(-1)^{n-1}|A_1\cap\cdots\cap A_n|\\[3pt]
+ &=\binom n1(n-1)!-\binom n2(n-2)!+\cdots
+      +(-1)^{n-1}\binom nn\,0!\\[3pt]
+ &=\sum_{k=1}^{n}(-1)^{k-1}\binom nk(n-k)!.
+\end{aligned}
+\]
+Prin urmare, în notaţia de la sfârşitul manuscrisului,
+\[
+ \boxed{D_n=n!-|B|=\sum_{k=0}^{n}(-1)^k\binom nk(n-k)!}.
+\]
+
+\bigskip
+\noindent\fbox{2}\quad Fie $X,Y,Z$ mulţimi.
+
+\medskip
+\noindent\textbf{(a)} Avem corespondenţa:
+\[
+ \operatorname{Hom}(X\times Y,Z)
+ \;\overset{\alpha}{\underset{\beta}{\rightleftarrows}}\;
+ \operatorname{Hom}\bigl(X,\operatorname{Hom}(Y,Z)\bigr),
+\]
+unde
+\[
+ \alpha(f)(x)(y)=f(x,y).
+\]
+
+\noindent\textbf{(b)} De asemenea,
+\[
+ \operatorname{Hom}(X,Y\times Z)
+ \cong\operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+
+\medskip
+\noindent\underline{Demonstraţia punctului (a).}
+Definim aplicaţia inversă prin
+\[
+ \beta(g)(a,b)=g(a)(b),\qquad
+ g:X\longrightarrow\operatorname{Hom}(Y,Z).
+\]
+Pentru orice astfel de $g$,
+\[
+ (\alpha\circ\beta)(g)=g.
+\]
+Într-adevăr, pentru toţi $x\in X$ şi $y\in Y$,
+\[
+ \begin{aligned}
+ (\alpha\circ\beta)(g)(x)(y)
+ &=\alpha\bigl(\beta(g)\bigr)(x)(y)\\
+ &=\beta(g)(x,y)\\
+ &=g(x)(y).
+ \end{aligned}
+\]
+Pe de altă parte, pentru $f:X\times Y\longrightarrow Z$,
+\[
+ (\beta\circ\alpha)(f)=\operatorname{id}_{\operatorname{Hom}(X\times Y,Z)}(f)=f.
+\]
+Într-adevăr, pentru orice $x\in X$ şi $y\in Y$,
+\[
+ \begin{aligned}
+ \beta\bigl(\alpha(f)\bigr)(x,y)
+ &=\alpha(f)(x)(y)\\
+ &=f(x,y).
+ \end{aligned}
+\]

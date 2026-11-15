@@ -1,0 +1,116 @@
+% Seminar 3 - Pagina 3. Fragment pentru
+% \input{seminars/pages/seminar3-pagina3-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Manuscrisul definește o mulțime "numărabilă" printr-o bijecție cu N,
+%   adică în sensul "infinit numărabil". Urmează observația despre
+%   submulțimi: finite sau numărabile.
+% - Simbolurile de lângă observația despre submulțimi sunt șterse/slabe;
+%   lectura "finită sau numărabilă" este provizorie.
+% - Exemplul Q ~ Z x Z este păstrat fără reconstruirea unei bijecții.
+% - Indicii cifrelor zecimale y_{n1}, y_{n2} și z_0,z_1 sunt păstrați.
+% - La contradicție, manuscrisul este șters parțial; z != y_n este
+%   dedus din construcția imediat precedentă.
+% - Manuscrisul nu tratează ambiguitatea reprezentărilor zecimale
+%   (șirurile care se termină în 9). Nu am completat demonstrația.
+% - Nota despre produsul aplicațiilor este distinctă de exercițiul 1.
+% - Exercițiul 2 continuă pe pagina următoare a manuscrisului.
+
+\subsection*{Seminar 3 - Pagina 3}
+
+\noindent O mulțime $A$ se numește \emph{numărabilă} dacă există o
+bijecție
+\[
+ f:\mathbb N\longrightarrow A.
+\]
+\noindent\textbf{Exemple.} $\mathbb N$, $\mathbb Z$,
+$\mathbb Q\ (\sim\mathbb Z\times\mathbb Z)$.
+
+\noindent Dacă $A$ este numărabilă și $B\subseteq A$, atunci $B$ este
+finită sau numărabilă.
+
+\medskip
+\noindent\textbf{(1) $\mathbb R$ nu este numărabilă.}
+
+\noindent\underline{Demonstrație (prin reducere la absurd).}
+Presupunem că $\mathbb R$ este numărabilă. Atunci $[0,1)$ ar fi
+numărabilă. Fie
+\[
+ [0,1)=\{y_n\mid n\in\mathbb N\},
+\]
+unde scriem dezvoltările zecimale
+\[
+\begin{aligned}
+ y_0 &= 0,y_{01}y_{02}y_{03}\ldots,\\
+ y_1 &= 0,y_{11}y_{12}y_{13}\ldots,\\
+     &\ \vdots\\
+ y_n &= 0,y_{n1}y_{n2}y_{n3}\ldots .
+\end{aligned}
+\]
+Construim numărul
+\[
+ z:=0,z_0z_1z_2\ldots z_t\ldots\in[0,1)
+\]
+prin
+\[
+ z_0=\begin{cases}
+       1+y_{01},&y_{01}\neq9,\\
+       0,&y_{01}=9,
+     \end{cases}
+ \qquad
+ z_t=\begin{cases}
+       1+y_{t,t+1},&y_{t,t+1}\neq9,\\
+       0,&y_{t,t+1}=9.
+     \end{cases}
+\]
+Astfel $z\neq y_n$, pentru orice $n\in\mathbb N$, contradicție cu
+$[0,1)=\{y_n\mid n\in\mathbb N\}$.
+Deci $[0,1)$ nu este numărabilă, prin urmare nici
+$\mathbb R$ nu este numărabilă.
+
+\medskip
+\noindent\emph{Notă despre produsul mulțimilor numărabile.}
+Fie
+\[
+ A_1=\{x_1,x_2,\ldots,x_n,\ldots\},\qquad
+ B_1=\{y_1,y_2,\ldots,y_n,\ldots\},
+\]
+cu aplicațiile $f_1:A_1\to\mathbb N$ și $f_2:B_1\to\mathbb N$.
+În manuscris apare aplicația produs
+\[
+\begin{aligned}
+ f_1\times f_2 &: A_1\times B_1\longrightarrow
+                    \mathbb N\times\mathbb N,\\
+ (f_1\times f_2)(x_i,y_j)
+   &=\bigl(f_1(x_i),f_2(y_j)\bigr).
+\end{aligned}
+\]
+
+\medskip
+\noindent\textbf{Exercițiul 2.} Nu există o aplicație
+$f:\mathbb R\to\mathbb R$ astfel încât
+\[
+ |f(x)-f(y)|>1\qquad(\forall x\neq y).
+\]
+
+\noindent\underline{Demonstrație (prin reducere la absurd).}
+Presupunem că există $f:\mathbb R\to\mathbb R$ cu
+$|f(x)-f(y)|>1$ pentru $x\neq y$. Atunci
+\[
+ x\neq y\ \Longrightarrow\ f(x)\neq f(y),
+\]
+și deci $f$ este injectivă. Notăm
+\[
+ \operatorname{im}(f)=\{f(x)\mid x\in\mathbb R\}.
+\]
+Din injectivitate rezultă
+$\operatorname{im}(f)\sim\mathbb R$, deci
+$\operatorname{im}(f)$ nu este numărabilă.
+Dar
+\[
+ \operatorname{im}(f)
+  =\operatorname{im}(f)\cap\mathbb R
+  =\operatorname{im}(f)\cap
+     \left(\bigcup_{n\in\mathbb Z}[n,n+1)\right)
+  =\ \cdots
+\]
+% Demonstrația continuă pe pagina următoare a manuscrisului.

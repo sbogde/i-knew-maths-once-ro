@@ -1,0 +1,86 @@
+% Seminar 3 - Pagina 8. Fragment pentru
+% \input{seminars/pages/seminar3-pagina8-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Manuscrisul folosește Hom(A,B) pentru mulțimea tuturor aplicațiilor A -> B.
+% - O clasă de echivalență este numită în notițe „germenele” lui f pe A'.
+%   În terminologia uzuală, germenii presupun acordul pe o vecinătate;
+%   relația de aici cere numai egalitatea restricțiilor la A'.
+% - Formula exactă de după „germenele lui f” este neclară; pare să
+%   trimită la A', posibil prin expresia „în punctul lui A'”.
+% - Diagrama cu restricția este reprodusă folosind tikz-cd; p este
+%   proiecția canonică, iar h aplicația de restricție.
+% - Construcția de la final alege a în B, presupunând implicit B nevidă
+%   dacă A\A' este nevidă; această ipoteză nu este enunțată în manuscris.
+% - Semnele barate lângă diagrame nu sunt reconstituite.
+% - Manuscrisul se oprește la enunțarea existenței unei prelungiri;
+%   nu am adăugat o încheiere nouă a demonstrației.
+
+\subsection*{Seminar 3 - Pagina 8}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+Fie $A,B$ mulțimi și $A'\subseteq A$.
+Pentru $f,g\in\operatorname{Hom}(A,B)$, definim
+\[
+ f\sim g\overset{\mathrm{def}}\iff f|_{A'}=g|_{A'}.
+\]
+Să se arate că $\sim$ este relație de echivalență și că
+\[
+ \operatorname{Hom}(A,B)/{\sim}
+ \ \overset{\mathrm{bij}}{\cong}\ \operatorname{Hom}(A',B).
+\]
+Un element din mulțimea factor se numește în notițe
+\emph{germenele} lui $f$ pe $A'$.
+
+\medskip
+\noindent\underline{Demonstrație.}
+Considerăm proiecția canonică $p$ și aplicația de restricție $h$:
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ \operatorname{Hom}(A,B)
+    \arrow[r,"p"]\arrow[d,"h"']
+  & \operatorname{Hom}(A,B)/{\sim}
+       \arrow[dl,dashed,"\overline h"] \\
+ \operatorname{Hom}(A',B) &
+\end{tikzcd}
+\qquad h(f)=f|_{A'}.
+\]
+Relația este cea indusă de $h$:
+\[
+ \sim\;=R_h,
+ \qquad f\sim g\iff h(f)=h(g)
+ \iff f|_{A'}=g|_{A'}.
+\]
+Prin urmare, aplicația indusă $\overline h$ este injectivă.
+
+\medskip
+\noindent Pentru orice aplicație $t:A'\longrightarrow B$ căutăm
+$f:A\longrightarrow B$ astfel încât $f|_{A'}=t$.
+Alegem $a\in B$ și definim
+\[
+ f(x)=
+ \begin{cases}
+   t(x),&x\in A',\\
+   a,&x\in A\setminus A'.
+ \end{cases}
+\]
+Aceasta este prelungirea indicată de diagramă:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ A'\arrow[r,hook,"i"]\arrow[d,"t"']
+    & A\arrow[dl,dashed,"f"]\\
+ B &
+\end{tikzcd}
+\qquad f\circ i=t.
+\]
+Astfel, cum apare la sfârșitul paginii,
+\[
+ \forall\,g:A'\longrightarrow B,\quad
+ \exists\,f:A\longrightarrow B
+ \quad\text{a.î.}\quad f|_{A'}=g.
+\]
+
+\endgroup

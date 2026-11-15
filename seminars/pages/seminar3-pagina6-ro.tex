@@ -1,0 +1,101 @@
+% Seminar 3 - Pagina 6. Fragment pentru
+% \input{seminars/pages/seminar3-pagina6-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Pagina continuă exemplele (i), (iii) și (iv) de pe pagina precedentă.
+% - În prima linie, parantezele drepte și acoladele reprezintă partea
+%   întreagă și partea fracționară; scrisul compact a fost interpretat
+%   prin descompunerea x=[x]+{x}, y=[y]+{y}.
+% - Manuscrisul verifică explicit reflexivitatea și simetria congruenței
+%   modulo Z; tranzitivitatea nu este scrisă pe această pagină.
+% - În margine se reamintește cazul (iv), x~y iff x-y in Q, și R/~ ~ R;
+%   nu este repetat ca un exemplu numerotat separat.
+% - Diagramele au fost redesenate pentru claritate; restricția lui p
+%   la un sistem de reprezentanți este bijecția menționată.
+% - Egalitatea argumentelor complexe cere o alegere consecventă a argumentului
+%   (sau interpretarea modulo 2pi); notația manuscrisului nu precizează.
+% - Eticheta aplicației către S' din ultima diagramă este palidă;
+%   normalizarea z -> z/|z| corespunde construcției prezentate.
+
+\subsection*{Seminar 3 - Pagina 6}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{Demonstrație (continuarea exemplului (i)).}
+Scriem $x=\lfloor x\rfloor+\{x\}$ și $y=\lfloor y\rfloor+\{y\}$.
+Dacă $x-y\in\mathbb Z$, atunci
+\[
+ \lfloor x\rfloor+\{x\}-\lfloor y\rfloor-\{y\}\in\mathbb Z,
+ \qquad \{x\}-\{y\}\in\mathbb Z.
+\]
+Pentru relația $x\sim y\iff x-y\in\mathbb Z$:
+\[
+ \begin{aligned}
+ \text{(R)}\quad &x\sim x &&(x-x=0\in\mathbb Z),\\
+ \text{(S)}\quad &x\sim y\Longrightarrow y\sim x
+     &&(x-y\in\mathbb Z\Longrightarrow y-x\in\mathbb Z).
+ \end{aligned}
+\]
+
+\noindent\underline{Varianta 1.} Intervalul $[0,1)$ este sistem de
+reprezentanți pentru $\sim$ dacă și numai dacă
+\[
+ p|_{[0,1)}:[0,1)\longrightarrow\mathbb R/{\sim}
+ \quad\text{este bijecție}.
+\]
+\noindent\textbf{Pasul 1.} Pentru $x,y\in[0,1)$,
+$x\ne y\Longrightarrow x\not\sim y$ (evident).
+
+\noindent\textbf{Pasul 2.} Pentru orice $x\in\mathbb R$ există
+$t\in[0,1)$ astfel încât $x-t\in\mathbb Z$: luăm $t=\{x\}$.
+
+\medskip
+\noindent\textbf{(iii) Numere complexe cu același modul.}
+Pentru mulțimea factor $\mathbb C/{\sim}$, unde
+$z_1\sim z_2\iff|z_1|=|z_2|$, considerăm
+\[
+ p|_{[0,+\infty)}:[0,+\infty)\longrightarrow\mathbb C/{\sim}.
+\]
+\noindent\textbf{(1)} Pentru $x,y\in[0,+\infty)$,
+$x\ne y\Longrightarrow x\not\sim y$.
+
+\noindent\textbf{(2)} Pentru orice $z\in\mathbb C$ există
+$t\in[0,+\infty)$ astfel încât $z\sim t$: luăm $t=|z|$.
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C\arrow[r,"p"]\arrow[d,"{f(z)=|z|}"']
+    & \mathbb C/{\sim} \\
+ {[0,+\infty)}\arrow[ur,dashed,"{p|_{[0,+\infty)}}"'] &
+\end{tikzcd}
+\]
+Dacă $|z_1|=|z_2|$, atunci $f(z_1)=f(z_2)$.
+
+\medskip
+\noindent\textbf{(iv) Numere complexe cu același argument.}
+Notăm
+\[
+ S'=\{z\in\mathbb C\mid |z|=1\},\qquad
+ z_1\sim z_2\iff\arg(z_1)=\arg(z_2)
+ \quad(z_1,z_2\in\mathbb C^*).
+\]
+\noindent\textbf{(1)} Dacă $z_1,z_2\in S'$ și $z_1\ne z_2$,
+atunci $z_1\not\sim z_2$ (argumentele sunt diferite).
+
+\noindent\textbf{(2)} Pentru orice $z\in\mathbb C^*$ există
+$z_1\in S'$ astfel încât $z\sim z_1$. Într-adevăr, scriem
+\[
+ z=r(\cos t+i\sin t),\qquad z_1=\cos t+i\sin t.
+\]
+Astfel, notițele identifică $\mathbb C^*/{\sim}$ cu $S'$ prin
+reprezentanți de pe cercul unitate:
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C^*\arrow[r,"p"]\arrow[d,"{f(z)=z/|z|}"']
+    & \mathbb C^*/{\sim} \\
+ S'\arrow[ur,dashed,"{p|_{S'}}"'] &
+\end{tikzcd}
+\]
+
+\endgroup

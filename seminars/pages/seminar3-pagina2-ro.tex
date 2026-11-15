@@ -1,0 +1,96 @@
+% Seminar 3 - Pagina 2. Fragment pentru
+% \input{seminars/pages/seminar3-pagina2-ro}; fără preambul sau pagină nouă.
+% NOTE EDITORIALE:
+% - Pagina continuă problema 2(b) din Seminarul 3 - Pagina 1.
+% - Manuscrisul alternează notațiile P_y/P_z și p_y/p_z;
+%   proiecțiile sunt notate consecvent p_Y și p_Z.
+% - Diagrama rearanjează schița manuscrisului pentru lizibilitate,
+%   păstrând proiecțiile și cele două aplicații componente.
+% - O observație intercalată pare să fie: fixez a din Z,
+%   i_Y(y)=(y,a). Am păstrat-o, deși nu intervine în demonstrație.
+% - Calculele tăiate din dreptul celor două identități sunt omise;
+%   pașii finali lizibili sunt păstrați.
+% - În câteva locuri manuscrisul scrie identitatea fără a preciza
+%   mulțimea pe care acționează; domeniile sunt explicite mai jos.
+
+\subsection*{Seminar 3 - Pagina 2}
+
+\noindent\textbf{(b) Continuare.} Avem corespondența
+\[
+  \operatorname{Hom}(X,Y\times Z)
+  \;\overset{\alpha}{\underset{\beta}{\rightleftarrows}}\;
+  \operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+Fie $p_Y:Y\times Z\to Y$ și $p_Z:Y\times Z\to Z$ proiecțiile
+canonice:
+\[
+ p_Y(y,z)=y,\qquad p_Z(y,z)=z.
+\]
+Diagrama proiecțiilor și a aplicațiilor componente este
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+ & X \arrow[dl, "h"'] \arrow[dr, "g"]
+     \arrow[d, dashed, "{\beta(g,h)}"] & \\
+ Z & Y\times Z \arrow[l, "p_Z"] \arrow[r, "p_Y"'] & Y
+\end{tikzcd}
+\]
+Pentru $f:X\to Y\times Z$, definim
+\[
+  \alpha(f)=(p_Y\circ f,\,p_Z\circ f).
+\]
+Reciproc, pentru $g:X\to Y$ și $h:X\to Z$, punem
+\[
+  \beta(g,h)(x)=(g(x),h(x)),\qquad x\in X.
+\]
+
+\medskip
+\noindent\emph{Observație intercalată în manuscris.} Fixăm $a\in Z$ și
+considerăm
+\[
+ \iota_Y:Y\longrightarrow Y\times Z,\qquad
+ \iota_Y(y)=(y,a).
+\]
+
+\medskip
+\noindent Arătăm mai întâi că $\alpha\circ\beta=\operatorname{id}$.
+Pentru orice $g:X\to Y$ și $h:X\to Z$,
+\[
+  \alpha\bigl(\beta(g,h)\bigr)=(g,h).
+\]
+Într-adevăr,
+\[
+\begin{aligned}
+ \bigl(p_Y\circ\beta(g,h)\bigr)(x)
+   &=p_Y\bigl(\beta(g,h)(x)\bigr) \\
+   &=p_Y(g(x),h(x))=g(x),
+ \qquad \forall x\in X,\\[3pt]
+ \bigl(p_Z\circ\beta(g,h)\bigr)(x)
+   &=p_Z\bigl(\beta(g,h)(x)\bigr) \\
+   &=p_Z(g(x),h(x))=h(x),
+ \qquad \forall x\in X.
+\end{aligned}
+\]
+Prin urmare,
+\[
+  (\alpha\circ\beta)(g,h)
+    =(p_Y\circ\beta(g,h),\,p_Z\circ\beta(g,h))
+    =(g,h).
+\]
+
+\medskip
+\noindent Reciproc, demonstrăm că $\beta\circ\alpha=\operatorname{id}$.
+Fie $f:X\to Y\times Z$. Atunci
+\[
+ (\beta\circ\alpha)(f)=f.
+\]
+Pentru $x\in X$, notăm $f(x)=(y,z)$. Avem
+\[
+\begin{aligned}
+ \beta\bigl(\alpha(f)\bigr)(x)
+   &=\beta(p_Y\circ f,\,p_Z\circ f)(x)\\
+   &=\bigl((p_Y\circ f)(x),\,(p_Z\circ f)(x)\bigr)\\
+   &=\bigl(p_Y(y,z),\,p_Z(y,z)\bigr)\\
+   &=(y,z)=f(x).
+\end{aligned}
+\]
+Deci cele două corespondențe sunt inverse una alteia.
